@@ -1,0 +1,16 @@
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary build files
+*.o
+*.obj
+*.tmp
+*.log
+
+# Deliverables are intentionally versioned
+!*.exe
+!*.dat
+!*.svg

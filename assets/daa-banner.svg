@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="330" viewBox="0 0 1400 330" role="img" aria-label="Design and Analysis of Algorithms Laboratory">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071a2b"/><stop offset="0.5" stop-color="#0a3b5c"/><stop offset="1" stop-color="#075e54"/></linearGradient>
+  <radialGradient id="glow" cx="0.82" cy="0.18" r="0.7"><stop offset="0" stop-color="#32d5a4" stop-opacity="0.42"/><stop offset="1" stop-color="#32d5a4" stop-opacity="0"/></radialGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-opacity="0.25"/></filter>
+</defs>
+<rect width="1400" height="330" rx="28" fill="url(#bg)"/>
+<rect width="1400" height="330" rx="28" fill="url(#glow)"/>
+<g opacity="0.15" stroke="#d8fff4" fill="none">
+  <circle cx="1120" cy="170" r="112"/><circle cx="1120" cy="170" r="76"/><circle cx="1120" cy="170" r="40"/>
+  <path d="M930 68h330M930 116h330M930 164h330M930 212h330M930 260h330"/>
+  <path d="M976 36v260M1030 36v260M1084 36v260M1138 36v260M1192 36v260"/>
+</g>
+<g filter="url(#shadow)">
+  <text x="80" y="92" fill="#67f5c6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="4">IIIT BHUBANESWAR · CSE</text>
+  <text x="78" y="175" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="58" font-weight="800">Design &amp; Analysis of Algorithms</text>
+  <text x="80" y="230" fill="#d8fff4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="500">Laboratory Repository · B425050</text>
+</g>
+<g transform="translate(1240 244)"><rect x="-115" y="-30" width="230" height="60" rx="30" fill="#ffffff" opacity="0.94"/><text text-anchor="middle" y="9" fill="#075e54" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">LAB 01</text></g>
+</svg>

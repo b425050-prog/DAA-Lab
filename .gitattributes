@@ -1,0 +1,14 @@
+# Normalize text files across Windows and GNU/Linux
+* text=auto
+
+*.c text eol=lf
+*.h text eol=lf
+*.md text eol=lf
+*.dat text eol=lf
+*.svg text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# Compiled executables and PDFs are binary
+*.exe binary
+*.pdf binary
