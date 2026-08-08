@@ -1,121 +1,118 @@
-<p align="center">
-  <img src="../assets/q3-banner.svg" alt="Q3 Merging k Sorted Arrays" width="100%">
-</p>
+<p align="center"><img src="../assets/lab2_banner.gif" width="100%" alt="DAA Lab 02"></p>
 
-<p align="center">
-  <img alt="Topic" src="https://img.shields.io/badge/TOPIC-MULTIWAY%20MERGING-22D3EE?style=for-the-badge">
-  <img alt="Method 1" src="https://img.shields.io/badge/SEQUENTIAL-%CE%98(nk%C2%B2)-FB7185?style=for-the-badge">
-  <img alt="Method 2" src="https://img.shields.io/badge/BALANCED-%CE%98(nk%20log%20k)-22C55E?style=for-the-badge">
-</p>
+<p align="center"><a href="../README.md">← Lab 02</a> · <a href="../../README.md">Main repository</a></p>
 
-<p align="center"><strong>Same merge primitive. Completely different growth in the number of arrays.</strong></p>
+# Q3 · Merging k Sorted Arrays
 
-<p align="center"><img src="../../assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
+Suppose there are `k` sorted arrays and every array contains `n` elements. The final output contains `nk` elements.
 
-## 🎯 Problem
+## Program · Both methods + user selection
 
-There are **k sorted arrays**, each containing **n elements**. The final sorted array contains **kn elements**.
+**File:** `q3_merge_k_arrays.c`
 
-Compare two methods:
+The program implements both algorithms. You enter `k`, `n`, and all `k` sorted arrays, then choose which method's merged result you want displayed:
 
-- **Method 1:** merge the first two arrays, merge that result with the third, continue sequentially until the kth array is included.
-- **Method 2:** merge arrays in balanced pairs, then merge the resulting runs in pairs again, continuing until only one sorted run remains.
-
-Both methods are implemented and validated.
-
-## 🧠 Method 1 · Sequential Merging
-
-The merged result gets larger after every step:
-
-<p align="center"><strong>2n, 3n, 4n, …, kn</strong></p>
-
-Therefore the total amount of merge work is:
-
-<p align="center"><strong>2n + 3n + ⋯ + kn</strong></p>
-<p align="center"><strong>= n(2 + 3 + ⋯ + k)</strong></p>
-<p align="center"><strong>= n[k(k + 1)/2 − 1]</strong></p>
-<p align="center"><strong>⇒ Θ(nk²)</strong></p>
-
-The problem is repeated reprocessing: elements already merged into the growing result are copied again and again.
-
-## ⚡ Method 2 · Balanced Pairwise Merging
-
-At each level, every element participates in at most one merge.
-
-<p align="center"><strong>Work per level = Θ(nk)</strong></p>
-
-The number of balanced merging levels is logarithmic:
-
-<p align="center"><strong>Number of levels = Θ(log k)</strong></p>
-
-Hence:
-
-<p align="center"><strong>Θ(nk) · Θ(log k) = Θ(nk log k)</strong></p>
-
-> **Final comparison:** sequential merging is **Θ(nk²)**, while balanced pairwise merging is **Θ(nk log k)**.
-
-<p align="center"><img src="../../assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
-
-## 📈 Experimental Validation
-
-<p align="center">
-  <img src="q3_merge_k_sorted_arrays.svg" alt="Sequential and balanced merging graph" width="100%">
-</p>
-
-The graph validates the result from two directions:
-
-### Vary k while n = 256
-
-The sequential method bends toward quadratic growth in k, while balanced merging grows much more slowly with k log k.
-
-### Vary n while k = 16
-
-Both methods are linear in n, exactly as the formulas predict. The balanced method still performs substantially fewer element writes.
-
-The graph program runs the real merge algorithms, verifies that both outputs are sorted and identical, and only then records the work count.
-
-## 🔬 Exact Work Count for Powers of Two
-
-When k is a power of two:
-
-- Method 1 writes exactly **n(2 + 3 + ⋯ + k)** elements during merge operations.
-- Method 2 has **log₂ k** balanced levels, and each level writes **nk** elements, giving **nk log₂ k** merge writes.
-
-The experiment therefore exposes the asymptotic difference directly through element-write counts.
-
-## 🧩 Files
-
-| File | Purpose |
-|---|---|
-| `q3_merge_k_sorted_arrays.c` | Clean, self-contained implementation of both methods and the required analysis |
-| `q3_graph.c` | Self-contained measurement program that validates both methods and generates the graph |
-| `q3_merge_k_sorted_arrays.gp` | Separate GNUPlot styling and plotting instructions |
-| `q3_merge_k_sorted_arrays.svg` | Final comparison graph |
-
-There are exactly **two C programs** and no helper header or extra algorithm file.
-
-## ▶️ Run the Answer Program
-
-```bash
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q3_merge_k_sorted_arrays.c -o q3_merge_k_sorted_arrays
-./q3_merge_k_sorted_arrays
+```text
+1. Method 1 - sequential repeated merge
+2. Method 2 - balanced pairwise merge
 ```
 
-The terminal output derives both complexities, prints a correctness demonstration, compares measured work, and verifies that both methods produce the same sorted result.
+It validates that every input array is already sorted, runs **both** methods on the same input for a fair measurement, prints the selected merged output first, verifies that both methods produce the same final array, and then prints a side-by-side table containing:
 
-## 🎨 Generate the Graph
+- key comparisons;
+- output element writes;
+- merge calls;
+- stages / rounds;
+- measured elapsed time.
+
+It finishes by printing the exact worst-case expression requested for Method 1 and the `n`, `k` complexity derivation for Method 2.
 
 ```bash
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q3_graph.c -o q3_graph
-./q3_graph
+gcc -std=c17 -O2 -Wall -Wextra -pedantic q3_merge_k_arrays.c -lm -o q3_merge_k_arrays
+./q3_merge_k_arrays
 ```
 
-`q3_graph` runs both methods over a range of k and n values, verifies every output, creates temporary data, invokes `q3_merge_k_sorted_arrays.gp`, writes the final SVG, and removes the temporary .dat file after a successful plot.
+## Method 1 · Sequential repeated merge
 
-<p align="center"><img src="../../assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
+Merge the first two arrays, merge that result with the third, then with the fourth, and continue until the kth array.
 
-## ✅ Final Observation
+The merge output lengths are:
 
-> Balanced pairwise merging wins because it prevents an already-large merged result from being copied once for every remaining array. The improvement is from **Θ(nk²)** to **Θ(nk log k)**.
+```text
+2n, 3n, 4n, ... , kn
+```
 
-<p align="center"><strong>Q3 · Complete · Balanced merging wins asymptotically</strong></p>
+Total element-level merge work is proportional to:
+
+```text
+n(2 + 3 + ... + k)
+= n(k(k + 1)/2 - 1)
+= Θ(nk²)
+```
+
+Worst-case key comparisons are:
+
+```text
+n(k(k + 1)/2 - 1) - (k - 1)
+```
+
+### Detailed animation · Method 1
+
+The animation uses eight arrays with four elements each:
+
+```text
+A1 = [1,  9, 17, 25]    A5 = [5, 13, 21, 29]
+A2 = [2, 10, 18, 26]    A6 = [6, 14, 22, 30]
+A3 = [3, 11, 19, 27]    A7 = [7, 15, 23, 31]
+A4 = [4, 12, 20, 28]    A8 = [8, 16, 24, 32]
+```
+
+Every frame shows the arrays being merged, current accumulator size, actual comparisons, writes, cumulative work, and the resulting array.
+
+<p align="center"><img src="q3_method1_sequential.gif" width="100%" alt="Method 1 sequential merge animation"></p>
+
+For this example Method 1 performs **133 key comparisons** and **140 output writes**.
+
+## Method 2 · Balanced pairwise merge
+
+Pair the arrays and merge each pair. Repeat on the resulting arrays until only one remains.
+
+For `k = 8`:
+
+```text
+8 arrays → 4 arrays → 2 arrays → 1 array
+```
+
+There are `Θ(log k)` levels. At each level at most all `nk` elements participate, so:
+
+```text
+Θ(nk) work per level × Θ(log k) levels
+= Θ(nk log k)
+```
+
+When `k` is a power of two, the exact worst-case number of key comparisons is:
+
+```text
+nk log₂(k) - (k - 1)
+```
+
+### Detailed animation · Method 2
+
+The second animation uses the **same input arrays** as Method 1 so the visual comparison is fair. It shows every pair, every round, each pair's comparison ceiling, cumulative counters, and the number of elements rewritten per round.
+
+<p align="center"><img src="q3_method2_balanced.gif" width="100%" alt="Method 2 balanced merge animation"></p>
+
+For this same example Method 2 performs **84 key comparisons** and **96 output writes** in exactly **3 rounds**.
+
+## Side-by-side conclusion
+
+| Property | Method 1 · Sequential | Method 2 · Balanced |
+|---|---:|---:|
+| Merge structure | growing accumulator | balanced merge tree |
+| Number of merge calls | `k - 1` | `k - 1` |
+| Depth / stages | `k - 1` | `⌈log₂ k⌉` rounds |
+| Worst-case running time | `Θ(nk²)` | `Θ(nk log k)` |
+| Example comparisons | 133 | 84 |
+| Example output writes | 140 | 96 |
+
+Both methods are correct. The improvement comes from **how often already-merged elements are processed again**: sequential merging repeatedly revisits a growing prefix, while balanced merging limits each element to logarithmically many merge levels.

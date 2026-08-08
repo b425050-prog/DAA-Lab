@@ -1,119 +1,93 @@
 <p align="center">
-  <img src="../assets/q1-banner.svg" alt="Q1 Dictionary Operations" width="100%">
+  <img src="../assets/lab2_banner.gif" width="100%" alt="DAA Lab 02">
 </p>
+
+<p align="center"><a href="../README.md">← Lab 02</a> · <a href="../../README.md">Main repository</a></p>
+
+# Q1 · Dictionary Operations
 
 <p align="center">
-  <img alt="Topic" src="https://img.shields.io/badge/TOPIC-DICTIONARY%20ADT-22D3EE?style=for-the-badge">
-  <img alt="Representations" src="https://img.shields.io/badge/REPRESENTATIONS-6-A78BFA?style=for-the-badge">
-  <img alt="Operations" src="https://img.shields.io/badge/OPERATIONS-7-FB7185?style=for-the-badge">
+  <img alt="Cases" src="https://img.shields.io/badge/MEASURED%20CASES-42-22C55E?style=for-the-badge">
+  <img alt="Sizes" src="https://img.shields.io/badge/INPUT%20SIZES-96-38BDF8?style=for-the-badge">
+  <img alt="Agreement" src="https://img.shields.io/badge/THEORY%20MATCH-42%2F42-F97316?style=for-the-badge">
 </p>
 
-<p align="center"><strong>Worst-case asymptotic behavior of seven dictionary operations across six representations.</strong></p>
+The dictionary supports **Search, Insert, Delete, Maximum, Minimum, Predecessor, and Successor**. The question asks for worst-case asymptotic running times under six representations and asks that those claims be validated experimentally.
 
-<p align="center"><img src="../../assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
-
-## 🎯 Problem
-
-For a dictionary D, determine the worst-case running time of:
-
-**Search · Insert · Delete · Maximum · Minimum · Predecessor · Successor**
-
-when D is represented by:
-
-**unsorted array · sorted array · singly linked unsorted list · singly linked sorted list · doubly linked unsorted list · doubly linked sorted list**
-
-Then validate the resulting growth classes graphically.
-
-## 🧠 Final Complexity Table
+## Final theoretical table
 
 | Representation | Search | Insert | Delete | Maximum | Minimum | Predecessor | Successor |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Unsorted array** | O(n) | O(1) | O(1) | O(n) | O(n) | O(n) | O(n) |
-| **Sorted array** | O(log n) | O(n) | O(n) | O(1) | O(1) | O(1) | O(1) |
-| **Singly linked unsorted list** | O(n) | O(1) | O(n) | O(n) | O(n) | O(n) | O(n) |
-| **Singly linked sorted list** | O(n) | O(n) | O(n) | O(1) | O(1) | O(n) | O(1) |
-| **Doubly linked unsorted list** | O(n) | O(1) | O(1) | O(n) | O(n) | O(n) | O(n) |
-| **Doubly linked sorted list** | O(n) | O(n) | O(1) | O(1) | O(1) | O(1) | O(1) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Unsorted array | `O(n)` | `O(1)` | `O(1)` | `O(n)` | `O(n)` | `O(n)` | `O(n)` |
+| Sorted array | `O(log n)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` | `O(1)` | `O(1)` |
+| Singly linked unsorted | `O(n)` | `O(1)` | `O(n)` | `O(n)` | `O(n)` | `O(n)` | `O(n)` |
+| Singly linked sorted | `O(n)` | `O(n)` | `O(n)` | `O(1)*` | `O(1)` | `O(n)` | `O(1)` |
+| Doubly linked unsorted | `O(n)` | `O(1)` | `O(1)` | `O(n)` | `O(n)` | `O(n)` | `O(n)` |
+| Doubly linked sorted | `O(n)` | `O(n)` | `O(1)` | `O(1)*` | `O(1)` | `O(1)` | `O(1)` |
 
-### Important implementation assumptions
+`*` The implementation maintains both head and tail pointers. That is constant-size metadata and lets a sorted list expose both ends directly. If your classroom convention defines a linked list as **head-only**, change `Maximum` for the ascending sorted linked-list rows to `O(n)`; the rest of the analysis is unchanged.
 
-> **Delete(D, x)** receives a direct pointer or reference to x, exactly as stated in the problem. An unsorted array can therefore delete in O(1) by replacing the removed slot with the final occupied element.
+### Why `Delete` differs between singly and doubly linked lists
 
-> For sorted linked lists, a tail pointer is maintained. Maximum is therefore O(1). Updating that tail does not worsen the listed update bounds: a doubly linked list can update it directly, while a singly linked list can charge the required predecessor search to an operation that is already O(n).
+`Delete(D, x)` is given a pointer to `x`. A doubly linked node stores `x->prev`, so its neighbors can be re-linked directly. A singly linked node does not store its physical predecessor; in the worst case the program must walk from the head to find it. Hence worst-case deletion is `O(1)` for the doubly linked representation and `O(n)` for the singly linked representation.
 
-## 🔎 Why the Bounds Look Like This
+## Program 1 · Experimental complexity inference
 
-<details open>
-<summary><strong>Unsorted array</strong></summary>
-<br>
-Search, maximum, minimum, predecessor, and successor may inspect all n items, so each is O(n). Insertion appends in O(1). Because deletion is given the item directly and order does not need to be preserved, the hole can be filled with the last item in O(1).
-</details>
+**File:** `q1_experimental_complexity.c`
 
-<details>
-<summary><strong>Sorted array</strong></summary>
-<br>
-Binary search gives O(log n) search. Ordered neighbors and endpoints give predecessor, successor, minimum, and maximum in O(1). Insertion and deletion can shift Θ(n) items, so both are O(n).
-</details>
+This is the validation program, not a hard-coded answer printer. It:
 
-<details>
-<summary><strong>Singly linked lists</strong></summary>
-<br>
-There is no random access, so sorting does not make search logarithmic. Deleting a known node can still require finding its physical predecessor, which is O(n). In a sorted singly linked list, successor is the next link and is O(1), while predecessor remains O(n).
-</details>
+1. builds the six representations for each input size;
+2. performs the seven operations in worst-case configurations;
+3. counts **dominant algorithmic steps** rather than noisy clock ticks;
+4. records 96 rows from `n = 64` through `n = 65,536` in `q1_experimental_data.dat`;
+5. fits each observed series against the models `1`, `log₂ n`, and `n`;
+6. chooses the model with the smallest normalized fit error;
+7. prints the final experimentally inferred 6 × 7 table.
 
-<details>
-<summary><strong>Doubly linked lists</strong></summary>
-<br>
-A node stores both next and previous links. Deleting a known node is therefore O(1). In a sorted doubly linked list, predecessor and successor are both direct links and are O(1).
-</details>
+The generated run concludes with:
 
-<p align="center"><img src="../../assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
-
-## 📈 Growth Validation
-
-<p align="center">
-  <img src="q1_dictionary_operations.svg" alt="Dictionary operation growth graph" width="100%">
-</p>
-
-The six panels reproduce the table visually. Operations in the same asymptotic class share the same representative curve:
-
-- **O(1)** stays flat.
-- **O(log n)** grows slowly.
-- **O(n)** grows proportionally with n.
-
-The graph uses logarithmic axes so all three classes remain visible across a wide range of dictionary sizes.
-
-## 🧩 Files
-
-| File | Purpose |
-|---|---|
-| `q1_dictionary_operations.c` | Clean answer program: prints the complete table and reasoning |
-| `q1_graph.c` | Creates temporary growth data, invokes GNUPlot, generates the SVG, then removes the temporary data |
-| `q1_dictionary_operations.gp` | Separate GNUPlot design and six-panel plotting instructions |
-| `q1_dictionary_operations.svg` | Final graph |
-
-Exactly **two C programs** are used. The answer program contains no file-writing or plotting logic.
-
-## ▶️ Run the Answer Program
-
-```bash
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_dictionary_operations.c -o q1_dictionary_operations
-./q1_dictionary_operations
+```text
+Agreement with theoretical worst-case table: 42/42 operations (FULL AGREEMENT)
 ```
 
-## 🎨 Generate the Graph
+Compile and run:
 
 ```bash
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_graph.c -o q1_graph
-./q1_graph
+gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_experimental_complexity.c -lm -o q1_experimental_complexity
+./q1_experimental_complexity
 ```
 
-`q1_graph` creates the temporary data, runs `q1_dictionary_operations.gp`, writes `q1_dictionary_operations.svg`, and removes the temporary .dat file after a successful plot.
+## Program 2 · Theoretical complexity plot
 
-<p align="center"><img src="../../assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
+**File:** `q1_plot_theoretical.c`
 
-## ✅ Final Observation
+It directly creates `q1_theoretical_complexity.svg`. The graph uses log-log axes so the logarithmic curve is not visually flattened beneath the linear curve.
 
-> **Dictionary design is a trade-off.** A representation that makes one operation cheap can make another expensive. Unsorted structures favor updates, sorted arrays favor search and ordered access, and doubly linked lists make pointer-based deletion and neighbor traversal especially efficient.
+```bash
+gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_plot_theoretical.c -lm -o q1_plot_theoretical
+./q1_plot_theoretical
+```
 
-<p align="center"><strong>Q1 · Complete</strong></p>
+<p align="center"><img src="q1_theoretical_complexity.svg" width="96%" alt="Q1 theoretical growth"></p>
+
+## Program 3 · Experimental data plot
+
+**File:** `q1_plot_experimental.c`
+
+This program reads the measured `q1_experimental_data.dat` produced by Program 1 and creates a **six-panel** SVG. Every panel corresponds to one representation and contains all seven measured operations. Log-log axes make the three signatures easy to tell apart:
+
+- flat trace → `O(1)`;
+- slowly rising trace → `O(log n)`;
+- diagonal linear-growth trace → `O(n)`.
+
+```bash
+gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_plot_experimental.c -lm -o q1_plot_experimental
+./q1_plot_experimental
+```
+
+<p align="center"><img src="q1_experimental_complexity.svg" width="100%" alt="Q1 experimental growth"></p>
+
+## What to submit / explain in viva
+
+The important experimental claim is not “the machine took X milliseconds.” Clock time depends on the CPU, compiler, caches, OS scheduler, and background tasks. **Operation count** is reproducible and its rate of increase is what asymptotic analysis predicts. The measured series therefore validates the order of growth directly.

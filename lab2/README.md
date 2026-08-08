@@ -1,155 +1,114 @@
 <p align="center">
-  <img src="assets/lab2-banner.svg" alt="DAA Lab 02" width="100%">
+  <img src="assets/lab2_banner.gif" alt="DAA Lab 02 animated banner" width="100%">
 </p>
 
 <p align="center">
-  <img alt="Questions" src="https://img.shields.io/badge/QUESTIONS-3-22D3EE?style=for-the-badge">
-  <img alt="C Programs" src="https://img.shields.io/badge/C%20FILES-6-A78BFA?style=for-the-badge&logo=c&logoColor=white">
-  <img alt="Graphs" src="https://img.shields.io/badge/SVG%20GRAPHS-3-FB7185?style=for-the-badge">
-  <img alt="Status" src="https://img.shields.io/badge/STATUS-COMPLETE-22C55E?style=for-the-badge">
+  <img alt="Language" src="https://img.shields.io/badge/LANGUAGE-C17-00599C?style=for-the-badge&logo=c&logoColor=white">
+  <img alt="Questions" src="https://img.shields.io/badge/QUESTIONS-3-7C3AED?style=for-the-badge">
+  <img alt="Experiments" src="https://img.shields.io/badge/EXPERIMENTS-DETERMINISTIC-22C55E?style=for-the-badge">
+  <img alt="Visuals" src="https://img.shields.io/badge/VISUALS-SVG%20%2B%20GIF-F97316?style=for-the-badge">
+  <img alt="Status" src="https://img.shields.io/badge/STATUS-READY-06B6D4?style=for-the-badge">
 </p>
+
+<h1 align="center">DAA Laboratory · Lab 02</h1>
+<p align="center"><strong>Dictionary operations · 2-way vs 3-way merge sort · merging k sorted arrays</strong></p>
+<p align="center">Student: <strong>Satyam Dhal</strong> · Instructor: <strong>Dr. Ajaya Kumar Dash</strong> · 04 August 2026</p>
+
+<p align="center"><img src="assets/animated_divider.gif" width="100%" alt="animated divider"></p>
+
+<p align="center"><strong><a href="../README.md">← Main repository</a></strong> · <a href="Problem-Sheet-Lab-02.pdf">Original problem sheet</a></p>
+
+## Laboratory dashboard
+
+| Question | What the code actually does | Required result |
+|---|---|---|
+| **[Q1 · Dictionary Operations](Q-1/README.md)** | Implements instrumented worst-case operations over six representations, infers growth classes experimentally, then produces separate theoretical and experimental SVG plots | Experimental table agrees with `O(1)`, `O(log n)`, `O(n)` theory |
+| **[Q2 · Merge Sort vs Modified Merge Sort](Q-2/README.md)** | Lets you enter an array and choose 2-way or 3-way merge sort; separate programs plot theoretical and measured growth | Both are `Θ(n log n)` |
+| **[Q3 · Merging k Sorted Arrays](Q-3/README.md)** | Lets you enter k sorted arrays and choose sequential or balanced merging; measures both and provides two detailed animations | Sequential `Θ(nk²)` vs balanced `Θ(nk log k)` |
 
 <p align="center">
-  <strong>Dictionary representations · merge-sort recursion · balanced multiway merging</strong>
+  <img src="assets/pipeline.gif" width="100%" alt="animated reproducible pipeline">
 </p>
 
-<p align="center">04 August 2026 · Instructor: Dr. Ajaya Kumar Dash · Student: Satyam Dhal</p>
+## What is different in this rebuild
 
-<p align="center">
-  <a href="Q-1/README.md">Q1 · Dictionary Operations</a> ·
-  <a href="Q-2/README.md">Q2 · Merge Sort</a> ·
-  <a href="Q-3/README.md">Q3 · Merging k Arrays</a> ·
-  <a href="Problem-Sheet-Lab-02.pdf">Problem Sheet</a>
-</p>
+This version separates **algorithm**, **experiment**, and **visualization** instead of printing a pre-filled complexity table and calling that validation.
 
-<p align="center"><img src="../assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
+- Q1 measures dominant operation counts over **96 input sizes from 64 through 65,536**, fits the measurements against `1`, `log₂ n`, and `n`, and prints the experimentally inferred complexity of all **42 operation/representation combinations**.
+- Q1 has one C program for the experiment, one C program for the theoretical plot, and one C program that reads the measured `.dat` file and plots the experimental data.
+- Q2 has a clean interactive sorter plus two independent plot programs. Its experimental plot uses **80 deterministic random arrays from n = 2,000 through 160,000** and verifies every sorted result before accepting a data point.
+- Q3 has no graph, exactly as requested. Instead, it includes two looping GIF animations that walk through the same `k = 8`, `n = 4` example merge-by-merge and keep comparison/write counters visible.
 
-## 🌌 Lab 02 Dashboard
+<p align="center"><img src="assets/animated_divider.gif" width="100%" alt="animated divider"></p>
 
-| Question | What Is Analyzed? | Final Worst-Case Result |
-|:--:|---|---|
-| **[Q1](Q-1/README.md)** | Search, insert, delete, maximum, minimum, predecessor, and successor across six dictionary representations | **O(1)** · **O(log n)** · **O(n)** trade-offs |
-| **[Q2](Q-2/README.md)** | Standard 2-way merge sort against modified 3-way merge sort | Both **Θ(n log n)** |
-| **[Q3](Q-3/README.md)** | Sequential merging against balanced pairwise merging for k sorted arrays of n elements each | **Θ(nk²)** versus **Θ(nk log k)** |
+## Repository map
 
-## 🧬 The Lab 02 File Rule
-
-Every question contains exactly **two C programs**.
-
-<table>
-<tr>
-<td width="50%" valign="top">
-<h3>🧠 Program 1 · Answer</h3>
-<p>Contains the actual algorithm or complexity answer requested by the question.</p>
-<p>Its terminal output presents the derivation, result, verification, and observations cleanly.</p>
-</td>
-<td width="50%" valign="top">
-<h3>📈 Program 2 · Graph</h3>
-<p>Runs the experiment, writes temporary graph data, invokes GNUPlot, creates the SVG, and removes the temporary data after success.</p>
-<p>All file-writing logic stays here — never in the clean answer program.</p>
-</td>
-</tr>
-</table>
-
-Alongside those two C files, each question keeps one separate **GNUPlot .gp file** and the finished **SVG graph**.
-
-> **Nothing else is required to understand or regenerate a Lab 02 result.** No helper headers, no duplicate algorithm libraries, no platform-specific build scripts, and no committed .dat files.
-
-<p align="center">
-  <img src="../assets/pipeline.svg" alt="Experimental workflow" width="100%">
-</p>
-
-## ⚡ Generate Any Graph
-
-GNUPlot must be installed and available through the command `gnuplot`. Then enter the question folder and run only these two commands.
-
-### Q1 · Dictionary Operations
-
-```bash
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_graph.c -o q1_graph
-./q1_graph
+```text
+DAA-Lab/
+└── lab2/
+    ├── README.md
+    ├── Problem-Sheet-Lab-02.pdf
+    ├── assets/
+    │   ├── lab2_banner.gif
+    │   ├── animated_divider.gif
+    │   └── pipeline.gif
+    │
+    ├── Q-1/
+    │   ├── README.md
+    │   ├── q1_experimental_complexity.c
+    │   ├── q1_plot_theoretical.c
+    │   ├── q1_plot_experimental.c
+    │   ├── q1_experimental_data.dat
+    │   ├── q1_theoretical_complexity.svg
+    │   ├── q1_experimental_complexity.svg
+    │   └── q1_sample_output.txt
+    │
+    ├── Q-2/
+    │   ├── README.md
+    │   ├── q2_merge_sort_interactive.c
+    │   ├── q2_plot_theoretical.c
+    │   ├── q2_plot_experimental.c
+    │   ├── q2_experimental_data.dat
+    │   ├── q2_theoretical_complexity.svg
+    │   ├── q2_experimental_complexity.svg
+    │   └── q2_sample_output.txt
+    │
+    └── Q-3/
+        ├── README.md
+        ├── q3_merge_k_arrays.c
+        ├── q3_method1_sequential.gif
+        ├── q3_method2_balanced.gif
+        └── q3_sample_output.txt
 ```
 
-### Q2 · Merge Sort Comparison
+## Run from the repository sequence
+
+Every program is standalone C17. No GNUPlot, Python, JavaScript, helper library, or platform-specific build system is required to regenerate the plots. The C plotting programs write SVG directly.
+
+From the repository root, for example:
 
 ```bash
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q2_graph.c -o q2_graph
-./q2_graph
+cd lab2/Q-1
+gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_experimental_complexity.c -lm -o q1_experimental_complexity
+./q1_experimental_complexity
+
+gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_plot_experimental.c -lm -o q1_plot_experimental
+./q1_plot_experimental
 ```
 
-### Q3 · Merging k Sorted Arrays
+The committed `.dat`, `.svg`, `.gif`, and sample-output files are already present so the repository is readable immediately after upload.
 
-```bash
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q3_graph.c -o q3_graph
-./q3_graph
-```
+<p align="center"><img src="assets/animated_divider.gif" width="100%" alt="animated divider"></p>
 
-Each graph program follows the same sequence:
+## Final conclusions
 
-**measure → verify → create temporary .dat → call GNUPlot → create .svg → remove temporary .dat**
+| Topic | Conclusion |
+|---|---|
+| Dictionary representations | No representation dominates every operation; ordering and link direction trade query speed against update cost. |
+| 2-way vs 3-way merge sort | Recursion depth changes, but both perform linear merging work per level and therefore remain `Θ(n log n)`. |
+| Merging k arrays | Repeatedly merging into one growing accumulator costs `Θ(nk²)`; balancing the merge tree reduces it to `Θ(nk log k)`. |
 
-No separate regeneration script is needed.
+<p align="center"><strong>Built so that every asymptotic claim has a reproducible experiment or a step-by-step validation beside it.</strong></p>
 
-<p align="center"><img src="../assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
 
-## 🎨 Final Visualizations
-
-### Q1 · Dictionary Operation Growth
-
-<p align="center">
-  <a href="Q-1/README.md"><img src="Q-1/q1_dictionary_operations.svg" alt="Q1 graph" width="94%"></a>
-</p>
-
-### Q2 · 2-Way vs 3-Way Merge Sort
-
-<p align="center">
-  <a href="Q-2/README.md"><img src="Q-2/q2_merge_sort_comparison.svg" alt="Q2 graph" width="94%"></a>
-</p>
-
-### Q3 · Sequential vs Balanced Merging
-
-<p align="center">
-  <a href="Q-3/README.md"><img src="Q-3/q3_merge_k_sorted_arrays.svg" alt="Q3 graph" width="94%"></a>
-</p>
-
-<p align="center"><img src="../assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
-
-## 🧠 Core Conclusions
-
-<table>
-<tr>
-<td width="33%" valign="top">
-<h3 align="center">Q1</h3>
-<p align="center"><strong>Representation creates trade-offs.</strong></p>
-<p>Unsorted structures favor cheap updates. Sorted arrays favor search and ordered access. Link direction determines whether a known node and its predecessor can be reached immediately.</p>
-</td>
-<td width="33%" valign="top">
-<h3 align="center">Q2</h3>
-<p align="center"><strong>More branches do not change the class.</strong></p>
-<p>Both recursion trees perform linear merging work per level. The depth changes from logarithm base 2 to logarithm base 3, but both remain Θ(n log n).</p>
-</td>
-<td width="33%" valign="top">
-<h3 align="center">Q3</h3>
-<p align="center"><strong>Balance prevents repeated large merges.</strong></p>
-<p>Sequential merging repeatedly reprocesses an increasingly large result, producing Θ(nk²). Balanced merging limits the process to Θ(log k) levels of Θ(nk) work.</p>
-</td>
-</tr>
-</table>
-
-## ✅ Submission Checklist
-
-- [x] All three questions answered.
-- [x] Exactly two C programs per question.
-- [x] Main answer programs contain no graph-data file writing.
-- [x] Graph programs verify algorithmic correctness before plotting.
-- [x] GNUPlot scripts are separate and readable.
-- [x] Finished SVG graphs are included.
-- [x] Temporary .dat files are not included.
-- [x] Mathematical notation uses readable symbols such as Θ, ², log₂, ⇒, and ⋯ where appropriate.
-- [x] All solution programs compile cleanly with `-Wall -Wextra -pedantic`.
-
-<p align="center">
-  <img src="../assets/footer-orbit.svg" alt="Algorithm analysis footer" width="100%">
-</p>
-
-<p align="center"><strong>Satyam Dhal · DAA Laboratory · Lab 02</strong></p>
+<p align="center"><strong><a href="../README.md">← Back to the DAA Laboratory repository</a></strong></p>

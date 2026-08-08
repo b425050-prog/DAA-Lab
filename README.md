@@ -3,164 +3,205 @@
 </p>
 
 <p align="center">
-  <a href="lab1/README.md"><img alt="Lab 01" src="https://img.shields.io/badge/LAB%2001-COMPLETE-22C55E?style=for-the-badge"></a>
-  <a href="lab2/README.md"><img alt="Lab 02" src="https://img.shields.io/badge/LAB%2002-COMPLETE-22D3EE?style=for-the-badge"></a>
-  <img alt="Language" src="https://img.shields.io/badge/C-C17-A78BFA?style=for-the-badge&logo=c&logoColor=white">
-  <img alt="Visualization" src="https://img.shields.io/badge/PLOTS-GNUPLOT-FB7185?style=for-the-badge">
+  <img alt="Language" src="https://img.shields.io/badge/LANGUAGE-C17-00599C?style=for-the-badge&logo=c&logoColor=white">
+  <img alt="Labs" src="https://img.shields.io/badge/LABS-02-7C3AED?style=for-the-badge">
+  <img alt="Questions" src="https://img.shields.io/badge/QUESTIONS-09-0EA5E9?style=for-the-badge">
+  <img alt="Analysis" src="https://img.shields.io/badge/ANALYSIS-THEORY%20%2B%20EXPERIMENT-22C55E?style=for-the-badge">
+  <img alt="Status" src="https://img.shields.io/badge/STATUS-UP%20TO%20DATE-F97316?style=for-the-badge">
 </p>
+
+<h1 align="center">Design and Analysis of Algorithms Laboratory</h1>
+<p align="center"><strong>Algorithms · experiments · asymptotic analysis · reproducible visualizations</strong></p>
+<p align="center">B425050 · Computer Science and Engineering · IIIT Bhubaneswar</p>
 
 <p align="center">
-  <strong>Implement the algorithm. Verify the result. Measure the work. Visualize the growth.</strong>
+  <img src="assets/animated-divider.svg" alt="animated divider" width="100%">
 </p>
 
-<p align="center">
-  <a href="#-laboratory-index">Laboratory Index</a> ·
-  <a href="#-lab-02-spotlight">Lab 02 Spotlight</a> ·
-  <a href="#-experimental-workflow">Workflow</a> ·
-  <a href="#-repository-design">Repository Design</a>
-</p>
-
-<p align="center"><img src="assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
-
-## 👨‍💻 Student & Course
-
-<table>
-<tr><td><strong>Student</strong></td><td><strong>Satyam Dhal</strong></td></tr>
-<tr><td><strong>Student ID</strong></td><td>B425050</td></tr>
-<tr><td><strong>Branch</strong></td><td>Computer Science and Engineering</td></tr>
-<tr><td><strong>Institute</strong></td><td>International Institute of Information Technology, Bhubaneswar</td></tr>
-<tr><td><strong>Course</strong></td><td>Design and Analysis of Algorithms Laboratory</td></tr>
-<tr><td><strong>Instructor</strong></td><td>Dr. Ajaya Kumar Dash</td></tr>
-<tr><td><strong>Semester</strong></td><td>3rd Semester</td></tr>
-</table>
-
-<p align="center"><img src="assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
-
-## 🧭 Laboratory Index
-
-| Laboratory | Date | Core Ideas | Status |
-|:--:|:--:|---|:--:|
-| **[Lab 01](lab1/README.md)** | 28 July 2026 | Growth-rate comparison · probability simulation · bubble-sort analysis · Towers of Hanoi · binary search · uniqueness | ✅ Complete |
-| **[Lab 02](lab2/README.md)** | 04 August 2026 | Dictionary ADT · 2-way and 3-way merge sort · merging k sorted arrays | ✅ Complete |
-
-> Every laboratory is organized as a readable record of the algorithm, its analysis, the observed result, and the final visualization.
-
-## ✨ Lab 02 Spotlight
-
-<p align="center">
-  <img src="assets/lab2-showcase.svg" alt="Lab 02 animated showcase" width="100%">
-</p>
-
-| Question | Main Result | Visual Evidence |
-|:--:|---|---|
-| **[Q1 · Dictionary Operations](lab2/Q-1/README.md)** | Six representations produce trade-offs among **O(1)**, **O(log n)**, and **O(n)** operations. | Six-panel growth comparison |
-| **[Q2 · Merge Sort](lab2/Q-2/README.md)** | 2-way: **T₂(n) = 2T₂(n/2) + Θ(n)** · 3-way: **T₃(n) = 3T₃(n/3) + Θ(n)** · both are **Θ(n log n)**. | Measured work and normalized growth |
-| **[Q3 · Merging k Arrays](lab2/Q-3/README.md)** | Sequential merging is **Θ(nk²)**; balanced pairwise merging is **Θ(nk log k)**. | Growth in k and growth in n |
-
-<p align="center"><img src="assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
-
-## 🔬 Experimental Workflow
-
-<p align="center">
-  <img src="assets/pipeline.svg" alt="Solve verify measure plot explain" width="100%">
-</p>
-
-For **Lab 02**, every question follows one deliberately simple contract:
+## Repository dashboard
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<h3>① Solution program</h3>
-<p>The first C file contains the actual algorithmic answer. It prints the result, analysis, verification, and observations requested by the question.</p>
+
+### Lab 01 · Foundations
+
+Six experiments covering growth rates, probability simulation, sorting analysis, recursion, binary search, and uniqueness.
+
+**[Open Lab 01 →](lab1/README.md)**
+
 </td>
 <td width="50%" valign="top">
-<h3>② Graph program</h3>
-<p>The second C file performs the experiment, creates temporary data, invokes the question's GNUPlot script, generates the SVG, and removes the temporary data after a successful plot.</p>
+
+### Lab 02 · Structural Trade-offs
+
+Dictionary representations, 2-way vs 3-way merge sort, and two strategies for merging `k` sorted arrays — with theoretical and experimental validation.
+
+**[Open Lab 02 →](lab2/README.md)**
+
 </td>
 </tr>
 </table>
 
-The graph description remains in a separate **.gp** file so the visualization is readable and editable without polluting the main solution program.
+<p align="center">
+  <a href="lab2/README.md"><img src="lab2/assets/lab2_banner.gif" alt="Lab 02 animated showcase" width="96%"></a>
+</p>
 
-### Lab 02 file contract
+## Student and course details
 
-| Artifact | Purpose |
+| Field | Information |
 |---|---|
-| Solution `.c` file | Clean solution and required terminal output |
-| Graph `.c` file | Measurement, temporary data generation, and graph launch |
-| GNUPlot `.gp` file | GNUPlot styling and plotting instructions |
-| SVG graph | Final vector visualization |
+| **Student** | Satyam Dhal |
+| **Student ID** | B425050 |
+| **Branch** | Computer Science and Engineering |
+| **Institute** | International Institute of Information Technology, Bhubaneswar |
+| **Course** | Design and Analysis of Algorithms Laboratory |
+| **Instructor** | Dr. Ajaya Kumar Dash |
+| **Semester** | 3rd Semester |
 
-No **.dat** file is committed. It exists only while a graph is being generated.
+<p align="center">
+  <img src="assets/animated-divider.svg" alt="animated divider" width="100%">
+</p>
 
-## 🗂️ Repository Design
+## Laboratory index
 
-| Path | Role |
+| Lab | Date | Questions | Core ideas | Status |
+|:---:|:---:|:---:|---|:---:|
+| **[Lab 01](lab1/README.md)** | 28 Jul 2026 | 6 | Growth functions, coin simulation, bubble-sort analysis, Towers of Hanoi, partition search, uniqueness | ✅ Complete |
+| **[Lab 02](lab2/README.md)** | 04 Aug 2026 | 3 | Dictionary ADT complexity, 2-way vs 3-way merge sort, merging `k` sorted arrays | ✅ Complete |
+
+## Repository structure
+
+```text
+DAA-Lab/
+│
+├── README.md                      ← course-wide dashboard
+├── .gitignore
+├── .gitattributes
+├── Makefile
+├── assets/                        ← repository-level visual assets
+├── scripts/                       ← Lab 01 build/regeneration helpers
+│
+├── lab1/
+│   ├── README.md
+│   ├── Problem-Sheet-Lab-01.pdf
+│   ├── Q-1/
+│   ├── Q-2/
+│   ├── Q-3/
+│   ├── Q-4/
+│   ├── Q-5/
+│   └── Q-6/
+│
+└── lab2/
+    ├── README.md
+    ├── Problem-Sheet-Lab-02.pdf
+    ├── assets/
+    │   ├── lab2_banner.gif
+    │   ├── animated_divider.gif
+    │   └── pipeline.gif
+    ├── Q-1/                       ← dictionary operations
+    ├── Q-2/                       ← 2-way vs 3-way merge sort
+    └── Q-3/                       ← merging k sorted arrays
+```
+
+<p align="center">
+  <img src="lab2/assets/pipeline.gif" alt="experimental workflow" width="96%">
+</p>
+
+## Lab 01 at a glance
+
+| Question | Main result |
 |---|---|
-| `README.md` | Main navigation and course dashboard |
-| `assets/` | Animated repository artwork and workflow graphics |
-| `lab1/` | Laboratory 01 |
-| `lab2/` | Laboratory 02 |
-| `lab2/Q-1/` | Dictionary-operation complexity study |
-| `lab2/Q-2/` | 2-way versus 3-way merge-sort study |
-| `lab2/Q-3/` | Sequential versus balanced multi-array merging |
+| **[Q-1](lab1/Q-1/README.md)** | Functions ordered by increasing asymptotic growth |
+| **[Q-2](lab1/Q-2/README.md)** | Fair-coin probability approaches `0.5`; biased coin approaches its selected bias |
+| **[Q-3](lab1/Q-3/README.md)** | Early-exit and fixed-pass bubble sort are compared experimentally |
+| **[Q-4](lab1/Q-4/README.md)** | Towers of Hanoi uses `2ⁿ − 1` moves and exhibits exponential growth |
+| **[Q-5](lab1/Q-5/README.md)** | The `0 → 1` transition point is found with binary search |
+| **[Q-6](lab1/Q-6/README.md)** | Pairwise uniqueness checking has quadratic worst-case growth |
 
-Lab 01 retains its original implementation style. Lab 02 uses the cleaner **two-C-file** structure shown above.
+## Lab 02 at a glance
 
-## 🧠 What This Repository Optimizes For
+| Question | Implementation | Experimental / visual result | Final complexity |
+|---|---|---|---|
+| **[Q-1](lab2/Q-1/README.md)** | Seven dictionary operations across six representations | 42 measured cases; separate theoretical + experimental SVGs | `O(1)`, `O(log n)`, `O(n)` trade-offs |
+| **[Q-2](lab2/Q-2/README.md)** | Interactive 2-way / 3-way merge-sort selector | 80 deterministic input sizes; separate theoretical + experimental SVGs | Both `Θ(n log n)` |
+| **[Q-3](lab2/Q-3/README.md)** | Interactive sequential / balanced `k`-array merger | Timings, counters, and two detailed step-by-step GIF animations | `Θ(nk²)` vs `Θ(nk log k)` |
+
+<p align="center">
+  <img src="assets/animated-divider.svg" alt="animated divider" width="100%">
+</p>
+
+## Reproducibility philosophy
+
+The repository deliberately keeps the **answer**, the **measurement**, and the **visual evidence** close to one another.
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<h3>🧩 Readability</h3>
-<p>The algorithm a teacher reads is not buried under plotting code or file-generation noise.</p>
+
+### Lab 01 workflow
+
+The original Lab 01 programs preserve the submission format already used there. Where a graph is required, the C program generates data and drives GNUPlot to produce the SVG deliverable.
+
 </td>
 <td width="50%" valign="top">
-<h3>✅ Verification</h3>
-<p>Sorting and merging experiments validate their output before accepting measurements.</p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<h3>📈 Reproducibility</h3>
-<p>Experiments use deterministic inputs or deterministic growth representatives wherever practical.</p>
-</td>
-<td width="50%" valign="top">
-<h3>🎨 Presentation</h3>
-<p>Plots are stored as SVG so curves, labels, symbols, and legends remain crisp at every zoom level.</p>
+
+### Lab 02 workflow
+
+Lab 02 separates responsibilities more aggressively. Interactive algorithm programs remain clean; experiment programs generate deterministic data; standalone C plotting programs create SVG directly; Q3 uses animations instead of graphs because the question asks for algorithmic validation rather than a plot.
+
 </td>
 </tr>
 </table>
+
+### Common standards
+
+- **C-first implementation:** the algorithms and experiments are implemented in C.
+- **Theory beside evidence:** asymptotic conclusions are accompanied by either measured growth or an explicit step-by-step validation.
+- **Deterministic experiments:** fixed data generation is used where reproducibility matters.
+- **Readable mathematical notation:** results use forms such as `Θ(n log n)`, `Θ(nk²)`, `Θ(nk log k)`, and `2ⁿ − 1` directly.
+- **Submission-ready artifacts:** generated `.dat`, `.svg`, `.gif`, and sample-output files are kept beside the source that produced or explains them.
+- **Question-wise navigation:** every laboratory and every question has its own README so the repository can be reviewed without hunting through source files.
+
+## Lab 02 verification highlights
+
+<p align="center">
+  <img alt="Q1" src="https://img.shields.io/badge/Q1-42%2F42%20THEORY%20MATCH-22C55E?style=for-the-badge">
+  <img alt="Q2" src="https://img.shields.io/badge/Q2-80%20INPUT%20SIZES-38BDF8?style=for-the-badge">
+  <img alt="Q3" src="https://img.shields.io/badge/Q3-2%20DETAILED%20ANIMATIONS-F97316?style=for-the-badge">
+</p>
+
+- **Dictionary operations:** the instrumented experiment classifies all 42 operation/representation combinations and reproduces the theoretical worst-case table.
+- **Merge-sort modification:** both recursion schemes remain `Θ(n log n)`; the experimental visualization also normalizes the measurements by `n log n` to expose the shared asymptotic class.
+- **Merging `k` sorted arrays:** sequential accumulation repeatedly reprocesses an increasingly large result, while balanced merging limits the work to logarithmically many merge levels.
 
 <details>
-<summary><strong>Why count algorithmic work instead of relying only on elapsed time?</strong></summary>
-<br>
-Wall-clock time changes with CPU scheduling, caching, background processes, compiler behavior, and thermal state. Operation counts expose the algorithm's growth much more cleanly, which makes them especially useful for validating asymptotic analysis.
+<summary><strong>Build examples</strong></summary>
+
+### Lab 01
+
+Use the existing root build/regeneration workflow documented in [Lab 01](lab1/README.md).
+
+### Lab 02 · Q1 example
+
+```bash
+cd lab2/Q-1
+gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_experimental_complexity.c -lm -o q1_experimental_complexity
+./q1_experimental_complexity
+
+gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_plot_experimental.c -lm -o q1_plot_experimental
+./q1_plot_experimental
+```
+
+Lab 02 does **not** require GNUPlot for its SVG generation.
+
 </details>
-
-<details>
-<summary><strong>Why SVG?</strong></summary>
-<br>
-SVG is vector-based. Titles, axes, curves, mathematical symbols, and annotations remain sharp in GitHub, browsers, reports, and presentations.
-</details>
-
-<p align="center"><img src="assets/animated-divider.svg" width="100%" alt="Animated divider"></p>
-
-## 🛠️ Core Toolchain
 
 <p align="center">
-  <img alt="C" src="https://img.shields.io/badge/C-17-00599C?style=flat-square&logo=c&logoColor=white">
-  <img alt="GCC" src="https://img.shields.io/badge/Compiler-GCC-4B8BBE?style=flat-square">
-  <img alt="GNUPlot" src="https://img.shields.io/badge/Visualization-GNUPlot-A78BFA?style=flat-square">
-  <img alt="SVG" src="https://img.shields.io/badge/Output-SVG-FB7185?style=flat-square&logo=svg&logoColor=white">
-  <img alt="GitHub" src="https://img.shields.io/badge/Version%20Control-GitHub-181717?style=flat-square&logo=github">
+  <img src="assets/footer-orbit.svg" alt="footer animation" width="100%">
 </p>
 
 <p align="center">
-  <img src="assets/footer-orbit.svg" alt="Algorithm analysis footer animation" width="100%">
-</p>
-
-<p align="center">
-  <strong>Satyam Dhal · B425050 · CSE · IIIT Bhubaneswar</strong><br>
-  <sub>Design · analyze · verify · visualize.</sub>
+  <strong>B425050 · CSE · IIIT Bhubaneswar</strong><br>
+  <sub>Design → implement → measure → visualize → conclude.</sub>
 </p>
