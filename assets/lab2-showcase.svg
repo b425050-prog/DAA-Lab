@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="320" viewBox="0 0 1400 320">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#07111f"><animate attributeName="stop-color" values="#07111f;#0b1530;#07111f" dur="7s" repeatCount="indefinite"/></stop>
+    <stop offset="55%" stop-color="#0d1830"><animate attributeName="stop-color" values="#0d1830;#111b39;#0d1830" dur="9s" repeatCount="indefinite"/></stop>
+    <stop offset="100%" stop-color="#07111f"/>
+  </linearGradient>
+  <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#fb7185"/>
+    <animate attributeName="x1" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="1;0;1" dur="6s" repeatCount="indefinite"/>
+  </linearGradient>
+  <radialGradient id="orb"><stop offset="0" stop-color="#67e8f9" stop-opacity=".95"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+<rect width="1400" height="320" rx="30" fill="url(#bg)"/>
+<g font-family="Segoe UI,Arial,sans-serif">
+<text x="700" y="52" text-anchor="middle" fill="#f8fafc" font-size="28" font-weight="800">LAB 02 · THREE QUESTIONS · THREE GROWTH STORIES</text>
+<g transform="translate(75 88)"><rect width="390" height="180" rx="24" fill="#0f1d30" stroke="#22d3ee" stroke-width="1.5"/><text x="28" y="42" fill="#67e8f9" font-size="18" font-weight="800">Q1 · DICTIONARY ADT</text><text x="28" y="73" fill="#cbd5e1" font-size="16">O(1) · O(log n) · O(n)</text><path d="M35 145 C95 142 140 139 195 118 S305 66 350 48" fill="none" stroke="#22d3ee" stroke-width="3" stroke-dasharray="9 8"><animate attributeName="stroke-dashoffset" from="0" to="-68" dur="2.8s" repeatCount="indefinite"/></path></g>
+<g transform="translate(505 88)"><rect width="390" height="180" rx="24" fill="#0f1d30" stroke="#a78bfa" stroke-width="1.5"/><text x="28" y="42" fill="#c4b5fd" font-size="18" font-weight="800">Q2 · MERGE SORT</text><text x="28" y="73" fill="#cbd5e1" font-size="16">2-way ↔ 3-way · both Θ(n log n)</text><path d="M55 145 C130 130 195 102 335 55" fill="none" stroke="#a78bfa" stroke-width="3"/><circle r="7" fill="#ddd6fe" filter="url(#glow)"><animateMotion dur="3.2s" repeatCount="indefinite" path="M55 145 C130 130 195 102 335 55"/></circle></g>
+<g transform="translate(935 88)"><rect width="390" height="180" rx="24" fill="#0f1d30" stroke="#fb7185" stroke-width="1.5"/><text x="28" y="42" fill="#fda4af" font-size="18" font-weight="800">Q3 · k-WAY MERGING</text><text x="28" y="73" fill="#cbd5e1" font-size="16">Θ(nk²) → Θ(nk log k)</text><path d="M45 145 C130 142 175 129 235 101 S305 63 345 48" fill="none" stroke="#fb7185" stroke-width="3"/><circle r="7" fill="#fecdd3" filter="url(#glow)"><animateMotion dur="3.5s" repeatCount="indefinite" path="M45 145 C130 142 175 129 235 101 S305 63 345 48"/></circle></g>
+</g></svg>

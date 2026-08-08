@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="220" viewBox="0 0 1400 220">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#07111f"><animate attributeName="stop-color" values="#07111f;#0b1530;#07111f" dur="7s" repeatCount="indefinite"/></stop>
+    <stop offset="55%" stop-color="#0d1830"><animate attributeName="stop-color" values="#0d1830;#111b39;#0d1830" dur="9s" repeatCount="indefinite"/></stop>
+    <stop offset="100%" stop-color="#07111f"/>
+  </linearGradient>
+  <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#fb7185"/>
+    <animate attributeName="x1" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="1;0;1" dur="6s" repeatCount="indefinite"/>
+  </linearGradient>
+  <radialGradient id="orb"><stop offset="0" stop-color="#67e8f9" stop-opacity=".95"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+</defs><rect width="1400" height="220" rx="30" fill="url(#bg)"/>
+<ellipse cx="700" cy="112" rx="370" ry="68" fill="none" stroke="#334155" stroke-width="2" transform="rotate(-5 700 112)"/>
+<ellipse id="orbit" cx="700" cy="112" rx="370" ry="68" fill="none" stroke="url(#neon)" stroke-width="2.2" stroke-dasharray="10 12"><animateTransform attributeName="transform" type="rotate" from="0 700 112" to="360 700 112" dur="24s" repeatCount="indefinite"/></ellipse>
+<circle cx="700" cy="112" r="58" fill="#0f1d30" stroke="url(#neon)" stroke-width="2"/><text x="700" y="106" text-anchor="middle" fill="#f8fafc" font-family="Segoe UI,Arial,sans-serif" font-weight="800" font-size="18">IMPLEMENT</text><text x="700" y="132" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI,Arial,sans-serif" font-size="14">ANALYZE · VERIFY</text>
+<circle cx="1070" cy="112" r="9" fill="#22d3ee" filter="url(#glow)"><animateTransform attributeName="transform" type="rotate" from="0 700 112" to="360 700 112" dur="8s" repeatCount="indefinite"/></circle>
+<text x="700" y="196" text-anchor="middle" fill="#64748b" font-family="Segoe UI,Arial,sans-serif" font-size="14" letter-spacing="3">DESIGN · ANALYSIS · EVIDENCE</text></svg>

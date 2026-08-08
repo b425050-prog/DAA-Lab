@@ -1,20 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="330" viewBox="0 0 1400 330" role="img" aria-label="Design and Analysis of Algorithms Laboratory">
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="430" viewBox="0 0 1400 430">
+
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071a2b"/><stop offset="0.5" stop-color="#0a3b5c"/><stop offset="1" stop-color="#075e54"/></linearGradient>
-  <radialGradient id="glow" cx="0.82" cy="0.18" r="0.7"><stop offset="0" stop-color="#32d5a4" stop-opacity="0.42"/><stop offset="1" stop-color="#32d5a4" stop-opacity="0"/></radialGradient>
-  <filter id="shadow"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-opacity="0.25"/></filter>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#07111f"><animate attributeName="stop-color" values="#07111f;#0b1530;#07111f" dur="7s" repeatCount="indefinite"/></stop>
+    <stop offset="55%" stop-color="#0d1830"><animate attributeName="stop-color" values="#0d1830;#111b39;#0d1830" dur="9s" repeatCount="indefinite"/></stop>
+    <stop offset="100%" stop-color="#07111f"/>
+  </linearGradient>
+  <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#fb7185"/>
+    <animate attributeName="x1" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="1;0;1" dur="6s" repeatCount="indefinite"/>
+  </linearGradient>
+  <radialGradient id="orb"><stop offset="0" stop-color="#67e8f9" stop-opacity=".95"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
 </defs>
-<rect width="1400" height="330" rx="28" fill="url(#bg)"/>
-<rect width="1400" height="330" rx="28" fill="url(#glow)"/>
-<g opacity="0.15" stroke="#d8fff4" fill="none">
-  <circle cx="1120" cy="170" r="112"/><circle cx="1120" cy="170" r="76"/><circle cx="1120" cy="170" r="40"/>
-  <path d="M930 68h330M930 116h330M930 164h330M930 212h330M930 260h330"/>
-  <path d="M976 36v260M1030 36v260M1084 36v260M1138 36v260M1192 36v260"/>
+<rect width="1400" height="430" rx="34" fill="url(#bg)"/>
+<circle cx="180" cy="70" r="110" fill="#22d3ee" opacity=".10" filter="url(#soft)"><animate attributeName="r" values="80;140;80" dur="6s" repeatCount="indefinite"/></circle>
+<circle cx="1180" cy="330" r="130" fill="#a78bfa" opacity=".12" filter="url(#soft)"><animate attributeName="r" values="140;90;140" dur="7s" repeatCount="indefinite"/></circle>
+<g opacity=".22" stroke="#334155" stroke-width="1">
+<path d="M0 55 H1400"/><path d="M0 110 H1400"/><path d="M0 165 H1400"/><path d="M0 220 H1400"/><path d="M0 275 H1400"/><path d="M0 330 H1400"/><path d="M0 385 H1400"/><path d="M70 0 V430"/><path d="M140 0 V430"/><path d="M210 0 V430"/><path d="M280 0 V430"/><path d="M350 0 V430"/><path d="M420 0 V430"/><path d="M490 0 V430"/><path d="M560 0 V430"/><path d="M630 0 V430"/><path d="M700 0 V430"/><path d="M770 0 V430"/><path d="M840 0 V430"/><path d="M910 0 V430"/><path d="M980 0 V430"/><path d="M1050 0 V430"/><path d="M1120 0 V430"/><path d="M1190 0 V430"/><path d="M1260 0 V430"/><path d="M1330 0 V430"/></g>
+<path id="curve" d="M70 342 C250 338 300 310 430 303 S650 270 760 230 S960 120 1335 72" fill="none" stroke="url(#neon)" stroke-width="5" stroke-linecap="round" filter="url(#glow)" stroke-dasharray="12 10">
+  <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="3.2s" repeatCount="indefinite"/>
+</path>
+<path d="M70 366 C260 362 440 357 620 334 S1010 265 1335 204" fill="none" stroke="#22d3ee" stroke-opacity=".45" stroke-width="2.5"/>
+<g filter="url(#glow)">
+  <circle r="8" fill="#67e8f9"><animateMotion dur="4.5s" repeatCount="indefinite"><mpath href="#curve"/></animateMotion></circle>
+  <circle r="6" fill="#c4b5fd"><animateMotion dur="4.5s" begin="-1.5s" repeatCount="indefinite"><mpath href="#curve"/></animateMotion></circle>
+  <circle r="5" fill="#fda4af"><animateMotion dur="4.5s" begin="-3s" repeatCount="indefinite"><mpath href="#curve"/></animateMotion></circle>
 </g>
-<g filter="url(#shadow)">
-  <text x="80" y="92" fill="#67f5c6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="4">IIIT BHUBANESWAR · CSE</text>
-  <text x="78" y="175" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="58" font-weight="800">Design &amp; Analysis of Algorithms</text>
-  <text x="80" y="230" fill="#d8fff4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="500">Laboratory Repository · B425050</text>
+<g font-family="Segoe UI,Arial,sans-serif" text-anchor="middle">
+  <text x="700" y="120" fill="#f8fafc" font-size="48" font-weight="800" letter-spacing="1">DESIGN &amp; ANALYSIS OF ALGORITHMS</text>
+  <text x="700" y="163" fill="#94a3b8" font-size="21" letter-spacing="5">LABORATORY · IIIT BHUBANESWAR</text>
+  <rect x="438" y="190" width="524" height="54" rx="27" fill="#0f1d30" stroke="url(#neon)" stroke-width="1.6"/>
+  <text x="700" y="225" fill="#e2e8f0" font-size="20" font-weight="700">Satyam Dhal · B425050 · CSE</text>
 </g>
-<g transform="translate(1240 244)"><rect x="-115" y="-30" width="230" height="60" rx="30" fill="#ffffff" opacity="0.94"/><text text-anchor="middle" y="9" fill="#075e54" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="800">LAB 01</text></g>
+<g font-family="Segoe UI,Arial,sans-serif" font-weight="700" font-size="16" text-anchor="middle">
+  <g transform="translate(160 300)"><circle r="43" fill="#0f1d30" stroke="#22d3ee" stroke-width="2"><animate attributeName="r" values="40;46;40" dur="2.6s" repeatCount="indefinite"/></circle><text y="6" fill="#67e8f9">SEARCH</text></g>
+  <g transform="translate(700 306)"><circle r="43" fill="#0f1d30" stroke="#a78bfa" stroke-width="2"><animate attributeName="r" values="46;40;46" dur="3.1s" repeatCount="indefinite"/></circle><text y="6" fill="#c4b5fd">SORT</text></g>
+  <g transform="translate(1240 270)"><circle r="43" fill="#0f1d30" stroke="#fb7185" stroke-width="2"><animate attributeName="r" values="40;46;40" dur="2.9s" repeatCount="indefinite"/></circle><text y="6" fill="#fda4af">MERGE</text></g>
+</g>
+<g fill="#e2e8f0" opacity=".65">
+<circle cx="80" cy="35" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="2.4s" begin="-0.0s" repeatCount="indefinite"/></circle><circle cx="195" cy="53" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="2.85s" begin="-0.2s" repeatCount="indefinite"/></circle><circle cx="310" cy="71" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="3.3s" begin="-0.4s" repeatCount="indefinite"/></circle><circle cx="425" cy="35" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="3.75s" begin="-0.6000000000000001s" repeatCount="indefinite"/></circle><circle cx="540" cy="53" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="4.2s" begin="-0.8s" repeatCount="indefinite"/></circle><circle cx="655" cy="71" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="2.4s" begin="-1.0s" repeatCount="indefinite"/></circle><circle cx="770" cy="35" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="2.85s" begin="-1.2000000000000002s" repeatCount="indefinite"/></circle><circle cx="885" cy="53" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="3.3s" begin="-1.4000000000000001s" repeatCount="indefinite"/></circle><circle cx="1000" cy="71" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="3.75s" begin="-1.6s" repeatCount="indefinite"/></circle><circle cx="1115" cy="35" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="4.2s" begin="-1.8s" repeatCount="indefinite"/></circle><circle cx="1230" cy="53" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="2.4s" begin="-2.0s" repeatCount="indefinite"/></circle><circle cx="1345" cy="71" r="2.2"><animate attributeName="opacity" values=".15;.9;.15" dur="2.85s" begin="-2.2s" repeatCount="indefinite"/></circle></g>
 </svg>
