@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="270" viewBox="0 0 1200 270">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#07111f"><animate attributeName="stop-color" values="#07111f;#0b1530;#07111f" dur="7s" repeatCount="indefinite"/></stop>
+    <stop offset="55%" stop-color="#0d1830"><animate attributeName="stop-color" values="#0d1830;#111b39;#0d1830" dur="9s" repeatCount="indefinite"/></stop>
+    <stop offset="100%" stop-color="#07111f"/>
+  </linearGradient>
+  <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#fb7185"/>
+    <animate attributeName="x1" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="1;0;1" dur="6s" repeatCount="indefinite"/>
+  </linearGradient>
+  <radialGradient id="orb"><stop offset="0" stop-color="#67e8f9" stop-opacity=".95"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+    <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+</defs><rect width="1200" height="270" rx="28" fill="url(#bg)"/><text x="600" y="54" text-anchor="middle" fill="#f8fafc" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="900">Q3 · MERGING k SORTED ARRAYS</text><text x="600" y="86" text-anchor="middle" fill="#94a3b8" font-family="Segoe UI,Arial,sans-serif" font-size="16" letter-spacing="3">SEQUENTIAL CHAIN vs BALANCED MERGE TREE</text>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="14" text-anchor="middle"><text x="300" y="118" fill="#fda4af" font-weight="800">SEQUENTIAL · Θ(nk²)</text><text x="900" y="118" fill="#67e8f9" font-weight="800">BALANCED · Θ(nk log k)</text></g>
+<path id="seq" d="M110 184 H195 H280 H365 H450" stroke="#fb7185" stroke-width="4" fill="none" stroke-dasharray="10 9"><animate attributeName="stroke-dashoffset" from="0" to="-76" dur="2.7s" repeatCount="indefinite"/></path>
+<g fill="#0f1d30" stroke="#fb7185"><rect x="90" y="165" width="40" height="38" rx="8"/><rect x="175" y="165" width="40" height="38" rx="8"/><rect x="260" y="165" width="40" height="38" rx="8"/><rect x="345" y="165" width="40" height="38" rx="8"/><rect x="430" y="165" width="40" height="38" rx="8"/></g>
+<g stroke="#22d3ee" stroke-width="3" fill="none"><path id="tree" d="M750 190 L830 235 M750 190 L670 235 M1050 190 L970 235 M1050 190 L1130 235 M900 150 L750 190 M900 150 L1050 190"/></g><g fill="#0f1d30" stroke="#22d3ee"><circle cx="900" cy="150" r="24"/><circle cx="750" cy="190" r="20"/><circle cx="1050" cy="190" r="20"/></g><circle r="6" fill="#67e8f9" filter="url(#glow)"><animateMotion dur="3.4s" repeatCount="indefinite" path="M670 235 L750 190 L900 150"/></circle><circle r="6" fill="#fda4af" filter="url(#glow)"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#seq"/></animateMotion></circle></svg>
