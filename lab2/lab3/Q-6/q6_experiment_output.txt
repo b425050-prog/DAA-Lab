@@ -1,0 +1,16 @@
+n       sorted cmp   reverse cmp  random cmp   exact       
+8       28           28           28           28          
+16      120          120          120          120         
+24      276          276          276          276         
+32      496          496          496          496         
+64      2016         2016         2016         2016        
+128     8128         8128         8128         8128        
+192     18336        18336        18336        18336       
+256     32640        32640        32640        32640       
+320     51040        51040        51040        51040       
+384     73536        73536        73536        73536       
+448     100128       100128       100128       100128      
+512     130816       130816       130816       130816      
+
+All three input orders perform exactly n(n-1)/2 comparisons.
+Best-case and worst-case running times are therefore both Theta(n^2).

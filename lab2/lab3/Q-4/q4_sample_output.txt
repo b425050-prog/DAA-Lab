@@ -1,0 +1,17 @@
+============================================================
+ DAA Lab 03 - Q4: Strassen Matrix Multiplication
+============================================================
+Enter matrix order n: Enter matrix A (2 x 2):
+Enter matrix B (2 x 2):
+
+A x B using Strassen:
+      19       22 
+      43       50 
+
+Padded order used          : 2
+Scalar multiplications     : 7
+Additions/subtractions     : 18
+Recursive calls            : 8
+Classical cross-check      : PASS
+Complexity                 : T(n)=7T(n/2)+Theta(n^2)=Theta(n^log2(7))
+Numerically log2(7) ~= 2.8074, better than classical Theta(n^3).

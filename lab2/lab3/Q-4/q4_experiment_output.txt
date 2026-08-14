@@ -1,0 +1,15 @@
+n        Strassen mult        Classical mult       speedup count
+1        1                    1                    1.0000      
+2        7                    8                    1.1429      
+4        49                   64                   1.3061      
+8        343                  512                  1.4927      
+16       2401                 4096                 1.7060      
+32       16807                32768                1.9497      
+64       117649               262144               2.2282      
+128      823543               2097152              2.5465      
+256      5764801              16777216             2.9103      
+512      40353607             134217728            3.3260      
+1024     282475249            1073741824           3.8012      
+
+At n=2^k, Strassen performs exactly 7^k = n^(log2 7) scalar multiplications.
+Data written to q4_experimental_data.dat
