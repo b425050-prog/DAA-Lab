@@ -1,36 +1,35 @@
-CC ?= gcc
-CFLAGS ?= -std=c11 -O2 -Wall -Wextra -pedantic
-LDFLAGS ?=
+CC := gcc
+CFLAGS := -std=c17 -O2 -Wall -Wextra -pedantic
+LDLIBS := -lm
+BIN := bin
 
-PROGRAMS = \
-	lab1/Q-1/q1_growth_order.exe \
-	lab1/Q-2/q2_coin_toss.exe \
-	lab1/Q-3/q3_bubble_sort.exe \
-	lab1/Q-4/q4_towers_of_hanoi.exe \
-	lab1/Q-5/q5_partition_point.exe \
-	lab1/Q-6/q6_element_uniqueness.exe
+SOURCES := \
+	Q-1/binary_ternary_search.c \
+	Q-1/binary_ternary_generate_data.c \
+	Q-2/defective_coin.c \
+	Q-2/defective_coin_generate_data.c \
+	Q-3/max_min_dc.c \
+	Q-3/max_min_generate_data.c \
+	Q-4/strassen.c \
+	Q-4/strassen_generate_data.c \
+	Q-5/special_matrix_dc.c \
+	Q-5/special_matrix_generate_data.c \
+	Q-6/selection_sort_invariant.c \
+	Q-6/selection_sort_generate_data.c
 
-all: $(PROGRAMS)
+TARGETS := $(patsubst %.c,$(BIN)/%,$(SOURCES))
 
-lab1/Q-1/q1_growth_order.exe: lab1/Q-1/q1_growth_order.c
-	$(CC) $(CFLAGS) $(LDFLAGS) $< -o $@ -lm
+.PHONY: all clean plots
 
-lab1/Q-2/q2_coin_toss.exe: lab1/Q-2/q2_coin_toss.c
-	$(CC) $(CFLAGS) $(LDFLAGS) $< -o $@ -lm
+all: $(TARGETS)
 
-lab1/Q-3/q3_bubble_sort.exe: lab1/Q-3/q3_bubble_sort.c
-	$(CC) $(CFLAGS) $(LDFLAGS) $< -o $@
+$(BIN)/%: %.c
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) $< $(LDLIBS) -o $@
 
-lab1/Q-4/q4_towers_of_hanoi.exe: lab1/Q-4/q4_towers_of_hanoi.c
-	$(CC) $(CFLAGS) $(LDFLAGS) $< -o $@
-
-lab1/Q-5/q5_partition_point.exe: lab1/Q-5/q5_partition_point.c
-	$(CC) $(CFLAGS) $(LDFLAGS) $< -o $@
-
-lab1/Q-6/q6_element_uniqueness.exe: lab1/Q-6/q6_element_uniqueness.c
-	$(CC) $(CFLAGS) $(LDFLAGS) $< -o $@
+plots:
+	./scripts/regenerate_all.sh
 
 clean:
-	rm -f $(PROGRAMS)
-
-.PHONY: all clean
+	rm -rf $(BIN)
+	find . -name '*.dat' -delete
