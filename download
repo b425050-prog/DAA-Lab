@@ -1,8 +1,0 @@
-# Reproducible experiment data
-*.dat
-
-# Local build products
-bin/
-*.exe
-*.o
-*.out
