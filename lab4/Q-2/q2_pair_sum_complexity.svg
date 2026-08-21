@@ -1,0 +1,51 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1280' height='760' viewBox='0 0 1280 760' role='img' aria-labelledby='title desc'>
+<title id='title'>Cross-Set Pair Sum</title><desc id='desc'>Worst-case comparison growth: sort S2, then binary-search one complement per S1 value</desc>
+<defs><linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop stop-color='#071426'/><stop offset='.48' stop-color='#111337'/><stop offset='1' stop-color='#230b2f'/></linearGradient><linearGradient id='lineA' x1='0' y1='0' x2='1' y2='0'><stop stop-color='#22d3ee'/><stop offset='1' stop-color='#a78bfa'/></linearGradient><filter id='glow' x='-50%' y='-50%' width='200%' height='200%'><feGaussianBlur stdDeviation='5' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter><pattern id='dots' width='28' height='28' patternUnits='userSpaceOnUse'><circle cx='2' cy='2' r='1' fill='#94a3b8' opacity='.11'/></pattern></defs>
+<rect width='1280' height='760' rx='30' fill='url(#bg)'/><rect width='1280' height='760' rx='30' fill='url(#dots)'/><circle cx='1110' cy='72' r='118' fill='#22d3ee' opacity='.09'/><circle cx='1155' cy='28' r='58' fill='#a78bfa' opacity='.12'/><text x='64' y='66' fill='#f8fafc' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='31' font-weight='800'>Cross-Set Pair Sum</text><text x='66' y='101' fill='#b8c4db' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='17'>Worst-case comparison growth: sort S2, then binary-search one complement per S1 value</text><rect x='955' y='54' width='263' height='50' rx='25' fill='#0b1227' stroke='#22d3ee' stroke-width='2'/><text x='1086.5' y='86' fill='#a78bfa' font-family='ui-monospace,SFMono-Regular,Consolas,monospace' font-size='18' font-weight='700' text-anchor='middle'>O(n log n)</text>
+<rect x='76' y='138' width='1148' height='516' rx='18' fill='#050b18' opacity='.66' stroke='#334155'/>
+<line x1='112.00' y1='166' x2='112.00' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='246.50' y1='166' x2='246.50' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='381.00' y1='166' x2='381.00' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='515.50' y1='166' x2='515.50' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='650.00' y1='166' x2='650.00' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='784.50' y1='166' x2='784.50' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='919.00' y1='166' x2='919.00' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='1053.50' y1='166' x2='1053.50' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='1188.00' y1='166' x2='1188.00' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='626.00' x2='1188' y2='626.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='534.00' x2='1188' y2='534.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='442.00' x2='1188' y2='442.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='350.00' x2='1188' y2='350.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='258.00' x2='1188' y2='258.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='166.00' x2='1188' y2='166.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='626' x2='1188' y2='626' stroke='#cbd5e1' stroke-width='1.5' opacity='.75'/><line x1='112' y1='166' x2='112' y2='626' stroke='#cbd5e1' stroke-width='1.5' opacity='.75'/>
+<polyline fill='none' stroke='#94a3b8' stroke-width='3' stroke-dasharray='10 8' points='112.00,605.25 246.50,555.77 381.00,507.23 515.50,459.43 650.00,412.24 784.50,365.54 919.00,319.26 1053.50,273.33 1188.00,227.71 '/>
+<polyline fill='none' stroke='url(#lineA)' stroke-width='6' stroke-linejoin='round' filter='url(#glow)' points='112.00,564.81 246.50,515.15 381.00,466.59 515.50,418.67 650.00,371.48 784.50,324.67 919.00,278.36 1053.50,232.41 1188.00,186.75 '/>
+<circle cx='112.00' cy='564.81' r='5.0' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='112.00' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>128</text>
+<circle cx='246.50' cy='515.15' r='5.0' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='246.50' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>256</text>
+<circle cx='381.00' cy='466.59' r='5.0' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='381.00' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>512</text>
+<circle cx='515.50' cy='418.67' r='5.0' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='515.50' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>1024</text>
+<circle cx='650.00' cy='371.48' r='5.0' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='650.00' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>2048</text>
+<circle cx='784.50' cy='324.67' r='5.0' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='784.50' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>4096</text>
+<circle cx='919.00' cy='278.36' r='5.0' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='919.00' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>8192</text>
+<circle cx='1053.50' cy='232.41' r='5.0' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='1053.50' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>16384</text>
+<circle cx='1188.00' cy='186.75' r='5.0' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='1188.00' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>32768</text>
+<text x='98.00' y='631.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^9.3</text>
+<text x='98.00' y='516.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^12.1</text>
+<text x='98.00' y='401.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^14.9</text>
+<text x='98.00' y='286.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^17.6</text>
+<text x='98.00' y='171.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^20.4</text>
+<line x1='160.00' y1='194.00' x2='202.00' y2='194.00' stroke='#22d3ee' stroke-width='5' stroke-linecap='round'/><circle cx='181.00' cy='194.00' r='5' fill='#22d3ee'/><text x='213.00' y='199.00' fill='#e2e8f0' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='15'>Measured total comparisons</text>
+<line x1='470.00' y1='194.00' x2='512.00' y2='194.00' stroke='#94a3b8' stroke-width='5' stroke-linecap='round'/><circle cx='491.00' cy='194.00' r='5' fill='#94a3b8'/><text x='523.00' y='199.00' fill='#e2e8f0' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='15'>Reference n log2(n)</text>
+<text x='650.00' y='685.00' fill='#cbd5e1' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='16' text-anchor='middle'>Set size n (log2-spaced)</text>
+<text x='35' y='396' fill='#cbd5e1' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='16' text-anchor='middle' transform='rotate(-90 35 396)'>Comparisons (log2 scale)</text>
+<line x1='64' y1='714' x2='1216' y2='714' stroke='#334155'/><text x='640' y='741' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='14' text-anchor='middle'>Merge sort gives a worst-case guarantee; each of n complements costs at most logarithmic search.</text></svg>

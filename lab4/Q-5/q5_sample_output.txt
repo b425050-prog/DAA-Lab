@@ -1,0 +1,12 @@
+============================================================
+ DAA Lab 04 - Q5: Merge Overlapping Intervals
+============================================================
+Enter number of intervals: Enter each closed interval as: <left> <right>
+
+Sorted intervals : {(1, 3), (2, 6), (7, 18), (8, 10)}
+Merged intervals : {(1, 6), (7, 18)}
+Output size      : 2
+Sort comparisons : 4
+Linear scan tests: 3
+Validation       : PASS
+Complexity       : O(n log n) time, O(n) auxiliary space

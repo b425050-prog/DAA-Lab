@@ -1,0 +1,22 @@
+============================================================
+ DAA Lab 04 - Q6: Point of Maximum Interval Overlap
+============================================================
+Enter number of closed intervals: Enter each interval as: <left> <right> (left <= right)
+
+Grouped endpoint sweep:
+coordinate   starts   ends     at point    
+10           1        0        1           
+15           1        0        2           
+20           1        0        3           
+40           0        1        3           
+50           1        0        3           
+60           0        1        3           
+70           0        1        2           
+90           0        1        1           
+
+Earliest maximizing point : p = 20
+Intervals containing p    : I1=(10,40), I2=(20,60), I4=(15,70)
+Maximum overlap            : 3 intervals
+Direct containment check   : PASS
+Tie rule                   : START -> measure -> END
+Complexity                 : O(n log n) time, O(n) space

@@ -1,0 +1,25 @@
+n     k   sort cmp    prefixes      binary cmp    total         check   
+16    2   47          15            49            96            PASS    
+24    2   82          23            89            171           PASS    
+32    2   121         31            129           250           PASS    
+48    2   214         47            225           439           PASS    
+64    2   308         63            321           629           PASS    
+96    2   508         95            545           1053          PASS    
+128   2   726         127           769           1495          PASS    
+16    3   47          105           290           337           PASS    
+24    3   82          253           822           904           PASS    
+32    3   120         465           1674          1794          PASS    
+48    3   210         1081          4458          4668          PASS    
+64    3   300         1953          8778          9078          PASS    
+96    3   510         4465          22522         23032         PASS    
+128   3   738         8001          43434         44172         PASS    
+16    4   45          455           1095          1140          PASS    
+24    4   81          1771          5067          5148          PASS    
+32    4   123         4495          14415         14538         PASS    
+48    4   213         16215         60039         60252         PASS    
+64    4   298         39711         161727        162025        PASS    
+96    4   517         138415        636559        637076        PASS    
+128   4   737         333375        1662303       1663040       PASS    
+
+All impossible-target runs exhausted every (k-1)-prefix.
+Data written to q3_experimental_data.dat

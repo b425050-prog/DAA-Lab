@@ -1,0 +1,54 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1280' height='760' viewBox='0 0 1280 760' role='img' aria-labelledby='title desc'>
+<title id='title'>Peak Party Attendance Sweep</title><desc id='desc'>Two events per person; sorting dominates one linear chronological scan</desc>
+<defs><linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop stop-color='#071426'/><stop offset='.48' stop-color='#111337'/><stop offset='1' stop-color='#230b2f'/></linearGradient><linearGradient id='lineA' x1='0' y1='0' x2='1' y2='0'><stop stop-color='#34d399'/><stop offset='1' stop-color='#22d3ee'/></linearGradient><filter id='glow' x='-50%' y='-50%' width='200%' height='200%'><feGaussianBlur stdDeviation='5' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter><pattern id='dots' width='28' height='28' patternUnits='userSpaceOnUse'><circle cx='2' cy='2' r='1' fill='#94a3b8' opacity='.11'/></pattern></defs>
+<rect width='1280' height='760' rx='30' fill='url(#bg)'/><rect width='1280' height='760' rx='30' fill='url(#dots)'/><circle cx='1110' cy='72' r='118' fill='#34d399' opacity='.09'/><circle cx='1155' cy='28' r='58' fill='#22d3ee' opacity='.12'/><text x='64' y='66' fill='#f8fafc' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='31' font-weight='800'>Peak Party Attendance Sweep</text><text x='66' y='101' fill='#b8c4db' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='17'>Two events per person; sorting dominates one linear chronological scan</text><rect x='955' y='54' width='263' height='50' rx='25' fill='#0b1227' stroke='#34d399' stroke-width='2'/><text x='1086.5' y='86' fill='#22d3ee' font-family='ui-monospace,SFMono-Regular,Consolas,monospace' font-size='18' font-weight='700' text-anchor='middle'>O(n log n)</text>
+<rect x='76' y='138' width='1148' height='516' rx='18' fill='#050b18' opacity='.66' stroke='#334155'/>
+<line x1='112.00' y1='166' x2='112.00' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='231.56' y1='166' x2='231.56' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='351.11' y1='166' x2='351.11' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='470.67' y1='166' x2='470.67' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='590.22' y1='166' x2='590.22' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='709.78' y1='166' x2='709.78' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='829.33' y1='166' x2='829.33' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='948.89' y1='166' x2='948.89' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='1068.44' y1='166' x2='1068.44' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='1188.00' y1='166' x2='1188.00' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='626.00' x2='1188' y2='626.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='534.00' x2='1188' y2='534.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='442.00' x2='1188' y2='442.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='350.00' x2='1188' y2='350.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='258.00' x2='1188' y2='258.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='166.00' x2='1188' y2='166.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='626' x2='1188' y2='626' stroke='#cbd5e1' stroke-width='1.5' opacity='.75'/><line x1='112' y1='166' x2='112' y2='626' stroke='#cbd5e1' stroke-width='1.5' opacity='.75'/>
+<polyline fill='none' stroke='#94a3b8' stroke-width='3' stroke-dasharray='10 8' points='112.00,605.42 231.56,557.27 351.11,509.85 470.67,463.03 590.22,416.71 709.78,370.80 829.33,325.24 948.89,279.98 1068.44,234.99 1188.00,190.23 '/>
+<polyline fill='none' stroke='url(#lineA)' stroke-width='6' stroke-linejoin='round' filter='url(#glow)' points='112.00,606.41 231.56,558.09 351.11,510.71 470.67,463.79 590.22,417.39 709.78,371.35 829.33,325.79 948.89,280.49 1068.44,235.47 1188.00,190.70 '/>
+<circle cx='112.00' cy='606.41' r='5.0' fill='#34d399' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='112.00' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>128</text>
+<circle cx='231.56' cy='558.09' r='5.0' fill='#34d399' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='231.56' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>256</text>
+<circle cx='351.11' cy='510.71' r='5.0' fill='#34d399' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='351.11' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>512</text>
+<circle cx='470.67' cy='463.79' r='5.0' fill='#34d399' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='470.67' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>1024</text>
+<circle cx='590.22' cy='417.39' r='5.0' fill='#34d399' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='590.22' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>2048</text>
+<circle cx='709.78' cy='371.35' r='5.0' fill='#34d399' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='709.78' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>4096</text>
+<circle cx='829.33' cy='325.79' r='5.0' fill='#34d399' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='829.33' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>8192</text>
+<circle cx='948.89' cy='280.49' r='5.0' fill='#34d399' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='948.89' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>16384</text>
+<circle cx='1068.44' cy='235.47' r='5.0' fill='#34d399' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='1068.44' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>32768</text>
+<circle cx='1188.00' cy='190.70' r='5.0' fill='#34d399' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='1188.00' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='middle'>65536</text>
+<text x='98.00' y='631.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^10.5</text>
+<text x='98.00' y='516.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^13.3</text>
+<text x='98.00' y='401.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^16.1</text>
+<text x='98.00' y='286.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^18.9</text>
+<text x='98.00' y='171.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^21.7</text>
+<line x1='160.00' y1='194.00' x2='202.00' y2='194.00' stroke='#34d399' stroke-width='5' stroke-linecap='round'/><circle cx='181.00' cy='194.00' r='5' fill='#34d399'/><text x='213.00' y='199.00' fill='#e2e8f0' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='15'>Measured sort + sweep</text>
+<line x1='455.00' y1='194.00' x2='497.00' y2='194.00' stroke='#94a3b8' stroke-width='5' stroke-linecap='round'/><circle cx='476.00' cy='194.00' r='5' fill='#94a3b8'/><text x='508.00' y='199.00' fill='#e2e8f0' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='15'>Reference 2n log2(2n)</text>
+<text x='650.00' y='685.00' fill='#cbd5e1' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='16' text-anchor='middle'>Number of persons n (log2-spaced)</text>
+<text x='35' y='396' fill='#cbd5e1' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='16' text-anchor='middle' transform='rotate(-90 35 396)'>Operations (log2 scale)</text>
+<line x1='64' y1='714' x2='1216' y2='714' stroke='#334155'/><text x='640' y='741' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='14' text-anchor='middle'>With distinct times, every event has a single unambiguous +1 or -1 attendance transition.</text></svg>

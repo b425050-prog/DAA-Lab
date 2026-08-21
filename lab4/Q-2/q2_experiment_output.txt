@@ -1,0 +1,13 @@
+n        sort cmp       search cmp       total          validation
+128      737            1024             1761           PASS      
+256      1733           2304             4037           PASS      
+512      3966           5120             9086           PASS      
+1024     8970           11264            20234          PASS      
+2048     19932          24576            44508          PASS      
+4096     44041          53248            97289          PASS      
+8192     96198          114688           210886         PASS      
+16384    208685         245760           454445         PASS      
+32768    450173         524288           974461         PASS      
+
+The total comparison count stays a constant multiple of n log2(n).
+Data written to q2_experimental_data.dat

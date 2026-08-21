@@ -1,0 +1,15 @@
+n         reads          writes         total          validation
+128       128            128            256            PASS      
+256       256            256            512            PASS      
+512       512            512            1024           PASS      
+1024      1024           1024           2048           PASS      
+2048      2048           2048           4096           PASS      
+4096      4096           4096           8192           PASS      
+8192      8192           8192           16384          PASS      
+16384     16384          16384          32768          PASS      
+32768     32768          32768          65536          PASS      
+65536     65536          65536          131072         PASS      
+131072    131072         131072         262144         PASS      
+
+Every run performs exactly n classifications + n placements = 2n.
+Data written to q1_experimental_data.dat

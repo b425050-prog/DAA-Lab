@@ -1,0 +1,14 @@
+n        endpoints  sort cmp       sweep work   total          peak     check   
+128      256        1750           293          2043           99       PASS    
+256      512        4012           573          4585           167      PASS    
+512      1024       9034           1133         10167          311      PASS    
+1024     2048       20065          2253         22318          568      PASS    
+2048     4096       44211          4493         48704          1080     PASS    
+4096     8192       96553          8973         105526         2104     PASS    
+8192     16384      209514         17933        227447         4152     PASS    
+16384    32768      451563         35853        487416         8248     PASS    
+32768    65536      968893         71693        1040586        16440    PASS    
+65536    131072     2068586        143369       2211955        32824    PASS    
+
+Tied endpoints were grouped with closed-interval START-before-END semantics.
+Data written to q6_experimental_data.dat

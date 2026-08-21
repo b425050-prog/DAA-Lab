@@ -1,0 +1,13 @@
+============================================================
+ DAA Lab 04 - Q2: Pair Sum Across Two Sets
+============================================================
+Enter the common set size n: Enter 5 elements of S1:
+Enter 5 elements of S2:
+Enter target x: 
+Sorted copy of S2: -1 4 8 12 20
+Pair found          : 7 (from S1) + 4 (from S2) = 11
+S1 values examined  : 3
+Sort comparisons    : 7
+Binary comparisons  : 8
+Complexity          : O(n log n) worst-case time, O(n) extra space
+Method              : merge-sort S2, then binary-search x-a for each a in S1

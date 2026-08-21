@@ -1,0 +1,14 @@
+persons  events     sort cmp       sweep      total          peak     check   
+128      256        1758           256        2014           128      PASS    
+256      512        4033           512        4545           256      PASS    
+512      1024       9069           1024       10093          512      PASS    
+1024     2048       20194          2048       22242          1024     PASS    
+2048     4096       44494          4096       48590          2048     PASS    
+4096     8192       97310          8192       105502         4096     PASS    
+8192     16384      210861         16384      227245         8192     PASS    
+16384    32768      454534         32768      487302         16384    PASS    
+32768    65536      974569         65536      1040105        32768    PASS    
+65536    131072     2079850        131072     2210922        65536    PASS    
+
+Every timeline sorted 2n distinct events, reached peak n, and ended at zero.
+Data written to q4_experimental_data.dat

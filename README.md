@@ -6,12 +6,13 @@
   <a href="lab1/README.md"><img alt="Lab 01" src="https://img.shields.io/badge/LAB%2001-FOUNDATIONS-38BDF8?style=for-the-badge"></a>
   <a href="lab2/README.md"><img alt="Lab 02" src="https://img.shields.io/badge/LAB%2002-STRUCTURAL%20TRADE--OFFS-8B5CF6?style=for-the-badge"></a>
   <a href="lab3/README.md"><img alt="Lab 03" src="https://img.shields.io/badge/LAB%2003-DIVIDE%20%C2%B7%20CONQUER%20%C2%B7%20PROVE-22C55E?style=for-the-badge"></a>
+  <a href="lab4/README.md"><img alt="Lab 04" src="https://img.shields.io/badge/LAB%2004-SORT%20%C2%B7%20SEARCH%20%C2%B7%20SWEEP-F43F5E?style=for-the-badge"></a>
 </p>
 
 <p align="center">
   <img alt="Language" src="https://img.shields.io/badge/LANGUAGE-C17-00599C?style=flat-square&logo=c&logoColor=white">
-  <img alt="Labs" src="https://img.shields.io/badge/LABS-03-7C3AED?style=flat-square">
-  <img alt="Questions" src="https://img.shields.io/badge/QUESTIONS-15-0EA5E9?style=flat-square">
+  <img alt="Labs" src="https://img.shields.io/badge/LABS-04-7C3AED?style=flat-square">
+  <img alt="Questions" src="https://img.shields.io/badge/QUESTIONS-21-0EA5E9?style=flat-square">
   <img alt="Approach" src="https://img.shields.io/badge/APPROACH-THEORY%20%2B%20EXPERIMENT-22C55E?style=flat-square">
   <img alt="Visuals" src="https://img.shields.io/badge/VISUALS-SVG%20%2B%20GIF-F97316?style=flat-square">
   <img alt="Status" src="https://img.shields.io/badge/STATUS-CURRENT-06B6D4?style=flat-square">
@@ -33,7 +34,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/course_journey.gif" alt="Animated course journey through Lab 01, Lab 02 and Lab 03" width="96%">
+  <img src="assets/course_journey_lab4.gif" alt="Animated course journey through Lab 01, Lab 02, Lab 03 and Lab 04" width="96%">
 </p>
 
 ---
@@ -42,7 +43,7 @@
 
 <table>
 <tr>
-<td width="33%" valign="top" align="center">
+<td width="50%" valign="top" align="center">
 
 ### 01 · Foundations
 
@@ -55,7 +56,7 @@ Growth functions, probability simulation, sorting behaviour, recursion, binary s
 **[Open Lab 01 →](lab1/README.md)**
 
 </td>
-<td width="33%" valign="top" align="center">
+<td width="50%" valign="top" align="center">
 
 ### 02 · Structural Trade-offs
 
@@ -68,7 +69,9 @@ Dictionary representations, 2-way vs 3-way merge sort, and two strategies for me
 **[Open Lab 02 →](lab2/README.md)**
 
 </td>
-<td width="33%" valign="top" align="center">
+</tr>
+<tr>
+<td width="50%" valign="top" align="center">
 
 ### 03 · Divide · Conquer · Prove
 
@@ -81,11 +84,24 @@ Binary/ternary search, defective coin, comparison-efficient min/max, Strassen, r
 **[Open Lab 03 →](lab3/README.md)**
 
 </td>
+<td width="50%" valign="top" align="center">
+
+### 04 · Sort · Search · Sweep
+
+<img src="https://img.shields.io/badge/6-QUESTIONS-F43F5E?style=for-the-badge" alt="6 questions">
+
+Stable colour distribution, pair sum, generalized k-sum, party attendance, interval union, and maximum overlap.
+
+**Core idea:** *order data once, then exploit the order*.
+
+**[Open Lab 04 →](lab4/README.md)**
+
+</td>
 </tr>
 </table>
 
 <p align="center">
-  <a href="lab3/README.md"><img src="lab3/assets/lab3_banner.gif" alt="Lab 03 animated banner" width="96%"></a>
+  <a href="lab4/README.md"><img src="lab4/assets/lab4_banner.gif" alt="Lab 04 animated banner" width="96%"></a>
 </p>
 
 ---
@@ -113,6 +129,7 @@ Binary/ternary search, defective coin, comparison-efficient min/max, Strassen, r
 | **[Lab 01](lab1/README.md)** | 28 Jul 2026 | 6 | Foundations of growth, probability, sorting, recursion and search | ✅ Complete |
 | **[Lab 02](lab2/README.md)** | 04 Aug 2026 | 3 | Representation and divide-structure trade-offs | ✅ Complete |
 | **[Lab 03](lab3/README.md)** | 11 Aug 2026 | 6 | Divide-and-conquer, comparison bounds, matrix recursion and correctness proofs | ✅ Complete |
+| **[Lab 04](lab4/README.md)** | 18 Aug 2026 | 6 | Sorting applications: stable distribution, complement search, event sweeps and interval geometry | ✅ Complete |
 
 ---
 
@@ -174,6 +191,21 @@ The result is a repository where a reviewer can move from **question → impleme
 | **[Q-4](lab3/Q-4/README.md)** | Strassen matrix multiplication | Recursive result cross-checked entry-by-entry against classical multiplication | `Θ(n^log₂7)` |
 | **[Q-5](lab3/Q-5/README.md)** | Special recursive matrix multiplication | Pattern validity + recursive output + classical multiplication cross-check | `Θ(n²)` |
 | **[Q-6](lab3/Q-6/README.md)** | Selection sort + loop invariant | Invariant tracing and identical comparison growth over different input orders | Best = worst = `Θ(n²)` |
+
+### Lab 04 · Sort · Search · Sweep
+
+<p align="center">
+  <img src="lab4/assets/sorting_applications_gallery.gif" alt="Animated overview of all six Lab 04 sorting applications" width="96%">
+</p>
+
+| Question | Algorithm | What is validated | Final result |
+|:---:|---|---|---|
+| **[Q-1](lab4/Q-1/README.md)** | Stable three-colour counting distribution | Colour blocks, stability, within-colour number order, exact two-pass work | `Θ(n)` |
+| **[Q-2](lab4/Q-2/README.md)** | Merge-sort one set + binary-search complements | Worst-case no-solution families, sortedness and comparison growth | `O(n log n)` |
+| **[Q-3](lab4/Q-3/README.md)** | Enumerate `k-1` indices + suffix binary search | Complete prefix exhaustion and distinct-index safety for `k=2,3,4` | `O(n^(k-1) log n)` |
+| **[Q-4](lab4/Q-4/README.md)** | Chronological `+1/-1` attendance sweep | Distinct events, nonnegative count, exact peak and final zero | `O(n log n)` |
+| **[Q-5](lab4/Q-5/README.md)** | Sort and merge interval union components | Sorted/disjoint output and complete input coverage | `O(n log n)` |
+| **[Q-6](lab4/Q-6/README.md)** | Grouped closed-endpoint sweep | Tied endpoints and direct containment at the reported point | `O(n log n)` |
 
 ---
 
@@ -248,6 +280,77 @@ The result is a repository where a reviewer can move from **question → impleme
 
 ---
 
+## ✦ Lab 04 Visual Gallery
+
+<table>
+<tr>
+<td width="50%" valign="top" align="center">
+
+### Q1 · Stable Colour Distribution
+
+<a href="lab4/Q-1/README.md"><img src="lab4/Q-1/q1_stable_colour_flow.gif" alt="Stable three-colour distribution animation" width="100%"></a>
+
+**Observe:** the output blocks are fixed before placement, so every colour keeps its original number order.
+
+</td>
+<td width="50%" valign="top" align="center">
+
+### Q2 · Complement Search
+
+<a href="lab4/Q-2/README.md"><img src="lab4/Q-2/q2_sort_and_search.gif" alt="Cross-set pair sum animation" width="100%"></a>
+
+**Observe:** sorting `S2` once turns every `x-a` membership test into a shrinking binary-search window.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="center">
+
+### Q3 · Generalized k-Sum
+
+<a href="lab4/Q-3/README.md"><img src="lab4/Q-3/q3_choose_and_search.gif" alt="Generalized k-sum animation" width="100%"></a>
+
+**Observe:** only increasing indices are selected, and the complement is searched strictly in the remaining suffix.
+
+</td>
+<td width="50%" valign="top" align="center">
+
+### Q4 · Peak Party Attendance
+
+<a href="lab4/Q-4/README.md"><img src="lab4/Q-4/q4_party_timeline.gif" alt="Peak party attendance animation" width="100%"></a>
+
+**Observe:** each sorted entry/exit event changes one live counter, exposing the earliest maximum.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="center">
+
+### Q5 · Interval Union
+
+<a href="lab4/Q-5/README.md"><img src="lab4/Q-5/q5_interval_merge.gif" alt="Merge overlapping intervals animation" width="100%"></a>
+
+**Observe:** after sorting, only the final merged component can overlap the next interval.
+
+</td>
+<td width="50%" valign="top" align="center">
+
+### Q6 · Closed-Endpoint Sweep
+
+<a href="lab4/Q-6/README.md"><img src="lab4/Q-6/q6_endpoint_sweep.gif" alt="Maximum closed interval overlap animation" width="100%"></a>
+
+**Observe:** starts are added and ends remain active while the overlap at the endpoint is measured.
+
+</td>
+</tr>
+</table>
+
+<p align="center">
+  <img src="lab4/assets/pipeline.gif" alt="Lab 04 evidence pipeline" width="96%">
+</p>
+
+---
+
 ## ✦ Complexity Landscape
 
 <p align="center">
@@ -259,9 +362,10 @@ The labs deliberately move across very different growth classes. The important p
 | Complexity | Seen in this repository | Structural reason |
 |---|---|---|
 | `Θ(log n)` | Binary search, ternary search, defective-coin reduction | A constant fraction of the candidate space disappears at every level |
-| `Θ(n)` | Individual linear scans / merge-level work | Every element is touched a constant number of times |
-| `Θ(n log n)` | 2-way and 3-way merge sort | Linear work is repeated over logarithmically many recursion levels |
+| `Θ(n)` | Individual scans and Lab 04 stable three-colour distribution | Every item is touched only a constant number of times; Q1 performs exactly `2n` dominant operations |
+| `Θ(n log n)` | Merge sort, pair sum, party sweep, interval merging, maximum overlap | Sorting creates a reusable order; the remaining search or sweep work is at most linear/logarithmic per item |
 | `Θ(n²)` | Selection sort, uniqueness baseline, special-pattern matrix multiplication | Either all relevant pairs are examined or quadratic output/combine work dominates |
+| `O(n^(k-1) log n)` | Generalized k-sum for fixed `k` | Enumerate `k-1` values and binary-search the final complement |
 | `Θ(n^log₂7)` | Strassen multiplication | Seven recursive subproblems of size `n/2` replace the classical eight |
 | `Θ(2ⁿ)` | Towers of Hanoi move growth | Each larger instance recursively contains two copies of the previous instance plus one move |
 
@@ -288,6 +392,12 @@ The labs deliberately move across very different growth classes. The important p
 | 03 | Q4 | `T(n)=7T(n/2)+Θ(n²)` | Classical cross-check + recursive product counts | SVG + GIF |
 | 03 | Q5 | `T(n)=2T(n/2)+Θ(n²)` | Structure check + classical cross-check | SVG + GIF |
 | 03 | Q6 | Selection-sort loop invariant + `Θ(n²)` | Trace + input-order comparison count | SVG + GIF |
+| 04 | Q1 | Stable constant-key distribution + `Θ(n)` | Exact classification/placement counts + stability checks | SVG + GIF |
+| 04 | Q2 | Sort once + `n` logarithmic membership queries | Worst-case unsuccessful complement searches | SVG + GIF |
+| 04 | Q3 | `C(n,k-1)` prefixes × logarithmic suffix search | Complete no-solution enumeration for `k=2,3,4` | SVG + GIF |
+| 04 | Q4 | Sort `2n` events + linear attendance sweep | Peak and counter-state invariants | SVG + GIF |
+| 04 | Q5 | Sort intervals + linear union scan | Disjointness and union-coverage validation | SVG + GIF |
+| 04 | Q6 | Sort/group closed endpoints | Direct containment count at the chosen point | SVG + GIF |
 
 ---
 
@@ -381,6 +491,44 @@ That is asymptotically optimal up to constants for explicitly writing an `n × n
 
 ---
 
+## ✦ Lab 04 · Deep-Dive Highlights
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### Stability is a proof obligation
+
+Q1 does not merely place red before blue before yellow. The placement pass must retain the left-to-right order inside every colour block. Original indices are carried into the output so this property is checked, not assumed.
+
+</td>
+<td width="33%" valign="top">
+
+### Sorted data becomes reusable
+
+Q2 and Q3 spend `O(n log n)` once, then ask many fast complement questions. Q3 additionally restricts each binary search to a suffix, guaranteeing that no selected set position can be reused.
+
+</td>
+<td width="33%" valign="top">
+
+### Endpoint semantics change answers
+
+Q4 uses distinct entry/exit times and `[entry,exit)` presence. Q6 uses closed intervals and tied endpoints, so it must add all starts, measure the point, and only then remove ends.
+
+</td>
+</tr>
+</table>
+
+### Three sweep-line views of ordered data
+
+| Question | Sorted objects | Maintained state | Answer event |
+|:---:|---|---|---|
+| Q4 | `2n` distinct entry/exit events | Number currently at the party | Counter reaches a new maximum |
+| Q5 | Intervals ordered by left endpoint | Last connected union component | Next interval either extends it or begins a new one |
+| Q6 | Grouped closed endpoints | Intervals active at the current coordinate | Starts added and ends retained during measurement |
+
+---
+
 ## ✦ Repository Structure
 
 ```text
@@ -397,7 +545,8 @@ DAA-Lab/
 │   ├── footer-orbit.svg
 │   ├── pipeline.svg
 │   ├── lab2-showcase.svg
-│   ├── course_journey.gif             ← NEW · animated lab timeline
+│   ├── course_journey.gif             ← Lab 01-03 animated timeline
+│   ├── course_journey_lab4.gif        ← current four-lab animated timeline
 │   ├── reproducibility_flow.gif       ← NEW · workflow animation
 │   ├── complexity_spectrum.gif        ← NEW · growth-class animation
 │   └── lab3_six_stories.gif           ← NEW · six-question Lab 03 overview
@@ -425,55 +574,37 @@ DAA-Lab/
 │   ├── Q-2/                            ← 2-way vs 3-way merge sort
 │   └── Q-3/                            ← merging k sorted arrays
 │
-└── lab3/
-    ├── README.md
-    ├── Problem-Sheet-Lab-03.pdf
-    ├── assets/
-    │   ├── lab3_banner.gif
-    │   ├── animated_divider.gif
-    │   ├── pipeline.gif
-    │   └── divide_conquer_gallery.gif
-    │
-    ├── Q-1/                            ← binary vs ternary search
-    │   ├── README.md
-    │   ├── q1_search_interactive.c
-    │   ├── q1_experimental_comparison.c
-    │   ├── q1_plot_comparison.c
-    │   ├── q1_experimental_data.dat
-    │   ├── q1_binary_vs_ternary.svg
-    │   ├── q1_binary_vs_ternary.gif
-    │   └── sample / experiment output
-    │
-    ├── Q-2/                            ← defective coin
-    │   ├── README.md
-    │   ├── q2_defective_coin.c
-    │   ├── q2_experimental_validation.c
-    │   ├── q2_plot_complexity.c
-    │   ├── q2_experimental_data.dat
-    │   ├── q2_defective_coin_complexity.svg
-    │   ├── q2_balance_scale.gif
-    │   └── sample / experiment output
-    │
-    ├── Q-3/                            ← max + min with D&C
-    │   ├── README.md
-    │   ├── q3_max_min_dc.c
-    │   ├── q3_experimental_validation.c
-    │   ├── q3_plot_comparisons.c
-    │   ├── q3_experimental_data.dat
-    │   ├── q3_max_min_comparisons.svg
-    │   ├── q3_pairwise_tournament.gif
-    │   └── sample / experiment output
-    │
-    ├── Q-4/                            ← Strassen multiplication
-    ├── Q-5/                            ← special-pattern multiplication
-    └── Q-6/                            ← selection sort + loop invariant
+├── lab3/
+│   ├── README.md
+│   ├── Problem-Sheet-Lab-03.pdf
+│   ├── assets/                         ← banner, pipeline and D&C gallery
+│   ├── Q-1/                            ← binary vs ternary search
+│   ├── Q-2/                            ← defective coin
+│   ├── Q-3/                            ← max + min with D&C
+│   ├── Q-4/                            ← Strassen multiplication
+│   ├── Q-5/                            ← special-pattern multiplication
+│   └── Q-6/                            ← selection sort + loop invariant
+│
+└── lab4/
+    ├── README.md                       ← latest visual laboratory dashboard
+    ├── Problem-Sheet-Lab-04.pdf
+    ├── Makefile
+    ├── build_windows.bat
+    ├── common/svg_plot.h               ← shared C-only SVG theme
+    ├── assets/                         ← banner, divider, gallery, pipeline
+    ├── Q-1/                            ← stable three-colour distribution
+    ├── Q-2/                            ← pair sum across two sets
+    ├── Q-3/                            ← generalized k-sum
+    ├── Q-4/                            ← peak party attendance
+    ├── Q-5/                            ← merge overlapping intervals
+    └── Q-6/                            ← maximum closed-interval overlap
 ```
 
 ---
 
 ## ✦ File Design Inside a Question Folder
 
-Lab 02 and Lab 03 deliberately separate responsibilities instead of making one giant program do everything.
+Lab 02, Lab 03, and Lab 04 deliberately separate responsibilities instead of making one giant program do everything.
 
 | File type | Purpose |
 |---|---|
@@ -532,83 +663,68 @@ Every question README explains what the plot or animation is supposed to prove. 
 ## ✦ Verification Highlights
 
 <p align="center">
-  <img alt="Q1 verified" src="https://img.shields.io/badge/Q1-SEARCH%20COUNTS-38BDF8?style=for-the-badge">
-  <img alt="Q2 verified" src="https://img.shields.io/badge/Q2-EXHAUSTIVE%20CASES-22C55E?style=for-the-badge">
-  <img alt="Q3 verified" src="https://img.shields.io/badge/Q3-EXACT%20BOUND-8B5CF6?style=for-the-badge">
+  <img alt="Q1 verified" src="https://img.shields.io/badge/Q1-STABILITY%20%2B%20EXACT%202n-38BDF8?style=for-the-badge">
+  <img alt="Q2 verified" src="https://img.shields.io/badge/Q2-WORST--CASE%20MISS-22C55E?style=for-the-badge">
+  <img alt="Q3 verified" src="https://img.shields.io/badge/Q3-DISTINCT%20INDICES-8B5CF6?style=for-the-badge">
 </p>
 <p align="center">
-  <img alt="Q4 verified" src="https://img.shields.io/badge/Q4-CLASSICAL%20CROSS--CHECK-F97316?style=for-the-badge">
-  <img alt="Q5 verified" src="https://img.shields.io/badge/Q5-STRUCTURE%20%2B%20CROSS--CHECK-D946EF?style=for-the-badge">
-  <img alt="Q6 verified" src="https://img.shields.io/badge/Q6-INVARIANT%20TRACE-F43F5E?style=for-the-badge">
+  <img alt="Q4 verified" src="https://img.shields.io/badge/Q4-COUNTER%20INVARIANTS-F97316?style=for-the-badge">
+  <img alt="Q5 verified" src="https://img.shields.io/badge/Q5-UNION%20COVERAGE-D946EF?style=for-the-badge">
+  <img alt="Q6 verified" src="https://img.shields.io/badge/Q6-CLOSED%20ENDPOINTS-F43F5E?style=for-the-badge">
 </p>
 
-### Lab 03 verification matrix
+### Lab 04 verification matrix
 
 | Q | Verification strategy | Why it matters |
 |:---:|---|---|
-| **1** | Count binary and ternary probes on the same family of sorted arrays | Separates asymptotic class from constant-factor comparison cost |
-| **2** | Exhaust every possible defective position and include the no-defect case | Prevents a logarithmic-looking algorithm from silently failing on edge cases |
-| **3** | Compare measured count against the exact pairwise-tournament formula | Directly validates the required `3n/2` bound |
-| **4** | Compare every Strassen output entry against classical multiplication | Validates the more complicated recursive formulas independently |
-| **5** | Check the recursive matrix pattern, then compare against classical multiplication | Confirms both the precondition and the output |
-| **6** | Trace the sorted-prefix invariant and compare counts for sorted/reverse/random input | Links proof of correctness to the actual loop and validates equal asymptotic best/worst behaviour |
+| **1** | Carry original indices through the output and require exact `n+n` work | Proves stability and the requested linear time independently |
+| **2** | Use impossible odd targets over even sets, forcing every complement search | Exercises the actual worst-case search path rather than early success |
+| **3** | Exhaust all `(k-1)`-prefixes for no-solution instances at three k values | Shows the parameterized growth and proves the suffix is completely tested |
+| **4** | Require a nonnegative sweep, expected peak, and final zero | Catches malformed chronological event handling |
+| **5** | Require sorted pairwise-disjoint output that covers every input interval | Validates that merging neither loses nor invents covered points |
+| **6** | Generate tied endpoints and compare the peak with direct containment | Specifically tests the closed-endpoint tie rule |
 
 ---
 
 ## ✦ Build & Run
 
-All Lab 03 programs are standalone C17 programs. Lab 02 and Lab 03 SVG plotters write SVG directly and therefore do not require GNUPlot.
+All Lab 04 algorithms and validators are standalone C17 programs. Their SVG plotters share only the header-only theme in `lab4/common/svg_plot.h`; GNUPlot is not required.
 
 ### Generic compilation pattern
 
 ```bash
-gcc -std=c17 -O2 -Wall -Wextra -pedantic program.c -lm -o program
+gcc -std=c17 -O2 -Wall -Wextra -Wpedantic program.c -lm -o program
 ./program
 ```
 
-### Example · Lab 03 Q1
+### Build and regenerate every Lab 04 artifact
 
 ```bash
-cd lab3/Q-1
-
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_search_interactive.c -o q1_search_interactive
-./q1_search_interactive
-
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_experimental_comparison.c -lm -o q1_experimental_comparison
-./q1_experimental_comparison
-
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q1_plot_comparison.c -lm -o q1_plot_comparison
-./q1_plot_comparison
+cd lab4
+make all
+make evidence
+make strict
 ```
 
-### Example · Lab 03 Q4
+### Example · Lab 04 Q6
 
 ```bash
-cd lab3/Q-4
-
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q4_strassen.c -o q4_strassen
-./q4_strassen
-
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q4_experimental_validation.c -lm -o q4_experimental_validation
-./q4_experimental_validation
-
-gcc -std=c17 -O2 -Wall -Wextra -pedantic q4_plot_multiplications.c -lm -o q4_plot_multiplications
-./q4_plot_multiplications
+cd lab4/Q-6
+gcc -std=c17 -O2 -Wall -Wextra -Wpedantic q6_max_interval_overlap.c -o q6_max_interval_overlap
+./q6_max_interval_overlap
 ```
 
 <details>
-<summary><strong>Suggested strict compile check for all Lab 03 C files</strong></summary>
+<summary><strong>Windows / MSYS2 native executables</strong></summary>
 
-From the repository root:
+From Windows Command Prompt with GCC on `PATH`:
 
-```bash
-find lab3 -name '*.c' -print0 | while IFS= read -r -d '' file; do
-    gcc -std=c17 -O2 -Wall -Wextra -pedantic -Werror "$file" -lm -o /tmp/daa_check
-    echo "PASS  $file"
-done
+```bat
+cd lab4
+build_windows.bat
 ```
 
-This treats compiler warnings as errors during the verification pass.
+The script compiles all 18 Lab 04 programs into the six `output` folders.
 
 </details>
 
@@ -624,6 +740,8 @@ This treats compiler warnings as errors during the verification pass.
 - [Lab 01 · Partition Search](lab1/Q-5/README.md)
 - [Lab 03 · Binary vs Ternary](lab3/Q-1/README.md)
 - [Lab 03 · Defective Coin](lab3/Q-2/README.md)
+- [Lab 04 · Cross-Set Pair Sum](lab4/Q-2/README.md)
+- [Lab 04 · Generalized k-Sum](lab4/Q-3/README.md)
 
 </td>
 <td width="25%" valign="top">
@@ -633,6 +751,8 @@ This treats compiler warnings as errors during the verification pass.
 - [Lab 02 · Merge Sort](lab2/Q-2/README.md)
 - [Lab 02 · Merge k Arrays](lab2/Q-3/README.md)
 - [Lab 03 · Selection Sort](lab3/Q-6/README.md)
+- [Lab 04 · Stable Colour Sort](lab4/Q-1/README.md)
+- [Lab 04 · Merge Intervals](lab4/Q-5/README.md)
 
 </td>
 <td width="25%" valign="top">
@@ -642,6 +762,8 @@ This treats compiler warnings as errors during the verification pass.
 - [Lab 03 · Max + Min](lab3/Q-3/README.md)
 - [Lab 03 · Strassen](lab3/Q-4/README.md)
 - [Lab 03 · Special Matrix](lab3/Q-5/README.md)
+- [Lab 04 · Party Event Sweep](lab4/Q-4/README.md)
+- [Lab 04 · Maximum Overlap](lab4/Q-6/README.md)
 
 </td>
 <td width="25%" valign="top">
@@ -651,6 +773,8 @@ This treats compiler warnings as errors during the verification pass.
 - [Lab 01 · Towers of Hanoi](lab1/Q-4/README.md)
 - [Lab 02 · Dictionary ADT](lab2/Q-1/README.md)
 - [Lab 03 · Loop Invariant](lab3/Q-6/README.md)
+- [Lab 04 · Stability Proof](lab4/Q-1/README.md)
+- [Lab 04 · Closed-Endpoint Semantics](lab4/Q-6/README.md)
 
 </td>
 </tr>
@@ -677,16 +801,24 @@ START
   │
   ├─► Lab 03 / Q5   Use structure to reach Θ(n²)
   │
-  └─► Lab 03 / Q6   Finish by proving correctness with a loop invariant
+  ├─► Lab 03 / Q6   Prove correctness with a loop invariant
+  │
+  ├─► Lab 04 / Q1   Turn a three-value key into an exact linear algorithm
+  │
+  ├─► Lab 04 / Q3   Reuse sorted order for generalized complement search
+  │
+  ├─► Lab 04 / Q5   Convert interval union into one ordered scan
+  │
+  └─► Lab 04 / Q6   Finish with precise closed-endpoint sweep semantics
 ```
 
 <p align="center">
-  <img src="lab3/assets/pipeline.gif" alt="Lab 03 pipeline" width="96%">
+  <img src="lab4/assets/pipeline.gif" alt="Lab 04 validation pipeline" width="96%">
 </p>
 
 ---
 
-## ✦ Final Takeaways So Far
+## ✦ Final Takeaways Through Lab 04
 
 <table>
 <tr>
@@ -699,7 +831,8 @@ The biggest improvements in complexity come from changing *how work is organized
 - balanced merge trees,
 - pairwise tournaments,
 - recursive matrix symmetry,
-- fewer recursive products.
+- fewer recursive products,
+- sorting once and reusing the order for searches and sweeps.
 
 </td>
 <td width="33%" valign="top">
@@ -708,7 +841,7 @@ The biggest improvements in complexity come from changing *how work is organized
 
 Two algorithms can share the same `Θ(...)` class and still differ meaningfully in constants, operation types, memory behaviour, or implementation overhead.
 
-Q1 of Lab 03 is built specifically to make that distinction visible.
+Lab 03 Q1 makes constant factors visible; Lab 04 shows another distinction: several `O(n log n)` algorithms share a bound while maintaining completely different state.
 
 </td>
 <td width="33%" valign="top">
@@ -722,7 +855,8 @@ That is why the later labs increasingly use:
 - cross-check algorithms,
 - exhaustive cases,
 - invariants,
-- exact operation bounds.
+- exact operation bounds,
+- direct property checks for stability, union coverage, and endpoint inclusion.
 
 </td>
 </tr>
@@ -736,10 +870,11 @@ That is why the later labs increasingly use:
   <img src="https://img.shields.io/badge/LAB%2001-COMPLETE-22C55E?style=for-the-badge" alt="Lab 01 complete">
   <img src="https://img.shields.io/badge/LAB%2002-COMPLETE-22C55E?style=for-the-badge" alt="Lab 02 complete">
   <img src="https://img.shields.io/badge/LAB%2003-COMPLETE-22C55E?style=for-the-badge" alt="Lab 03 complete">
+  <img src="https://img.shields.io/badge/LAB%2004-COMPLETE-22C55E?style=for-the-badge" alt="Lab 04 complete">
 </p>
 
 <p align="center">
-  <strong>15 questions documented · implementations separated from experiments · visual evidence committed beside the source</strong>
+  <strong>21 questions documented · implementations separated from experiments · visual evidence committed beside the source</strong>
 </p>
 
 <p align="center">
@@ -749,7 +884,9 @@ That is why the later labs increasingly use:
   &nbsp;•&nbsp;
   <a href="lab3/README.md">Lab 03</a>
   &nbsp;•&nbsp;
-  <a href="lab3/Problem-Sheet-Lab-03.pdf">Latest Problem Sheet</a>
+  <a href="lab4/README.md">Lab 04</a>
+  &nbsp;•&nbsp;
+  <a href="lab4/Problem-Sheet-Lab-04.pdf">Latest Problem Sheet</a>
 </p>
 
 <p align="center">

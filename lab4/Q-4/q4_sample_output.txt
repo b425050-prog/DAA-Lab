@@ -1,0 +1,26 @@
+============================================================
+ DAA Lab 04 - Q4: Peak Party Attendance
+============================================================
+Enter number of persons: Enter each person's distinct entry and exit times (entry < exit):
+P1: P2: P3: P4: P5: P6: 
+Chronological event sweep:
+t=1         ENTER P1     present=1
+t=2         ENTER P2     present=2
+t=4         ENTER P3     present=3
+t=5         ENTER P4     present=4
+t=7         EXIT  P2     present=3
+t=8         ENTER P5     present=4
+t=9         EXIT  P4     present=3
+t=10        EXIT  P1     present=2
+t=11        EXIT  P5     present=1
+t=12        EXIT  P3     present=0
+t=13        ENTER P6     present=1
+t=15        EXIT  P6     present=0
+
+Maximum attendance : 4 people
+Earliest peak time : 5
+Peak remains on    : [5, 7)
+People at the peak : P1, P2, P3, P4
+Sort comparisons   : 27
+Sweep events       : 12
+Complexity         : O(n log n) time, O(n) auxiliary space

@@ -1,0 +1,14 @@
+n        sort cmp       scan       total          merged       check   
+128      735            127        862            2            PASS    
+256      1744           255        1999           2            PASS    
+512      3969           511        4480           2            PASS    
+1024     8962           1023       9985           2            PASS    
+2048     19955          2047       22002          2            PASS    
+4096     43924          4095       48019          2            PASS    
+8192     96202          8191       104393         2            PASS    
+16384    208786         16383      225169         2            PASS    
+32768    450330         32767      483097         2            PASS    
+65536    966151         65535      1031686        2            PASS    
+
+Every output is sorted, pairwise disjoint, and covers every input interval.
+Data written to q5_experimental_data.dat
