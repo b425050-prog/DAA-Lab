@@ -7,12 +7,13 @@
   <a href="lab2/README.md"><img alt="Lab 02" src="https://img.shields.io/badge/LAB%2002-STRUCTURAL%20TRADE--OFFS-8B5CF6?style=for-the-badge"></a>
   <a href="lab3/README.md"><img alt="Lab 03" src="https://img.shields.io/badge/LAB%2003-DIVIDE%20%C2%B7%20CONQUER%20%C2%B7%20PROVE-22C55E?style=for-the-badge"></a>
   <a href="lab4/README.md"><img alt="Lab 04" src="https://img.shields.io/badge/LAB%2004-SORT%20%C2%B7%20SEARCH%20%C2%B7%20SWEEP-F43F5E?style=for-the-badge"></a>
+  <a href="lab5/README.md"><img alt="Lab 05" src="https://img.shields.io/badge/LAB%2005-SELECT%20%C2%B7%20PARTITION%20%C2%B7%20SORT-F59E0B?style=for-the-badge"></a>
 </p>
 
 <p align="center">
   <img alt="Language" src="https://img.shields.io/badge/LANGUAGE-C17-00599C?style=flat-square&logo=c&logoColor=white">
-  <img alt="Labs" src="https://img.shields.io/badge/LABS-04-7C3AED?style=flat-square">
-  <img alt="Questions" src="https://img.shields.io/badge/QUESTIONS-21-0EA5E9?style=flat-square">
+  <img alt="Labs" src="https://img.shields.io/badge/LABS-05-7C3AED?style=flat-square">
+  <img alt="Questions" src="https://img.shields.io/badge/QUESTIONS-25-0EA5E9?style=flat-square">
   <img alt="Approach" src="https://img.shields.io/badge/APPROACH-THEORY%20%2B%20EXPERIMENT-22C55E?style=flat-square">
   <img alt="Visuals" src="https://img.shields.io/badge/VISUALS-SVG%20%2B%20GIF-F97316?style=flat-square">
   <img alt="Status" src="https://img.shields.io/badge/STATUS-CURRENT-06B6D4?style=flat-square">
@@ -34,7 +35,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/course_journey_lab4.gif" alt="Animated course journey through Lab 01, Lab 02, Lab 03 and Lab 04" width="96%">
+  <img src="assets/course_journey_lab5.gif" alt="Animated course journey through Lab 01 to Lab 05" width="96%">
 </p>
 
 ---
@@ -98,10 +99,25 @@ Stable colour distribution, pair sum, generalized k-sum, party attendance, inter
 
 </td>
 </tr>
+<tr>
+<td colspan="2" valign="top" align="center">
+
+### 05 · Select · Partition · Sort
+
+<img src="https://img.shields.io/badge/4-QUESTIONS-F59E0B?style=for-the-badge" alt="4 questions">
+
+Linear-time median and order-statistic selection, randomized three-way Quick Sort, and worst-case-guaranteed Heap Sort over reproducible file datasets.
+
+**Core idea:** *ask only for the order information the problem actually needs*.
+
+**[Open Lab 05 →](lab5/README.md)**
+
+</td>
+</tr>
 </table>
 
 <p align="center">
-  <a href="lab4/README.md"><img src="lab4/assets/lab4_banner.gif" alt="Lab 04 animated banner" width="96%"></a>
+  <a href="lab5/README.md"><img src="lab5/assets/lab5_banner.gif" alt="Lab 05 animated banner" width="96%"></a>
 </p>
 
 ---
@@ -130,6 +146,7 @@ Stable colour distribution, pair sum, generalized k-sum, party attendance, inter
 | **[Lab 02](lab2/README.md)** | 04 Aug 2026 | 3 | Representation and divide-structure trade-offs | ✅ Complete |
 | **[Lab 03](lab3/README.md)** | 11 Aug 2026 | 6 | Divide-and-conquer, comparison bounds, matrix recursion and correctness proofs | ✅ Complete |
 | **[Lab 04](lab4/README.md)** | 18 Aug 2026 | 6 | Sorting applications: stable distribution, complement search, event sweeps and interval geometry | ✅ Complete |
+| **[Lab 05](lab5/README.md)** | 25 Aug 2026 | 4 | Linear-time selection, randomized partitioning, Quick Sort and Heap Sort over file datasets | ✅ Complete |
 
 ---
 
@@ -206,6 +223,19 @@ The result is a repository where a reviewer can move from **question → impleme
 | **[Q-4](lab4/Q-4/README.md)** | Chronological `+1/-1` attendance sweep | Distinct events, nonnegative count, exact peak and final zero | `O(n log n)` |
 | **[Q-5](lab4/Q-5/README.md)** | Sort and merge interval union components | Sorted/disjoint output and complete input coverage | `O(n log n)` |
 | **[Q-6](lab4/Q-6/README.md)** | Grouped closed-endpoint sweep | Tied endpoints and direct containment at the reported point | `O(n log n)` |
+
+### Lab 05 · Select · Partition · Sort
+
+<p align="center">
+  <img src="lab5/assets/selection_sorting_gallery.gif" alt="Animated overview of all four Lab 05 selection and sorting questions" width="96%">
+</p>
+
+| Question | Algorithm | What is validated | Final result |
+|:---:|---|---|---|
+| **[Q-1](lab5/Q-1/README.md)** | Median via deterministic median-of-medians selection | Odd/even medians, duplicates, signed extremes, exact half-integer formatting, and independent sorted-oracle checks | `Θ(n)` worst-case |
+| **[Q-2](lab5/Q-2/README.md)** | BFPRT `k`-th order statistic with three-way partitioning | Every rank on edge families plus 2,000 deterministic fuzz cases | `Θ(n)` worst-case |
+| **[Q-3](lab5/Q-3/README.md)** | Seeded randomized three-way Quick Sort over a generated file | Input/output round trips, exact sorted oracle, multiset preservation, and bounded stack | Expected `Θ(n log n)`, worst `Θ(n²)` |
+| **[Q-4](lab5/Q-4/README.md)** | Floyd max-heap construction + repeated maximum extraction over a generated file | Heap invariant, exact sorted oracle, multiset preservation, and edge families | `Θ(n log n)` in all cases |
 
 ---
 
@@ -351,6 +381,57 @@ The result is a repository where a reviewer can move from **question → impleme
 
 ---
 
+## ✦ Lab 05 Visual Gallery
+
+<table>
+<tr>
+<td width="50%" valign="top" align="center">
+
+### Q1 · Median without Full Sorting
+
+<a href="lab5/Q-1/README.md"><img src="lab5/Q-1/q1_bfprt_selection.gif" alt="BFPRT median selection animation" width="100%"></a>
+
+**Watch:** groups of five create a guaranteed pivot; only the band containing the middle rank survives.
+
+</td>
+<td width="50%" valign="top" align="center">
+
+### Q2 · K-th Order Statistic
+
+<a href="lab5/Q-2/README.md"><img src="lab5/Q-2/q2_median_of_medians.gif" alt="Median-of-medians k-th selection animation" width="100%"></a>
+
+**Watch:** three-way partitioning resolves duplicate pivot values in one step and preserves the requested rank.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="center">
+
+### Q3 · Randomized Three-Way Quick Sort
+
+<a href="lab5/Q-3/README.md"><img src="lab5/Q-3/q3_three_way_quicksort.gif" alt="Three-way Quick Sort animation" width="100%"></a>
+
+**Watch:** the pivot splits a file-loaded array into smaller, equal, and larger bands before the strict sides continue.
+
+</td>
+<td width="50%" valign="top" align="center">
+
+### Q4 · Heap Construction and Extraction
+
+<a href="lab5/Q-4/README.md"><img src="lab5/Q-4/q4_heapify_tree.gif" alt="Heap Sort construction and extraction animation" width="100%"></a>
+
+**Watch:** the maximum repeatedly moves from the heap root into a final slot in the growing sorted suffix.
+
+</td>
+</tr>
+</table>
+
+<p align="center">
+  <img src="lab5/assets/pipeline.gif" alt="Lab 05 evidence pipeline" width="96%">
+</p>
+
+---
+
 ## ✦ Complexity Landscape
 
 <p align="center">
@@ -362,8 +443,8 @@ The labs deliberately move across very different growth classes. The important p
 | Complexity | Seen in this repository | Structural reason |
 |---|---|---|
 | `Θ(log n)` | Binary search, ternary search, defective-coin reduction | A constant fraction of the candidate space disappears at every level |
-| `Θ(n)` | Individual scans and Lab 04 stable three-colour distribution | Every item is touched only a constant number of times; Q1 performs exactly `2n` dominant operations |
-| `Θ(n log n)` | Merge sort, pair sum, party sweep, interval merging, maximum overlap | Sorting creates a reusable order; the remaining search or sweep work is at most linear/logarithmic per item |
+| `Θ(n)` | Individual scans, stable three-colour distribution, BFPRT median and `k`-th selection | Every item is touched a bounded number of times; the guaranteed BFPRT pivot discards a fixed fraction after linear partition work |
+| `Θ(n log n)` | Merge sort, file-based Heap Sort, expected randomized Quick Sort, pair sum, party sweep, interval merging, maximum overlap | Either logarithmic levels process linear total work or sorting creates an order reused by later work |
 | `Θ(n²)` | Selection sort, uniqueness baseline, special-pattern matrix multiplication | Either all relevant pairs are examined or quadratic output/combine work dominates |
 | `O(n^(k-1) log n)` | Generalized k-sum for fixed `k` | Enumerate `k-1` values and binary-search the final complement |
 | `Θ(n^log₂7)` | Strassen multiplication | Seven recursive subproblems of size `n/2` replace the classical eight |
@@ -398,6 +479,10 @@ The labs deliberately move across very different growth classes. The important p
 | 04 | Q4 | Sort `2n` events + linear attendance sweep | Peak and counter-state invariants | SVG + GIF |
 | 04 | Q5 | Sort intervals + linear union scan | Disjointness and union-coverage validation | SVG + GIF |
 | 04 | Q6 | Sort/group closed endpoints | Direct containment count at the chosen point | SVG + GIF |
+| 05 | Q1 | One/two BFPRT order statistics + linear partitioning | Odd/even oracle medians, preservation, edge cases and deterministic fuzz | SVG + GIF |
+| 05 | Q2 | `T(n) ≤ T(n/5) + T(7n/10+6) + Θ(n)` | Every rank on edge families + 2,000 duplicate-heavy fuzz arrays | SVG + GIF |
+| 05 | Q3 | Randomized three-way Quick Sort | Exact oracle, file round trips, fingerprints and recursion-stack bound | SVG + GIF |
+| 05 | Q4 | Linear heap construction + logarithmic extractions | Exact oracle, max-heap invariant, fingerprints and file outputs | SVG + GIF |
 
 ---
 
@@ -529,6 +614,36 @@ Q4 uses distinct entry/exit times and `[entry,exit)` presence. Q6 uses closed in
 
 ---
 
+## ✦ Lab 05 · Deep-Dive Highlights
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### Selection is not sorting
+
+Q1 and Q2 do not pay to establish every pairwise ordering. Small groups reveal a pivot, one linear partition identifies its rank band, and only the band containing the requested order statistic continues.
+
+</td>
+<td width="33%" valign="top">
+
+### A pivot changes the guarantee
+
+Randomized Quick Sort gives excellent expected behaviour. BFPRT spends more pivot-selection work to guarantee a fixed-fraction discard, while Heap Sort guarantees `Θ(n log n)` by maintaining a different structure entirely.
+
+</td>
+<td width="33%" valign="top">
+
+### Files are part of correctness
+
+Q3 and Q4 validate both round trips: generate → write → read and sort → write → read. Ordering checks, independent reference arrays, and multiset fingerprints ensure that file handling neither loses nor invents values.
+
+</td>
+</tr>
+</table>
+
+---
+
 ## ✦ Repository Structure
 
 ```text
@@ -546,7 +661,8 @@ DAA-Lab/
 │   ├── pipeline.svg
 │   ├── lab2-showcase.svg
 │   ├── course_journey.gif             ← Lab 01-03 animated timeline
-│   ├── course_journey_lab4.gif        ← current four-lab animated timeline
+│   ├── course_journey_lab4.gif        ← four-lab animated timeline
+│   ├── course_journey_lab5.gif        ← current five-lab animated timeline
 │   ├── reproducibility_flow.gif       ← NEW · workflow animation
 │   ├── complexity_spectrum.gif        ← NEW · growth-class animation
 │   └── lab3_six_stories.gif           ← NEW · six-question Lab 03 overview
@@ -585,26 +701,38 @@ DAA-Lab/
 │   ├── Q-5/                            ← special-pattern multiplication
 │   └── Q-6/                            ← selection sort + loop invariant
 │
-└── lab4/
+├── lab4/
+│   ├── README.md
+│   ├── Problem-Sheet-Lab-04.pdf
+│   ├── Makefile
+│   ├── build_windows.bat
+│   ├── common/svg_plot.h               ← shared C-only SVG theme
+│   ├── assets/                         ← banner, divider, gallery, pipeline
+│   ├── Q-1/                            ← stable three-colour distribution
+│   ├── Q-2/                            ← pair sum across two sets
+│   ├── Q-3/                            ← generalized k-sum
+│   ├── Q-4/                            ← peak party attendance
+│   ├── Q-5/                            ← merge overlapping intervals
+│   └── Q-6/                            ← maximum closed-interval overlap
+│
+└── lab5/
     ├── README.md                       ← latest visual laboratory dashboard
-    ├── Problem-Sheet-Lab-04.pdf
+    ├── Problem-Sheet-Lab-05.jpeg
     ├── Makefile
     ├── build_windows.bat
     ├── common/svg_plot.h               ← shared C-only SVG theme
     ├── assets/                         ← banner, divider, gallery, pipeline
-    ├── Q-1/                            ← stable three-colour distribution
-    ├── Q-2/                            ← pair sum across two sets
-    ├── Q-3/                            ← generalized k-sum
-    ├── Q-4/                            ← peak party attendance
-    ├── Q-5/                            ← merge overlapping intervals
-    └── Q-6/                            ← maximum closed-interval overlap
+    ├── Q-1/                            ← median without full sorting
+    ├── Q-2/                            ← k-th smallest without full sorting
+    ├── Q-3/                            ← randomized Quick Sort over a file
+    └── Q-4/                            ← Heap Sort over a file
 ```
 
 ---
 
 ## ✦ File Design Inside a Question Folder
 
-Lab 02, Lab 03, and Lab 04 deliberately separate responsibilities instead of making one giant program do everything.
+Labs 02 through 05 deliberately separate responsibilities instead of making one giant program do everything.
 
 | File type | Purpose |
 |---|---|
@@ -684,11 +812,20 @@ Every question README explains what the plot or animation is supposed to prove. 
 | **5** | Require sorted pairwise-disjoint output that covers every input interval | Validates that merging neither loses nor invents covered points |
 | **6** | Generate tied endpoints and compare the peak with direct containment | Specifically tests the closed-endpoint tie rule |
 
+### Lab 05 verification matrix
+
+| Q | Verification strategy | Why it matters |
+|:---:|---|---|
+| **1** | Check odd/even medians against a sorted oracle across edge families, fuzz cases, and scaling inputs | Catches off-by-one errors in the two middle ranks while keeping the submitted algorithm selection-only |
+| **2** | Check every rank on duplicate/extreme arrays plus 2,000 deterministic fuzz cases | Exercises all three partition bands and one-based `k` boundaries |
+| **3** | Re-read both files, compare with an exact oracle, verify fingerprints, and enforce the smaller-side recursion bound | Separates Quick Sort correctness from file I/O and prevents worst-case stack growth |
+| **4** | Validate the built max-heap and compare every measured result byte-for-byte with an independent sort | Checks both the structural invariant and the final permutation/order result |
+
 ---
 
 ## ✦ Build & Run
 
-All Lab 04 algorithms and validators are standalone C17 programs. Their SVG plotters share only the header-only theme in `lab4/common/svg_plot.h`; GNUPlot is not required.
+All Lab 05 algorithms and validators are standalone C17 programs. Their SVG plotters share only the header-only theme in `lab5/common/svg_plot.h`; GNUPlot is not required.
 
 ### Generic compilation pattern
 
@@ -697,21 +834,21 @@ gcc -std=c17 -O2 -Wall -Wextra -Wpedantic program.c -lm -o program
 ./program
 ```
 
-### Build and regenerate every Lab 04 artifact
+### Build and regenerate every Lab 05 artifact
 
 ```bash
-cd lab4
+cd lab5
 make all
 make evidence
 make strict
 ```
 
-### Example · Lab 04 Q6
+### Example · Lab 05 Q2
 
 ```bash
-cd lab4/Q-6
-gcc -std=c17 -O2 -Wall -Wextra -Wpedantic q6_max_interval_overlap.c -o q6_max_interval_overlap
-./q6_max_interval_overlap
+cd lab5/Q-2
+gcc -std=c17 -O2 -Wall -Wextra -Wpedantic q2_kth_smallest.c -o q2_kth_smallest
+./q2_kth_smallest
 ```
 
 <details>
@@ -720,11 +857,11 @@ gcc -std=c17 -O2 -Wall -Wextra -Wpedantic q6_max_interval_overlap.c -o q6_max_in
 From Windows Command Prompt with GCC on `PATH`:
 
 ```bat
-cd lab4
+cd lab5
 build_windows.bat
 ```
 
-The script compiles all 18 Lab 04 programs into the six `output` folders.
+The script compiles all 12 Lab 05 programs into the four `output` folders.
 
 </details>
 
@@ -742,6 +879,8 @@ The script compiles all 18 Lab 04 programs into the six `output` folders.
 - [Lab 03 · Defective Coin](lab3/Q-2/README.md)
 - [Lab 04 · Cross-Set Pair Sum](lab4/Q-2/README.md)
 - [Lab 04 · Generalized k-Sum](lab4/Q-3/README.md)
+- [Lab 05 · Median Selection](lab5/Q-1/README.md)
+- [Lab 05 · K-th Order Statistic](lab5/Q-2/README.md)
 
 </td>
 <td width="25%" valign="top">
@@ -753,6 +892,8 @@ The script compiles all 18 Lab 04 programs into the six `output` folders.
 - [Lab 03 · Selection Sort](lab3/Q-6/README.md)
 - [Lab 04 · Stable Colour Sort](lab4/Q-1/README.md)
 - [Lab 04 · Merge Intervals](lab4/Q-5/README.md)
+- [Lab 05 · Randomized Quick Sort](lab5/Q-3/README.md)
+- [Lab 05 · Heap Sort](lab5/Q-4/README.md)
 
 </td>
 <td width="25%" valign="top">
@@ -764,6 +905,7 @@ The script compiles all 18 Lab 04 programs into the six `output` folders.
 - [Lab 03 · Special Matrix](lab3/Q-5/README.md)
 - [Lab 04 · Party Event Sweep](lab4/Q-4/README.md)
 - [Lab 04 · Maximum Overlap](lab4/Q-6/README.md)
+- [Lab 05 · BFPRT Selection](lab5/Q-2/README.md)
 
 </td>
 <td width="25%" valign="top">
@@ -775,6 +917,8 @@ The script compiles all 18 Lab 04 programs into the six `output` folders.
 - [Lab 03 · Loop Invariant](lab3/Q-6/README.md)
 - [Lab 04 · Stability Proof](lab4/Q-1/README.md)
 - [Lab 04 · Closed-Endpoint Semantics](lab4/Q-6/README.md)
+- [Lab 05 · BFPRT Recurrence](lab5/Q-1/README.md)
+- [Lab 05 · Quick Sort Guarantees](lab5/Q-3/README.md)
 
 </td>
 </tr>
@@ -809,16 +953,24 @@ START
   │
   ├─► Lab 04 / Q5   Convert interval union into one ordered scan
   │
-  └─► Lab 04 / Q6   Finish with precise closed-endpoint sweep semantics
+  ├─► Lab 04 / Q6   Finish with precise closed-endpoint sweep semantics
+  │
+  ├─► Lab 05 / Q1   Find a median without paying for a complete ordering
+  │
+  ├─► Lab 05 / Q2   Generalize selection to any requested rank
+  │
+  ├─► Lab 05 / Q3   Partition file data with expected-fast randomized pivots
+  │
+  └─► Lab 05 / Q4   Replace pivot risk with a worst-case heap guarantee
 ```
 
 <p align="center">
-  <img src="lab4/assets/pipeline.gif" alt="Lab 04 validation pipeline" width="96%">
+  <img src="lab5/assets/pipeline.gif" alt="Lab 05 validation pipeline" width="96%">
 </p>
 
 ---
 
-## ✦ Final Takeaways Through Lab 04
+## ✦ Final Takeaways Through Lab 05
 
 <table>
 <tr>
@@ -832,7 +984,9 @@ The biggest improvements in complexity come from changing *how work is organized
 - pairwise tournaments,
 - recursive matrix symmetry,
 - fewer recursive products,
-- sorting once and reusing the order for searches and sweeps.
+- sorting once and reusing the order for searches and sweeps,
+- selecting only the rank that is actually needed,
+- choosing a heap when a deterministic sorting bound matters.
 
 </td>
 <td width="33%" valign="top">
@@ -841,7 +995,7 @@ The biggest improvements in complexity come from changing *how work is organized
 
 Two algorithms can share the same `Θ(...)` class and still differ meaningfully in constants, operation types, memory behaviour, or implementation overhead.
 
-Lab 03 Q1 makes constant factors visible; Lab 04 shows another distinction: several `O(n log n)` algorithms share a bound while maintaining completely different state.
+Lab 03 Q1 makes constant factors visible; Lab 04 shows that many `O(n log n)` algorithms maintain different state; Lab 05 separates expected guarantees, worst-case guarantees, and the lower cost of selecting one rank instead of sorting everything.
 
 </td>
 <td width="33%" valign="top">
@@ -856,7 +1010,8 @@ That is why the later labs increasingly use:
 - exhaustive cases,
 - invariants,
 - exact operation bounds,
-- direct property checks for stability, union coverage, and endpoint inclusion.
+- direct property checks for stability, union coverage, and endpoint inclusion,
+- independent sorted oracles and file round-trip fingerprints.
 
 </td>
 </tr>
@@ -871,10 +1026,11 @@ That is why the later labs increasingly use:
   <img src="https://img.shields.io/badge/LAB%2002-COMPLETE-22C55E?style=for-the-badge" alt="Lab 02 complete">
   <img src="https://img.shields.io/badge/LAB%2003-COMPLETE-22C55E?style=for-the-badge" alt="Lab 03 complete">
   <img src="https://img.shields.io/badge/LAB%2004-COMPLETE-22C55E?style=for-the-badge" alt="Lab 04 complete">
+  <img src="https://img.shields.io/badge/LAB%2005-COMPLETE-22C55E?style=for-the-badge" alt="Lab 05 complete">
 </p>
 
 <p align="center">
-  <strong>21 questions documented · implementations separated from experiments · visual evidence committed beside the source</strong>
+  <strong>25 questions documented · implementations separated from experiments · visual evidence committed beside the source</strong>
 </p>
 
 <p align="center">
@@ -886,7 +1042,9 @@ That is why the later labs increasingly use:
   &nbsp;•&nbsp;
   <a href="lab4/README.md">Lab 04</a>
   &nbsp;•&nbsp;
-  <a href="lab4/Problem-Sheet-Lab-04.pdf">Latest Problem Sheet</a>
+  <a href="lab5/README.md">Lab 05</a>
+  &nbsp;•&nbsp;
+  <a href="lab5/Problem-Sheet-Lab-05.jpeg">Latest Problem Sheet</a>
 </p>
 
 <p align="center">
