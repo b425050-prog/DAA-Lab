@@ -1,0 +1,16 @@
+n         build cmp    extraction cmp  total cmp     ratio        check    
+128       229          1165            1394          1.555804     PASS     
+256       469          2861            3330          1.625977     PASS     
+512       944          6664            7608          1.651042     PASS     
+1024      1923         15423           17346         1.693945     PASS     
+2048      3820         34898           38718         1.718661     PASS     
+4096      7729         77926           85655         1.742655     PASS     
+8192      15320        172242          187562        1.761212     PASS     
+16384     30853        377354          408207        1.779641     PASS     
+32768     61427        820282          881709        1.793842     PASS     
+65536     123179       1771370         1894549       1.806783     PASS     
+131072    246527       3804612         4051139       1.818102     PASS     
+
+Edge cases: PASS (empty, singleton, duplicates, ascending, descending)
+Every measured output matched an independent qsort result exactly.
+Data written to q4_experimental_data.dat

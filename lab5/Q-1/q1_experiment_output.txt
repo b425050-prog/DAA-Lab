@@ -1,0 +1,21 @@
+DAA Lab 05 Q1 - deterministic BFPRT validation
+============================================================
+Targeted edge cases             : 7/7 PASS
+Exhaustive {-1,0,1}, lengths 1-9: 29523/29523 PASS
+
+n         comparisons  writes       operations   ops/n        oracle    
+128       2021         2403         4424         34.562       PASS      
+256       3909         4741         8650         33.789       PASS      
+512       8722         10526        19248        37.594       PASS      
+1024      13408        16359        29767        29.069       PASS      
+2048      37149        45258        82407        40.238       PASS      
+4096      71686        86989        158675       38.739       PASS      
+8192      118148       143753       261901       31.970       PASS      
+16384     238796       291612       530408       32.374       PASS      
+32768     564951       680802       1245753      38.017       PASS      
+65536     952311       1158259      2110570      32.205       PASS      
+131072    1796656      2182869      3979525      30.361       PASS      
+
+All 29541 correctness cases passed.
+Each scaling row uses two selections because n is even.
+Data written to q1_experimental_data.dat

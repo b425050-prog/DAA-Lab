@@ -1,0 +1,62 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1280' height='760' viewBox='0 0 1280 760' role='img' aria-labelledby='title desc'>
+<title id='title'>Seeded Three-Way Quick Sort</title><desc id='desc'>Five-trial deterministic mean on generated file data; both axes use log2 scale</desc>
+<defs><linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop stop-color='#061426'/><stop offset='.48' stop-color='#10183a'/><stop offset='1' stop-color='#26102f'/></linearGradient><linearGradient id='lineA' x1='0' y1='0' x2='1' y2='0'><stop stop-color='#22d3ee'/><stop offset='1' stop-color='#a78bfa'/></linearGradient><filter id='glow' x='-50%' y='-50%' width='200%' height='200%'><feGaussianBlur stdDeviation='5' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter><pattern id='dots' width='28' height='28' patternUnits='userSpaceOnUse'><circle cx='2' cy='2' r='1' fill='#94a3b8' opacity='.11'/></pattern></defs>
+<rect width='1280' height='760' rx='30' fill='url(#bg)'/><rect width='1280' height='760' rx='30' fill='url(#dots)'/><circle cx='1110' cy='72' r='118' fill='#22d3ee' opacity='.09'/><circle cx='1155' cy='28' r='58' fill='#a78bfa' opacity='.12'/><text x='64' y='66' fill='#f8fafc' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='31' font-weight='800'>Seeded Three-Way Quick Sort</text><text x='66' y='101' fill='#b8c4db' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='17'>Five-trial deterministic mean on generated file data; both axes use log2 scale</text><rect x='955' y='54' width='263' height='50' rx='25' fill='#0b1227' stroke='#22d3ee' stroke-width='2'/><text x='1086.5' y='86' fill='#a78bfa' font-family='ui-monospace,SFMono-Regular,Consolas,monospace' font-size='18' font-weight='700' text-anchor='middle'>expected Θ(n log n)</text>
+<rect x='76' y='138' width='1148' height='516' rx='18' fill='#050b18' opacity='.66' stroke='#334155'/>
+<line x1='112.00' y1='166' x2='112.00' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='209.82' y1='166' x2='209.82' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='307.64' y1='166' x2='307.64' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='405.45' y1='166' x2='405.45' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='503.27' y1='166' x2='503.27' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='601.09' y1='166' x2='601.09' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='698.91' y1='166' x2='698.91' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='796.73' y1='166' x2='796.73' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='894.55' y1='166' x2='894.55' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='992.36' y1='166' x2='992.36' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='1090.18' y1='166' x2='1090.18' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='1188.00' y1='166' x2='1188.00' y2='626' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='626.00' x2='1188' y2='626.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='534.00' x2='1188' y2='534.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='442.00' x2='1188' y2='442.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='350.00' x2='1188' y2='350.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='258.00' x2='1188' y2='258.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='166.00' x2='1188' y2='166.00' stroke='#64748b' stroke-width='1' opacity='.22'/>
+<line x1='112' y1='626' x2='1188' y2='626' stroke='#cbd5e1' stroke-width='1.5' opacity='.75'/><line x1='112' y1='166' x2='112' y2='626' stroke='#cbd5e1' stroke-width='1.5' opacity='.75'/>
+<polyline fill='none' stroke='#94a3b8' stroke-width='3.0' stroke-dasharray='10 8' stroke-linecap='round' stroke-linejoin='round' points='112.00,590.98 209.82,553.95 307.64,517.62 405.45,481.86 503.27,446.54 601.09,411.59 698.91,376.96 796.73,342.59 894.55,308.45 992.36,274.51 1090.18,240.75 1188.00,207.14 '/>
+<polyline fill='none' stroke='#fb7185' stroke-width='4.0'  stroke-linecap='round' stroke-linejoin='round' points='112.00,610.48 209.82,567.32 307.64,531.13 405.45,492.26 503.27,455.79 601.09,420.79 698.91,385.00 796.73,351.87 894.55,315.63 992.36,282.17 1090.18,247.53 1188.00,215.10 '/>
+<polyline fill='none' stroke='url(#lineA)' stroke-width='6.0' filter='url(#glow)' stroke-linecap='round' stroke-linejoin='round' points='112.00,570.55 209.82,530.29 307.64,494.07 405.45,457.73 503.27,421.22 601.09,387.13 698.91,350.70 796.73,318.60 894.55,282.21 992.36,249.09 1090.18,214.23 1188.00,181.52 '/>
+<circle cx='112.00' cy='570.55' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='112.00' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>128</text>
+<circle cx='209.82' cy='530.29' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='209.82' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>256</text>
+<circle cx='307.64' cy='494.07' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='307.64' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>512</text>
+<circle cx='405.45' cy='457.73' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='405.45' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>1k</text>
+<circle cx='503.27' cy='421.22' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='503.27' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>2k</text>
+<circle cx='601.09' cy='387.13' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='601.09' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>4k</text>
+<circle cx='698.91' cy='350.70' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='698.91' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>8k</text>
+<circle cx='796.73' cy='318.60' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='796.73' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>16k</text>
+<circle cx='894.55' cy='282.21' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='894.55' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>32k</text>
+<circle cx='992.36' cy='249.09' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='992.36' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>64k</text>
+<circle cx='1090.18' cy='214.23' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='1090.18' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>128k</text>
+<circle cx='1188.00' cy='181.52' r='4.6' fill='#22d3ee' stroke='#f8fafc' stroke-width='1.5' filter='url(#glow)'/>
+<text x='1188.00' y='651.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='11' text-anchor='middle'>256k</text>
+<text x='98.00' y='631.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^8.7</text>
+<text x='98.00' y='516.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^12.4</text>
+<text x='98.00' y='401.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^16.1</text>
+<text x='98.00' y='286.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^19.8</text>
+<text x='98.00' y='171.00' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='12' text-anchor='end'>2^23.5</text>
+<line x1='148.00' y1='194.00' x2='190.00' y2='194.00' stroke='#22d3ee' stroke-width='5' stroke-linecap='round'/><circle cx='169.00' cy='194.00' r='5' fill='#22d3ee'/><text x='201.00' y='199.00' fill='#e2e8f0' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='15'>Pivot comparisons</text>
+<line x1='410.00' y1='194.00' x2='452.00' y2='194.00' stroke='#fb7185' stroke-width='5' stroke-linecap='round'/><circle cx='431.00' cy='194.00' r='5' fill='#fb7185'/><text x='463.00' y='199.00' fill='#e2e8f0' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='15'>Swaps</text>
+<line x1='590.00' y1='194.00' x2='632.00' y2='194.00' stroke='#94a3b8' stroke-width='5' stroke-linecap='round'/><circle cx='611.00' cy='194.00' r='5' fill='#94a3b8'/><text x='643.00' y='199.00' fill='#e2e8f0' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='15'>n log2(n) reference</text>
+<text x='650.00' y='685.00' fill='#cbd5e1' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='16' text-anchor='middle'>Number of values n (log2-spaced)</text>
+<text x='35' y='396' fill='#cbd5e1' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='16' text-anchor='middle' transform='rotate(-90 35 396)'>Measured operations (log2 scale)</text>
+<line x1='64' y1='714' x2='1216' y2='714' stroke='#334155'/><text x='640' y='741' fill='#94a3b8' font-family='Inter,Segoe UI,Arial,sans-serif' font-size='14' text-anchor='middle'>Random pivots give expected Θ(n log n); 3-way equal blocks are finished in one partition.</text></svg>

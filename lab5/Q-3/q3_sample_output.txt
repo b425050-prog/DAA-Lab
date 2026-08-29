@@ -1,0 +1,28 @@
+============================================================
+ DAA Lab 05 - Q3: Random-File Three-Way Quick Sort
+============================================================
+Enter N (1 to 1000000): Enter deterministic seed (0 to 18446744073709551615): Random-data file [q3_random_input.txt]: Sorted-output file [q3_sorted_output.txt]: Input preview  : 355588912  638982051  -309244544  -245242347  -788749954  -306693947  -642017916  -757006927  ...  230142136  -634988216  765886271  -765380699  -467540200  6735474  -761532195  657610992
+Sorted preview : -986364443  -788749954  -765380699  -761532195  -757006927  -642017916  -634988216  -467540200  ...  230142136  265483139  355588912  595464853  617767121  638982051  657610992  765886271
+
+Files
+  Random input  : q3_random_input.txt
+  Sorted output : q3_sorted_output.txt
+
+Quick Sort metrics
+  Pivot comparisons : 157
+  Swaps             : 49
+  Partitions         : 17
+  Values partitioned : 105
+  Maximum stack      : 3 frame(s), bound 5
+
+Validation
+  Input round-trip   : PASS
+  Ascending order    : PASS
+  Multiset checksum  : PASS (ffffffff417544f8-1bcc8a4a57799088-4c9594847850e4ec)
+  Output round-trip  : PASS
+  Stack bound        : PASS
+  Overall            : PASS
+
+Expected sorting time: Theta(n log n); worst case: Theta(n^2).
+3-way partitioning processes an all-equal range in Theta(n).
+Quick Sort stack space is O(log n) because only the smaller side recurses.

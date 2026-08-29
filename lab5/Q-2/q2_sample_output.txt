@@ -1,0 +1,16 @@
+============================================================
+ DAA Lab 05 - Q2: K-th Smallest without Sorting
+============================================================
+Enter the number of elements n: Enter 15 integers (duplicates and negative values are allowed):
+Enter k (1 = smallest, 15 = largest): 
+Original list (preserved) : 29 -4 17 8 3 21 14 6 11 1 25 9 19 5 13
+Partitioned working copy  : 8 -4 9 5 1 6 3 11 21 14 29 17 19 25 13
+Requested rank (1-based)  : 8
+K-th smallest element     : 11
+Value comparisons         : 54
+Three-way partitions      : 1
+Groups of at most 5 sorted: 4
+Maximum recursion depth   : 2
+Method                    : deterministic median-of-medians (BFPRT)
+Complexity                : Theta(n) worst-case time; O(log n) stack
+Input preservation        : O(n) working copy

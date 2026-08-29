@@ -1,0 +1,39 @@
+RUN 1 - even n, duplicates, and both signed 64-bit extremes
+============================================================
+DAA Lab 05 - Q1: Median Without Sorting (BFPRT)
+============================================================
+Enter the number of elements: 8
+Enter 8 integers: 9223372036854775807 -9223372036854775808 10 2 9 2 7 4
+
+Original list : [9223372036854775807, -9223372036854775808, 10, 2, 9, 2, 7, 4]
+Lower middle (rank 4): 4
+Upper middle (rank 5): 7
+Median          : 5.5
+
+Method          : deterministic median-of-medians selection
+Full-array sort : not performed (only groups of at most five are sorted)
+Comparisons     : 65
+Array writes    : 68
+Partitions      : 3
+Rank validation : PASS
+Complexity      : Theta(n) worst-case time, O(log n) stack space
+
+
+RUN 2 - odd n with duplicate median values
+============================================================
+DAA Lab 05 - Q1: Median Without Sorting (BFPRT)
+============================================================
+Enter the number of elements: 9
+Enter 9 integers: 12 3 5 7 4 19 8 8 8
+
+Original list : [12, 3, 5, 7, 4, 19, 8, 8, 8]
+Middle order statistic (rank 5): 8
+Median          : 8
+
+Method          : deterministic median-of-medians selection
+Full-array sort : not performed (only groups of at most five are sorted)
+Comparisons     : 29
+Array writes    : 30
+Partitions      : 1
+Rank validation : PASS
+Complexity      : Theta(n) worst-case time, O(log n) stack space

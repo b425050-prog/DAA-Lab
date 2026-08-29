@@ -1,0 +1,26 @@
+n         avg comparisons  avg swaps      avg parts     stack      check   
+128       1413.8           579.8          83.4          4          PASS    
+256       3473.0           1519.4         168.2         6          PASS    
+512       7796.6           3408.6         326.2         6          PASS    
+1024      17549.6          8117.8         626.4         7          PASS    
+2048      39646.6          18323.4        1232.4        8          PASS    
+4096      84859.2          40029.8        2405.8        8          PASS    
+8192      191375.0         89003.0        4836.6        9          PASS    
+16384     391835.6         186459.2       9582.0        9          PASS    
+32768     883059.6         418738.6       19169.2       10         PASS    
+65536     1849615.4        883877.6       38234.2       10         PASS    
+131072    4027492.4        1915171.4      76533.6       12         PASS    
+262144    8359165.4        3950663.6      153070.8      12         PASS    
+
+Adversarial and duplicate-rich validation (n = 65536)
+case                   comparisons      swaps          stack      check   
+already sorted         2059189          733274         10         PASS    
+reverse sorted         1938755          708736         11         PASS    
+all equal              131072           0              1          PASS    
+17-value duplicate pool 451038           204289         3          PASS    
+alternating limits     196608           32768          1          PASS    
+empty + singleton      0                0              0 / 1      PASS    
+
+All rows exactly match an independent qsort oracle and pass
+sortedness, multiset-fingerprint, and stack-bound checks.
+Five deterministic trials per n were written to q3_experimental_data.dat.

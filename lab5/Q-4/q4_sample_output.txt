@@ -1,0 +1,16 @@
+============================================================
+ DAA Lab 05 - Q4: Heap Sort of File-Stored Random Numbers
+============================================================
+Enter N (1..1000000): Enter an unsigned seed: Input file name: Sorted output file name: Generated preview:    -6412 44568 -1124 57594 -78307 -77893 73848 -64115 59498 -45306 32162 43458 ...
+Sorted preview:       -86537 -78307 -77893 -64115 -45306 -20599 -19144 -6412 -1124 32162 43458 44568 ...
+
+Generated dataset      : q4_random_input.txt (15 values)
+Sorted dataset         : q4_sorted_output.txt
+Key comparisons        : 74
+Swaps                  : 47
+Sift-down calls        : 21
+Max-heap after build   : PASS
+Nondecreasing output   : PASS
+Multiset fingerprint   : PASS
+Heap-sort complexity   : Theta(n log n) time, O(1) extra space
+Whole file pipeline    : Theta(n log n) time, Theta(n) array space
