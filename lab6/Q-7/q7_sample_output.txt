@@ -1,0 +1,5 @@
+DAA Lab 06 - Q7: Longest Common Subsequence
+Enter first string (no spaces): Enter second string (no spaces): LCS length   : 4
+LCS sequence : GTAB
+DP states    : 42
+Time: Theta(mn); space: Theta(mn) for reconstruction

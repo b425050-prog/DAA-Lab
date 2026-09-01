@@ -1,0 +1,5 @@
+DAA Lab 06 - Q8: Matrix-Chain Multiplication
+Enter number of dimensions N (N-1 matrices): Enter 4 dimensions: Minimum scalar multiplications: 4500
+Optimal parenthesization      : ((A1 x A2) x A3)
+Candidate splits examined    : 4
+Time: Theta(m^3); space: Theta(m^2), m=N-1 matrices

@@ -1,0 +1,4 @@
+DAA Lab 06 - Q5: Fibonacci by Dynamic Programming
+Enter n [0..93]: F(50) = 12586269025
+DP transitions: 49
+Time: Theta(n); auxiliary space: Theta(1)

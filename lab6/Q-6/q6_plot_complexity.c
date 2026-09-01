@@ -1,0 +1,8 @@
+#define PLOT_DATA_FILE "q6_experimental_data.dat"
+#define PLOT_OUTPUT_FILE "q6_knapsack_dp.svg"
+#define PLOT_TITLE "0/1 Knapsack State Grid"
+#define PLOT_SUBTITLE "Each item-capacity cell records the better of exclude and include"
+#define PLOT_BADGE "Theta(nW)"
+#define PLOT_X_LABEL "State-space size n(W+1)"
+#define PLOT_FOOTER "An independent one-row DP oracle checks the reconstructed full-table result."
+#include "../common/plot_from_dat.h"

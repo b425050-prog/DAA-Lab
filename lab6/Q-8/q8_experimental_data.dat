@@ -1,0 +1,7 @@
+# matrix_count measured_candidates cubic_reference valid
+4 10 10.667 1
+8 84 85.333 1
+16 680 682.667 1
+32 5456 5461.333 1
+64 43680 43690.667 1
+128 349504 349525.333 1

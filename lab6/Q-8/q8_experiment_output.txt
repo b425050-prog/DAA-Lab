@@ -1,0 +1,8 @@
+Required sample {10,30,5,60} -> 4500: PASS
+CLRS oracle -> 15125: PASS
+matrices=4    candidates=10         cost=936 PASS
+matrices=8    candidates=84         cost=3184 PASS
+matrices=16   candidates=680        cost=8760 PASS
+matrices=32   candidates=5456       cost=15982 PASS
+matrices=64   candidates=43680      cost=32544 PASS
+matrices=128  candidates=349504     cost=64696 PASS

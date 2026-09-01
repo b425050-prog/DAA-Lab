@@ -1,0 +1,5 @@
+DAA Lab 06 - Q6: 0/1 Knapsack by Dynamic Programming
+Enter number of items and capacity: Enter 4 weights: Enter 4 profits: Maximum profit: 9
+Selected items (1-based): 2 3
+DP states: 32
+Time: Theta(nW); space: Theta(nW), including reconstruction

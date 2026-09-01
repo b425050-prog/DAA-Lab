@@ -1,0 +1,9 @@
+Canonical LCS instance: PASS (GTAB)
+length=16    LCS=9     validation=PASS
+length=32    LCS=17    validation=PASS
+length=64    LCS=36    validation=PASS
+length=128   LCS=71    validation=PASS
+length=256   LCS=142   validation=PASS
+length=512   LCS=284   validation=PASS
+length=1024  LCS=569   validation=PASS
+length=2048  LCS=1137  validation=PASS

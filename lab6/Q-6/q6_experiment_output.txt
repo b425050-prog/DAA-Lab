@@ -1,0 +1,7 @@
+Canonical capacity-50 instance: PASS
+items=8    W=32    profit=148      oracle=PASS
+items=16   W=64    profit=450      oracle=PASS
+items=32   W=128   profit=872      oracle=PASS
+items=64   W=256   profit=1748     oracle=PASS
+items=128  W=512   profit=3568     oracle=PASS
+items=256  W=1024  profit=7238     oracle=PASS
