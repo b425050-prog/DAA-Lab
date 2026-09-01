@@ -1,0 +1,19 @@
+DAA Lab 06 - Q2: Square Matrix Operations
+Enter matrix order n: Enter matrix A (4 values): Enter matrix B (4 values): 
+A + B:
+    3.000    1.000
+    1.000    3.000
+A x B:
+    2.000    1.000
+    1.000    2.000
+A is zero      : no
+A is symmetric : yes
+det(A)         : 3
+transpose(A):
+    2.000    1.000
+    1.000    2.000
+Dominant eigenvalue (power iteration): 3
+Eigenvector: 0.707107 0.707107
+Iterations: 2
+Complexities: add/zero/symmetry/transpose Theta(n^2); multiply/determinant Theta(n^3); power iteration Theta(k n^2)
+Counted arithmetic/comparison work: 45

@@ -1,0 +1,8 @@
+#define PLOT_DATA_FILE "q4_experimental_data.dat"
+#define PLOT_OUTPUT_FILE "q4_reversal_sort.svg"
+#define PLOT_TITLE "Sorting by Reversal"
+#define PLOT_SUBTITLE "Recursive sorted runs are joined by three-reversal block rotations"
+#define PLOT_BADGE "O(n log^2 n) COST"
+#define PLOT_X_LABEL "Permutation size n"
+#define PLOT_FOOTER "A separate direct-placement construction validates the independent at-most n-1 reversal claim."
+#include "../common/plot_from_dat.h"

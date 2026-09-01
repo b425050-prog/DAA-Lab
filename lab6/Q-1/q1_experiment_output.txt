@@ -1,0 +1,10 @@
+n=64     work=877        validation=PASS
+n=128    work=2027       validation=PASS
+n=256    work=4545       validation=PASS
+n=512    work=10112      validation=PASS
+n=1024   work=22272      validation=PASS
+n=2048   work=48596      validation=PASS
+n=4096   work=105408     validation=PASS
+n=8192   work=227154     validation=PASS
+n=16384  work=487027     validation=PASS
+Array invariants and every partition: PASS

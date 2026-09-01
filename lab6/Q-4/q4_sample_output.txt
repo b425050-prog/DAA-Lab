@@ -1,0 +1,7 @@
+DAA Lab 06 - Q4: Sorting Only by Reversals
+Enter permutation size n: Enter a permutation of 1..5: 
+Direct placement result : 1 2 3 4 5
+  reversals=1 (at most n-1), length cost=3
+Cost-efficient result   : 1 2 3 4 5
+  reversals=3, length cost=6, comparisons=9
+Proof targets: O(n) reversals for direct placement; O(n log^2 n) reversal-length cost for divide/rotate/merge sort.

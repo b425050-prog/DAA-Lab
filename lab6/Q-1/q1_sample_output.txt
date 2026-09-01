@@ -1,0 +1,14 @@
+DAA Lab 06 - Q1: 1D Array Operations
+Enter n: Enter 8 integers: Choose pivot position [1..8]: 
+Maximum                  : 9
+Largest / second distinct: 9 / 7
+Mean                     : 4.875000
+Median                   : 4.500000
+Population std. deviation: 3.018174
+Mode                     : 1 (frequency 2)
+Sorted unique values     : 1 3 4 5 7 9
+Reversed                 : 4 1 7 3 9 9 1 5
+Partitioned (>= 9 | < 9): 9 9 5 1 3 7 1 4
+Partition boundary       : 2
+Dominant counted work    : 62
+Worst-case summary       : scans Theta(n); sort-backed median/mode/dedup Theta(n log n); reverse/partition Theta(n)

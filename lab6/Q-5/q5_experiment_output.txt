@@ -1,0 +1,12 @@
+Known values, recurrence boundary and F(93): PASS
+n=8   F(n)=21                   work=7
+n=16  F(n)=987                  work=15
+n=24  F(n)=46368                work=23
+n=32  F(n)=2178309              work=31
+n=40  F(n)=102334155            work=39
+n=48  F(n)=4807526976           work=47
+n=56  F(n)=225851433717         work=55
+n=64  F(n)=10610209857723       work=63
+n=72  F(n)=498454011879264      work=71
+n=80  F(n)=23416728348467685    work=79
+n=88  F(n)=1100087778366101931  work=87

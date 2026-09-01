@@ -1,0 +1,8 @@
+#define PLOT_DATA_FILE "q1_experimental_data.dat"
+#define PLOT_OUTPUT_FILE "q1_array_operations.svg"
+#define PLOT_TITLE "One Array, Nine Operations"
+#define PLOT_SUBTITLE "Measured combined work; sorting dominates the linear scans"
+#define PLOT_BADGE "Theta(n log n) SUITE"
+#define PLOT_X_LABEL "Number of array elements n"
+#define PLOT_FOOTER "Linear scans remain cheaper; deterministic merge sort supplies the suite's worst-case bound."
+#include "../common/plot_from_dat.h"

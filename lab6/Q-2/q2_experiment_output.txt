@@ -1,0 +1,7 @@
+Identity, double-transpose, determinant and eigenpair checks: PASS
+n=4    work=176          validation=PASS
+n=8    work=1472         validation=PASS
+n=16   work=12032        validation=PASS
+n=32   work=97280        validation=PASS
+n=64   work=782336       validation=PASS
+n=128  work=6275072      validation=PASS
