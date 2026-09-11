@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="34" viewBox="0 0 620 34" role="img" aria-label="C17; 7 solutions; 341 local test runs; MIT license">
+<rect x="0" y="1" width="80" height="30" rx="6" fill="#153430"/>
+<text x="40.0" y="21" text-anchor="middle" fill="#60e4c0" font-family="Arial,sans-serif" font-size="12" font-weight="bold">C17</text>
+<rect x="88" y="1" width="147" height="30" rx="6" fill="#153430"/>
+<text x="161.5" y="21" text-anchor="middle" fill="#60e4c0" font-family="Arial,sans-serif" font-size="12" font-weight="bold">7 SOLUTIONS</text>
+<rect x="243" y="1" width="227" height="30" rx="6" fill="#153430"/>
+<text x="356.5" y="21" text-anchor="middle" fill="#60e4c0" font-family="Arial,sans-serif" font-size="12" font-weight="bold">341 LOCAL TEST RUNS</text>
+<rect x="478" y="1" width="134" height="30" rx="6" fill="#153430"/>
+<text x="545.0" y="21" text-anchor="middle" fill="#60e4c0" font-family="Arial,sans-serif" font-size="12" font-weight="bold">MIT LICENSE</text>
+</svg>

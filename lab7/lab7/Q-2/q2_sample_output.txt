@@ -1,0 +1,2 @@
+Minimum worst-case drops: 14
+One optimal first drop: floor 14

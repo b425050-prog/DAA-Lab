@@ -1,0 +1,13 @@
+Minimum moves: 10
+Initial: 1111
+Move 1: switch 2 -> 1101
+Move 2: switch 1 -> 1100
+Move 3: switch 4 -> 0100
+Move 4: switch 1 -> 0101
+Move 5: switch 2 -> 0111
+Move 6: switch 1 -> 0110
+Move 7: switch 3 -> 0010
+Move 8: switch 1 -> 0011
+Move 9: switch 2 -> 0001
+Move 10: switch 1 -> 0000
+Verified: all switches are off.

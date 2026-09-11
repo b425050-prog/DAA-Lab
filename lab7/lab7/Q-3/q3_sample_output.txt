@@ -1,0 +1,36 @@
+Minimum moves: 33
+Top-level split: 4 small disks
+Move 1: disk 1 A -> D
+Move 2: disk 2 A -> B
+Move 3: disk 3 A -> C
+Move 4: disk 2 B -> C
+Move 5: disk 4 A -> B
+Move 6: disk 2 C -> A
+Move 7: disk 3 C -> B
+Move 8: disk 2 A -> B
+Move 9: disk 1 D -> B
+Move 10: disk 5 A -> C
+Move 11: disk 6 A -> D
+Move 12: disk 5 C -> D
+Move 13: disk 7 A -> C
+Move 14: disk 5 D -> A
+Move 15: disk 6 D -> C
+Move 16: disk 5 A -> C
+Move 17: disk 8 A -> D
+Move 18: disk 5 C -> D
+Move 19: disk 6 C -> A
+Move 20: disk 5 D -> A
+Move 21: disk 7 C -> D
+Move 22: disk 5 A -> C
+Move 23: disk 6 A -> D
+Move 24: disk 5 C -> D
+Move 25: disk 1 B -> A
+Move 26: disk 2 B -> D
+Move 27: disk 3 B -> C
+Move 28: disk 2 D -> C
+Move 29: disk 4 B -> D
+Move 30: disk 2 C -> B
+Move 31: disk 3 C -> D
+Move 32: disk 2 B -> D
+Move 33: disk 1 A -> D
+Verified: all disks legally transferred from A to D.

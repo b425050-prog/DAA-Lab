@@ -1,0 +1,7 @@
+Coins: 10
+Minimum moves: 3
+Target offsets: 2 2
+Move 1: (0,0) -> (2,2)
+Move 2: (0,3) -> (2,-1)
+Move 3: (3,0) -> (-1,2)
+Verified: every destination is outside the original triangle.

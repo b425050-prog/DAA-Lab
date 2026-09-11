@@ -1,0 +1,2 @@
+Maximum scientists alive: 2
+Best interval: [1879, 1934)

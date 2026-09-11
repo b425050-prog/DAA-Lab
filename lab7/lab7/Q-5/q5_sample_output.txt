@@ -1,0 +1,8 @@
+Guaranteed shots: 6
+Shot 1: spot 2; surviving positions: 4
+Shot 2: spot 3; surviving positions: 3
+Shot 3: spot 4; surviving positions: 3
+Shot 4: spot 4; surviving positions: 1
+Shot 5: spot 3; surviving positions: 1
+Shot 6: spot 2; surviving positions: 0
+Verified: no target path can survive the complete schedule.
