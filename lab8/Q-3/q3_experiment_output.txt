@@ -1,0 +1,14 @@
+Measured event: prefix-pair states
+All 11 rows oracle-checked before writing.
+# scale measured reference validated
+8 64 64 1
+12 144 144 1
+16 256 256 1
+24 576 576 1
+32 1024 1024 1
+48 2304 2304 1
+64 4096 4096 1
+96 9216 9216 1
+128 16384 16384 1
+192 36864 36864 1
+256 65536 65536 1

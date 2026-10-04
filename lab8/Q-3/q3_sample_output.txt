@@ -1,0 +1,3 @@
+LCS length: 4
+Subsequence: BCBA
+Prefix-pair states: 42

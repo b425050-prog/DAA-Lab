@@ -1,0 +1,3 @@
+Minimum coins: 2
+Chosen coins: [3,3]
+Candidate checks: 18

@@ -1,0 +1,2 @@
+Distinct combinations: 10
+DP additions: 25
