@@ -1,0 +1,3 @@
+Maximum revenue: 22
+Exact piece lengths: [2,6]
+Cut candidates: 36

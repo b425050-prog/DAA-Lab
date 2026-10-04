@@ -1,0 +1,13 @@
+Measured event: candidate roots
+All 10 rows oracle-checked before writing.
+# scale measured reference validated
+4 20 20 1
+6 56 56 1
+8 120 120 1
+12 364 364 1
+16 816 816 1
+24 2600 2600 1
+32 5984 5984 1
+48 19600 19600 1
+64 45760 45760 1
+80 88560 88560 1

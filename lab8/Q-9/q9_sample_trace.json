@@ -1,0 +1,727 @@
+{
+  "status": "reached_1",
+  "steps": 111,
+  "peak": 9232,
+  "trajectory": [
+    27,
+    82,
+    41,
+    124,
+    62,
+    31,
+    94,
+    47,
+    142,
+    71,
+    214,
+    107,
+    322,
+    161,
+    484,
+    242,
+    121,
+    364,
+    182,
+    91,
+    274,
+    137,
+    412,
+    206,
+    103,
+    310,
+    155,
+    466,
+    233,
+    700,
+    350,
+    175,
+    526,
+    263,
+    790,
+    395,
+    1186,
+    593,
+    1780,
+    890,
+    445,
+    1336,
+    668,
+    334,
+    167,
+    502,
+    251,
+    754,
+    377,
+    1132,
+    566,
+    283,
+    850,
+    425,
+    1276,
+    638,
+    319,
+    958,
+    479,
+    1438,
+    719,
+    2158,
+    1079,
+    3238,
+    1619,
+    4858,
+    2429,
+    7288,
+    3644,
+    1822,
+    911,
+    2734,
+    1367,
+    4102,
+    2051,
+    6154,
+    3077,
+    9232,
+    4616,
+    2308,
+    1154,
+    577,
+    1732,
+    866,
+    433,
+    1300,
+    650,
+    325,
+    976,
+    488,
+    244,
+    122,
+    61,
+    184,
+    92,
+    46,
+    23,
+    70,
+    35,
+    106,
+    53,
+    160,
+    80,
+    40,
+    20,
+    10,
+    5,
+    16,
+    8,
+    4,
+    2,
+    1
+  ],
+  "work": 3142,
+  "completed": 100,
+  "overflow": 0,
+  "limited": 0,
+  "champion": 97,
+  "longest": 118,
+  "interval": [
+    {
+      "start": 1,
+      "steps": 0,
+      "peak": 1,
+      "status": "reached_1"
+    },
+    {
+      "start": 2,
+      "steps": 1,
+      "peak": 2,
+      "status": "reached_1"
+    },
+    {
+      "start": 3,
+      "steps": 7,
+      "peak": 16,
+      "status": "reached_1"
+    },
+    {
+      "start": 4,
+      "steps": 2,
+      "peak": 4,
+      "status": "reached_1"
+    },
+    {
+      "start": 5,
+      "steps": 5,
+      "peak": 16,
+      "status": "reached_1"
+    },
+    {
+      "start": 6,
+      "steps": 8,
+      "peak": 16,
+      "status": "reached_1"
+    },
+    {
+      "start": 7,
+      "steps": 16,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 8,
+      "steps": 3,
+      "peak": 8,
+      "status": "reached_1"
+    },
+    {
+      "start": 9,
+      "steps": 19,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 10,
+      "steps": 6,
+      "peak": 16,
+      "status": "reached_1"
+    },
+    {
+      "start": 11,
+      "steps": 14,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 12,
+      "steps": 9,
+      "peak": 16,
+      "status": "reached_1"
+    },
+    {
+      "start": 13,
+      "steps": 9,
+      "peak": 40,
+      "status": "reached_1"
+    },
+    {
+      "start": 14,
+      "steps": 17,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 15,
+      "steps": 17,
+      "peak": 160,
+      "status": "reached_1"
+    },
+    {
+      "start": 16,
+      "steps": 4,
+      "peak": 16,
+      "status": "reached_1"
+    },
+    {
+      "start": 17,
+      "steps": 12,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 18,
+      "steps": 20,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 19,
+      "steps": 20,
+      "peak": 88,
+      "status": "reached_1"
+    },
+    {
+      "start": 20,
+      "steps": 7,
+      "peak": 20,
+      "status": "reached_1"
+    },
+    {
+      "start": 21,
+      "steps": 7,
+      "peak": 64,
+      "status": "reached_1"
+    },
+    {
+      "start": 22,
+      "steps": 15,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 23,
+      "steps": 15,
+      "peak": 160,
+      "status": "reached_1"
+    },
+    {
+      "start": 24,
+      "steps": 10,
+      "peak": 24,
+      "status": "reached_1"
+    },
+    {
+      "start": 25,
+      "steps": 23,
+      "peak": 88,
+      "status": "reached_1"
+    },
+    {
+      "start": 26,
+      "steps": 10,
+      "peak": 40,
+      "status": "reached_1"
+    },
+    {
+      "start": 27,
+      "steps": 111,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 28,
+      "steps": 18,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 29,
+      "steps": 18,
+      "peak": 88,
+      "status": "reached_1"
+    },
+    {
+      "start": 30,
+      "steps": 18,
+      "peak": 160,
+      "status": "reached_1"
+    },
+    {
+      "start": 31,
+      "steps": 106,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 32,
+      "steps": 5,
+      "peak": 32,
+      "status": "reached_1"
+    },
+    {
+      "start": 33,
+      "steps": 26,
+      "peak": 100,
+      "status": "reached_1"
+    },
+    {
+      "start": 34,
+      "steps": 13,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 35,
+      "steps": 13,
+      "peak": 160,
+      "status": "reached_1"
+    },
+    {
+      "start": 36,
+      "steps": 21,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 37,
+      "steps": 21,
+      "peak": 112,
+      "status": "reached_1"
+    },
+    {
+      "start": 38,
+      "steps": 21,
+      "peak": 88,
+      "status": "reached_1"
+    },
+    {
+      "start": 39,
+      "steps": 34,
+      "peak": 304,
+      "status": "reached_1"
+    },
+    {
+      "start": 40,
+      "steps": 8,
+      "peak": 40,
+      "status": "reached_1"
+    },
+    {
+      "start": 41,
+      "steps": 109,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 42,
+      "steps": 8,
+      "peak": 64,
+      "status": "reached_1"
+    },
+    {
+      "start": 43,
+      "steps": 29,
+      "peak": 196,
+      "status": "reached_1"
+    },
+    {
+      "start": 44,
+      "steps": 16,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 45,
+      "steps": 16,
+      "peak": 136,
+      "status": "reached_1"
+    },
+    {
+      "start": 46,
+      "steps": 16,
+      "peak": 160,
+      "status": "reached_1"
+    },
+    {
+      "start": 47,
+      "steps": 104,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 48,
+      "steps": 11,
+      "peak": 48,
+      "status": "reached_1"
+    },
+    {
+      "start": 49,
+      "steps": 24,
+      "peak": 148,
+      "status": "reached_1"
+    },
+    {
+      "start": 50,
+      "steps": 24,
+      "peak": 88,
+      "status": "reached_1"
+    },
+    {
+      "start": 51,
+      "steps": 24,
+      "peak": 232,
+      "status": "reached_1"
+    },
+    {
+      "start": 52,
+      "steps": 11,
+      "peak": 52,
+      "status": "reached_1"
+    },
+    {
+      "start": 53,
+      "steps": 11,
+      "peak": 160,
+      "status": "reached_1"
+    },
+    {
+      "start": 54,
+      "steps": 112,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 55,
+      "steps": 112,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 56,
+      "steps": 19,
+      "peak": 56,
+      "status": "reached_1"
+    },
+    {
+      "start": 57,
+      "steps": 32,
+      "peak": 196,
+      "status": "reached_1"
+    },
+    {
+      "start": 58,
+      "steps": 19,
+      "peak": 88,
+      "status": "reached_1"
+    },
+    {
+      "start": 59,
+      "steps": 32,
+      "peak": 304,
+      "status": "reached_1"
+    },
+    {
+      "start": 60,
+      "steps": 19,
+      "peak": 160,
+      "status": "reached_1"
+    },
+    {
+      "start": 61,
+      "steps": 19,
+      "peak": 184,
+      "status": "reached_1"
+    },
+    {
+      "start": 62,
+      "steps": 107,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 63,
+      "steps": 107,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 64,
+      "steps": 6,
+      "peak": 64,
+      "status": "reached_1"
+    },
+    {
+      "start": 65,
+      "steps": 27,
+      "peak": 196,
+      "status": "reached_1"
+    },
+    {
+      "start": 66,
+      "steps": 27,
+      "peak": 100,
+      "status": "reached_1"
+    },
+    {
+      "start": 67,
+      "steps": 27,
+      "peak": 304,
+      "status": "reached_1"
+    },
+    {
+      "start": 68,
+      "steps": 14,
+      "peak": 68,
+      "status": "reached_1"
+    },
+    {
+      "start": 69,
+      "steps": 14,
+      "peak": 208,
+      "status": "reached_1"
+    },
+    {
+      "start": 70,
+      "steps": 14,
+      "peak": 160,
+      "status": "reached_1"
+    },
+    {
+      "start": 71,
+      "steps": 102,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 72,
+      "steps": 22,
+      "peak": 72,
+      "status": "reached_1"
+    },
+    {
+      "start": 73,
+      "steps": 115,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 74,
+      "steps": 22,
+      "peak": 112,
+      "status": "reached_1"
+    },
+    {
+      "start": 75,
+      "steps": 14,
+      "peak": 340,
+      "status": "reached_1"
+    },
+    {
+      "start": 76,
+      "steps": 22,
+      "peak": 88,
+      "status": "reached_1"
+    },
+    {
+      "start": 77,
+      "steps": 22,
+      "peak": 232,
+      "status": "reached_1"
+    },
+    {
+      "start": 78,
+      "steps": 35,
+      "peak": 304,
+      "status": "reached_1"
+    },
+    {
+      "start": 79,
+      "steps": 35,
+      "peak": 808,
+      "status": "reached_1"
+    },
+    {
+      "start": 80,
+      "steps": 9,
+      "peak": 80,
+      "status": "reached_1"
+    },
+    {
+      "start": 81,
+      "steps": 22,
+      "peak": 244,
+      "status": "reached_1"
+    },
+    {
+      "start": 82,
+      "steps": 110,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 83,
+      "steps": 110,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 84,
+      "steps": 9,
+      "peak": 84,
+      "status": "reached_1"
+    },
+    {
+      "start": 85,
+      "steps": 9,
+      "peak": 256,
+      "status": "reached_1"
+    },
+    {
+      "start": 86,
+      "steps": 30,
+      "peak": 196,
+      "status": "reached_1"
+    },
+    {
+      "start": 87,
+      "steps": 30,
+      "peak": 592,
+      "status": "reached_1"
+    },
+    {
+      "start": 88,
+      "steps": 17,
+      "peak": 88,
+      "status": "reached_1"
+    },
+    {
+      "start": 89,
+      "steps": 30,
+      "peak": 304,
+      "status": "reached_1"
+    },
+    {
+      "start": 90,
+      "steps": 17,
+      "peak": 136,
+      "status": "reached_1"
+    },
+    {
+      "start": 91,
+      "steps": 92,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 92,
+      "steps": 17,
+      "peak": 160,
+      "status": "reached_1"
+    },
+    {
+      "start": 93,
+      "steps": 17,
+      "peak": 280,
+      "status": "reached_1"
+    },
+    {
+      "start": 94,
+      "steps": 105,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 95,
+      "steps": 105,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 96,
+      "steps": 12,
+      "peak": 96,
+      "status": "reached_1"
+    },
+    {
+      "start": 97,
+      "steps": 118,
+      "peak": 9232,
+      "status": "reached_1"
+    },
+    {
+      "start": 98,
+      "steps": 25,
+      "peak": 148,
+      "status": "reached_1"
+    },
+    {
+      "start": 99,
+      "steps": 25,
+      "peak": 448,
+      "status": "reached_1"
+    },
+    {
+      "start": 100,
+      "steps": 25,
+      "peak": 100,
+      "status": "reached_1"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+Maximum increasing sum: 106
+Chosen subsequence: [1,2,3,100]
+Pair checks: 21

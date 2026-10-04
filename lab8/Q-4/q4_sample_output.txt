@@ -1,0 +1,3 @@
+LIS length: 4
+Strictly increasing subsequence: [2,5,7,101]
+Pair checks: 28

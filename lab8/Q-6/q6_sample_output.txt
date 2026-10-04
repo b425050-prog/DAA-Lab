@@ -1,0 +1,10 @@
+Edit distance: 3
+Traceback (forward; M=match S=substitute D=delete I=insert):
+S: k -> s
+M: i -> i
+M: t -> t
+M: t -> t
+S: e -> i
+M: n -> n
+I: - -> g
+Prefix-pair states: 42
