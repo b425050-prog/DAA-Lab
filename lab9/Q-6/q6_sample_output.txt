@@ -1,0 +1,4 @@
+K: 3
+Reorganised string: abcabcad
+Status: valid
+Work: 10

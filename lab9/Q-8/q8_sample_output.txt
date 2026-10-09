@@ -1,0 +1,4 @@
+Minimum meeting rooms: 3
+Room IDs in input order: [1,2,2,3,2,3]
+Intervals: [start,end); zero length uses no room.
+Work: 23

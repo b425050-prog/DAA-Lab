@@ -1,0 +1,10 @@
+Canonical codebook (length, then symbol):
+A: 0 (1 bits)
+B: 100 (3 bits)
+C: 101 (3 bits)
+D: 110 (3 bits)
+E: 1110 (4 bits)
+F: 1111 (4 bits)
+Weighted bits: 224
+Average bits: 2.240000
+Work: 42

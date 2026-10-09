@@ -1,0 +1,5 @@
+Minimum deviation: 3
+Witness array: [4,2,5,5,3]
+Best interval: [2,5]
+Halvings: 4
+Work: 22

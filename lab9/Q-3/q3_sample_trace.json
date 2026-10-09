@@ -1,0 +1,9 @@
+{
+  "stops": 2,
+  "stations": [
+    1,
+    4
+  ],
+  "reach": 110,
+  "work": 9
+}

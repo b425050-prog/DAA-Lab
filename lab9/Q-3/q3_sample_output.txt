@@ -1,0 +1,4 @@
+Minimum refuelling stops: 2
+Travel-order station IDs: [1,4]
+Reachable distance: 110
+Work: 9

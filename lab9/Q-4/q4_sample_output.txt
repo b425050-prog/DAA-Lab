@@ -1,0 +1,6 @@
+Merge 1: 2 + 3 = 5
+Merge 2: 4 + 5 = 9
+Merge 3: 6 + 7 = 13
+Merge 4: 9 + 13 = 22
+Minimum total cost: 49
+Work: 16

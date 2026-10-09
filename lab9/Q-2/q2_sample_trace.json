@@ -1,0 +1,42 @@
+{
+  "codes": [
+    {
+      "symbol": "A",
+      "frequency": 45,
+      "length": 1,
+      "code": "0"
+    },
+    {
+      "symbol": "B",
+      "frequency": 13,
+      "length": 3,
+      "code": "100"
+    },
+    {
+      "symbol": "C",
+      "frequency": 12,
+      "length": 3,
+      "code": "101"
+    },
+    {
+      "symbol": "D",
+      "frequency": 16,
+      "length": 3,
+      "code": "110"
+    },
+    {
+      "symbol": "E",
+      "frequency": 9,
+      "length": 4,
+      "code": "1110"
+    },
+    {
+      "symbol": "F",
+      "frequency": 5,
+      "length": 4,
+      "code": "1111"
+    }
+  ],
+  "cost": 224,
+  "work": 42
+}

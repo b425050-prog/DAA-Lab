@@ -1,0 +1,6 @@
+Model: continuous consumption, 1 weight unit per time unit.
+Item 1: amount 2.000000, fraction 0.666667, start 0.000000
+Item 3: amount 2.000000, fraction 0.666667, start 2.000000
+Maximum integrated value: 9.000000
+Used capacity: 4.000000
+Work: 57

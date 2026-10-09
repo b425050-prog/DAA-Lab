@@ -1,0 +1,28 @@
+{
+  "value": 9.0,
+  "schedule": [
+    {
+      "id": 2,
+      "amount": 0.0,
+      "fraction": 0.0,
+      "start": 0.0,
+      "rate": 2.0
+    },
+    {
+      "id": 1,
+      "amount": 2.0,
+      "fraction": 0.6666666667,
+      "start": 0.0,
+      "rate": 1.0
+    },
+    {
+      "id": 3,
+      "amount": 2.0,
+      "fraction": 0.6666666667,
+      "start": 2.0,
+      "rate": 0.5
+    }
+  ],
+  "used": 4.0,
+  "work": 57
+}
