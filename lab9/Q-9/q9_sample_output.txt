@@ -1,0 +1,10 @@
+Optimal alphabetic cost: 153
+Leaf 1: weight 1, depth 3, code 000
+Leaf 2: weight 2, depth 3, code 001
+Leaf 3: weight 23, depth 2, code 01
+Leaf 4: weight 4, depth 4, code 1000
+Leaf 5: weight 3, depth 4, code 1001
+Leaf 6: weight 3, depth 4, code 1010
+Leaf 7: weight 5, depth 4, code 1011
+Leaf 8: weight 19, depth 2, code 11
+Compatible-pair checks: 34

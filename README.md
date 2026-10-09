@@ -9,14 +9,15 @@
   <a href="lab4/README.md"><img alt="Lab 04" src="https://img.shields.io/badge/LAB%2004-SORT%20%C2%B7%20SWEEP-F43F5E?style=for-the-badge"></a>
   <a href="lab5/README.md"><img alt="Lab 05" src="https://img.shields.io/badge/LAB%2005-SELECT%20%C2%B7%20PARTITION-F59E0B?style=for-the-badge"></a>
   <a href="lab6/README.md"><img alt="Lab 06" src="https://img.shields.io/badge/LAB%2006-TRANSFORM%20%C2%B7%20OPTIMIZE-06B6D4?style=for-the-badge"></a>
-  <a href="lab7/README.md"><img alt="Lab 07" src="https://img.shields.io/badge/LAB%2007-PUZZLE%20%C2%B7%20SEARCH-A3E635?style=for-the-badge"></a>
+  <a href="lab7/lab7/README.md"><img alt="Lab 07" src="https://img.shields.io/badge/LAB%2007-PUZZLE%20%C2%B7%20SEARCH-A3E635?style=for-the-badge"></a>
+  <a href="lab9/README.md"><img alt="Lab 09" src="https://img.shields.io/badge/LAB%2009-GREEDY%20%C2%B7%20PROVE-F5CF83?style=for-the-badge"></a>
   <a href="lab8/README.md"><img alt="Lab 08" src="https://img.shields.io/badge/LAB%2008-STATE%20%C2%B7%20STORY-81E7BB?style=for-the-badge"></a>
 </p>
 
 <p align="center">
   <img alt="Language" src="https://img.shields.io/badge/LANGUAGE-C17-00599C?style=flat-square&logo=c&logoColor=white">
-  <img alt="Labs" src="https://img.shields.io/badge/LABS-08-7C3AED?style=flat-square">
-  <img alt="Questions" src="https://img.shields.io/badge/QUESTIONS-49-0EA5E9?style=flat-square">
+  <img alt="Labs" src="https://img.shields.io/badge/LABS-09-7C3AED?style=flat-square">
+  <img alt="Questions" src="https://img.shields.io/badge/QUESTIONS-59-0EA5E9?style=flat-square">
   <img alt="Approach" src="https://img.shields.io/badge/APPROACH-THEORY%20%2B%20EXPERIMENT-22C55E?style=flat-square">
   <img alt="Visuals" src="https://img.shields.io/badge/VISUALS-SVG%20%2B%20GIF-F97316?style=flat-square">
   <img alt="Status" src="https://img.shields.io/badge/STATUS-CURRENT-06B6D4?style=flat-square">
@@ -31,7 +32,7 @@
 <p align="center"><strong>Satyam Dhal · B425050 · CSE · IIIT Bhubaneswar</strong></p>
 
 <p align="center"><img src="assets/animated-divider.svg" alt="animated divider" width="100%"></p>
-<p align="center"><img src="assets/course_journey_lab8.gif" alt="Animated course journey through all eight laboratories" width="96%"></p>
+<p align="center"><img src="assets/course_journey_lab9.gif" alt="Animated course journey through all nine laboratories" width="96%"></p>
 
 ---
 
@@ -49,9 +50,9 @@
 <td width="33%" valign="top" align="center"><h3>06 · Structure · Transform · Optimize</h3><img src="https://img.shields.io/badge/8-QUESTIONS-06B6D4?style=for-the-badge" alt="8 questions"><p>Array/matrix kernels, FFT, reversal cost, Fibonacci, knapsack, LCS, matrix chain.</p><p><strong>Reuse solved structure.</strong></p><p><a href="lab6/README.md"><strong>Open Lab 06 →</strong></a></p></td>
 </tr>
 <tr>
-<td width="33%" valign="top" align="center"><h3>07 · Puzzle · Search · Decide</h3><img src="https://img.shields.io/badge/7-QUESTIONS-A3E635?style=for-the-badge" alt="7 questions"><p>Coin geometry, egg testing, four-peg Hanoi, switches, moving targets, sweeps, matrix chains.</p><p><a href="lab7/README.md"><strong>Open Lab 07 →</strong></a></p></td>
+<td width="33%" valign="top" align="center"><h3>07 · Puzzle · Search · Decide</h3><img src="https://img.shields.io/badge/7-QUESTIONS-A3E635?style=for-the-badge" alt="7 questions"><p>Coin geometry, egg testing, four-peg Hanoi, switches, moving targets, sweeps, matrix chains.</p><p><a href="lab7/lab7/README.md"><strong>Open Lab 07 →</strong></a></p></td>
 <td width="33%" valign="top" align="center"><h3>08 · State · Choice · Story</h3><img src="https://img.shields.io/badge/9-QUESTIONS-81E7BB?style=for-the-badge" alt="9 questions"><p>Coin change, LCS, increasing subsequences, edit scripts, rod cuts, optimal search trees, Collatz.</p><p><a href="lab8/README.md"><strong>Open Lab 08 →</strong></a></p></td>
-<td width="33%" valign="top" align="center"><h3>Design → Evidence</h3><p>Eight laboratories. Forty-nine questions.</p><p>From a state definition to a reconstructed answer.</p><p><a href="lab8/VERIFICATION.md">Explore the latest checks →</a></p></td>
+<td width="33%" valign="top" align="center"><h3>09 · Greedy · Prove · Challenge</h3><img src="https://img.shields.io/badge/10-QUESTIONS-F5CF83?style=for-the-badge" alt="10 questions"><p>Decay scheduling, canonical codes, fuel, merges, cooldowns, interval rooms, alphabetic trees and superstrings.</p><p><a href="lab9/README.md"><strong>Open Lab 09 →</strong></a></p></td>
 </tr>
 </table>
 
@@ -85,8 +86,9 @@
 | **[04](lab4/README.md)** | 18 Aug 2026 | 6 | sorting applications, complement search, event sweeps and intervals | ✅ Complete |
 | **[05](lab5/README.md)** | 25 Aug 2026 | 4 | linear selection, randomized partitioning, Quick Sort and Heap Sort | ✅ Complete |
 | **[06](lab6/README.md)** | 31 Aug 2026 | 8 | array/matrix operations, FFT/reversal transforms and dynamic programming | ✅ Complete |
-| **[07](lab7/README.md)** | 08 Sep 2026 | 7 | puzzles, adversarial search, sweep lines, and matrix-chain DP | ✅ Complete |
+| **[07](lab7/lab7/README.md)** | 08 Sep 2026 | 7 | puzzles, adversarial search, sweep lines, and matrix-chain DP | ✅ Complete |
 | **[08](lab8/README.md)** | 29 Sep 2026 | 9 | dynamic programming, reconstruction, optimal BSTs, and Collatz trajectories | ✅ Complete |
+| **[09](lab9/README.md)** | 06 Oct 2026 | 10 | greedy exchange arguments, heaps, ordered trees and exact comparisons | ✅ Complete |
 
 ---
 
@@ -119,10 +121,17 @@ An asymptotic label is treated as a conclusion, not decoration. The correspondin
 | 04 | [1](lab4/Q-1/README.md) · [2](lab4/Q-2/README.md) · [3](lab4/Q-3/README.md) · [4](lab4/Q-4/README.md) · [5](lab4/Q-5/README.md) · [6](lab4/Q-6/README.md) | sorting applications | stable distribution, complement search, sweep lines, interval geometry |
 | 05 | [1](lab5/Q-1/README.md) · [2](lab5/Q-2/README.md) · [3](lab5/Q-3/README.md) · [4](lab5/Q-4/README.md) | selection and sorting | worst-case linear selection, expected Quick Sort, guaranteed Heap Sort |
 | 06 | [1](lab6/Q-1/README.md) · [2](lab6/Q-2/README.md) · [3](lab6/Q-3/README.md) · [4](lab6/Q-4/README.md) · [5](lab6/Q-5/README.md) · [6](lab6/Q-6/README.md) · [7](lab6/Q-7/README.md) · [8](lab6/Q-8/README.md) | structure, transforms and DP | `O(n log n)` convolution, reversal-cost proof, state reuse and optimal substructure |
-| 07 | [1](lab7/Q-1/README.md) · [2](lab7/Q-2/README.md) · [3](lab7/Q-3/README.md) · [4](lab7/Q-4/README.md) · [5](lab7/Q-5/README.md) · [6](lab7/Q-6/README.md) · [7](lab7/Q-7/README.md) | puzzles, search, sweeps and DP | structural moves, guaranteed coverage, and interval reuse |
+| 07 | [1](lab7/lab7/Q-1/README.md) · [2](lab7/lab7/Q-2/README.md) · [3](lab7/lab7/Q-3/README.md) · [4](lab7/lab7/Q-4/README.md) · [5](lab7/lab7/Q-5/README.md) · [6](lab7/lab7/Q-6/README.md) · [7](lab7/lab7/Q-7/README.md) | puzzles, search, sweeps and DP | structural moves, guaranteed coverage, and interval reuse |
 | 08 | [1](lab8/Q-1/README.md) · [2](lab8/Q-2/README.md) · [3](lab8/Q-3/README.md) · [4](lab8/Q-4/README.md) · [5](lab8/Q-5/README.md) · [6](lab8/Q-6/README.md) · [7](lab8/Q-7/README.md) · [8](lab8/Q-8/README.md) · [9](lab8/Q-9/README.md) | dynamic programming and arithmetic trajectories | optimal witnesses, unordered counts, weighted trees, guarded observations |
+| 09 | [1](lab9/Q-1/README.md) · [2](lab9/Q-2/README.md) · [3](lab9/Q-3/README.md) · [4](lab9/Q-4/README.md) · [5](lab9/Q-5/README.md) · [6](lab9/Q-6/README.md) · [7](lab9/Q-7/README.md) · [8](lab9/Q-8/README.md) · [9](lab9/Q-9/README.md) · [10](lab9/Q-10/README.md) | greedy design and exact checks | 885 checked executions; reconstructed witnesses; explicit modelling assumptions |
 
 ---
+
+## ✦ Lab 09 spotlight
+
+<p align="center"><a href="lab9/README.md"><img src="lab9/assets/lab9_banner.gif" alt="Lab 09 greedy design animated banner" width="96%"></a></p>
+
+Ten questions connect local choices to exchange proofs, answer replay and exact small-instance comparators. Explore the [Lab 09 dashboard](lab9/README.md), [input guide](lab9/INPUTS.md), and [885 checked executions](lab9/VERIFICATION.md). Q1 states its consumption model explicitly; Q3 answers the minimum-stops body; Q9 preserves leaf order; Q10 makes finite claims only.
 
 ## ✦ Lab 08 spotlight
 
@@ -210,8 +219,9 @@ DAA-Lab/
 ├── assets/                    ← course-wide banners and journey animations
 ├── scripts/                   ← legacy Lab 01 regeneration helpers
 ├── lab1/ ... lab5/            ← completed earlier laboratories
-├── lab7/                      ← puzzles, search, sweeps and DP
+├── lab7/lab7/                      ← puzzles, search, sweeps and DP
 ├── lab8/                      ← nine solutions + GIF/SVG evidence + question notes
+├── lab9/                      ← ten solutions + 885 checks + GIF/SVG evidence
 └── lab6/
     ├── README.md
     ├── two supplied problem sheets
@@ -222,4 +232,14 @@ DAA-Lab/
 ```
 
 <p align="center"><img src="assets/footer-orbit.svg" alt="DAA laboratory footer" width="100%"></p>
-<p align="center"><strong>49 questions · 8 labs · one continuous evidence-backed algorithm notebook.</strong></p>
+<p align="center"><strong>59 questions · 9 labs · one continuous evidence-backed algorithm notebook.</strong></p>
+
+## Lab 09 build and evidence
+
+```sh
+python3 lab9/tools/build.py
+python3 lab9/tools/validate.py
+python3 lab9/tools/generate_evidence.py
+```
+
+The existing Lab 07 directory is nested at `lab7/lab7/`; its navigation and root Makefile targets point to that actual location.

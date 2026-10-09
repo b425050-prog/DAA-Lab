@@ -1,0 +1,8 @@
+Greedy superstring: abbabbc
+Exact superstring: bbabbc
+Greedy length: 7
+Optimal length: 6
+Observed ratio: 1.166667
+Greedy is a heuristic; this is a finite-instance comparison.
+Overlap checks: 38
+Exact DP transitions: 12

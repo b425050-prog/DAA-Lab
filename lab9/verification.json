@@ -1,0 +1,9 @@
+{
+  "seed": 42505009,
+  "strict_sources": 10,
+  "oracle_checked_executions": 805,
+  "result": "PASS",
+  "q1_model": "continuous unit-rate integrated consumption",
+  "q1_validation": "concavity-based global optimality gap certificate",
+  "q9_validation": "independent interval DP, ordered prefix code and weighted cost"
+}

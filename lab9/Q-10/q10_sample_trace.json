@@ -1,0 +1,19 @@
+{
+  "greedy": "abbabbc",
+  "exact": "bbabbc",
+  "optimal": 6,
+  "work": 38,
+  "dp_work": 12,
+  "merges": [
+    [
+      3,
+      3,
+      2
+    ],
+    [
+      4,
+      3,
+      0
+    ]
+  ]
+}
