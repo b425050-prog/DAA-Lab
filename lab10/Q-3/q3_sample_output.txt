@@ -1,0 +1,7 @@
+Step 0: maximum=8
+Step 1: maximum=7
+Step 2: maximum=10
+Step 3: maximum=-2
+Step 4: maximum=NONE
+Step 5: maximum=NONE
+Work: 43

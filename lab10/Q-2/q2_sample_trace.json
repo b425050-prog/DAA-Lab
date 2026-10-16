@@ -1,0 +1,14 @@
+{
+  "stdout": "Add 1 (0,0): islands=1\nAdd 2 (0,1): islands=1\nAdd 3 (1,2): islands=2\nAdd 4 (2,1): islands=3\nAdd 5 (1,1): islands=1\nAdd 6 (1,1): islands=1 (duplicate)\nAdd 7 (2,3): islands=2\nAdd 8 (2,2): islands=1\nWork: 48\n",
+  "work": 48,
+  "counts": [
+    1,
+    1,
+    2,
+    3,
+    1,
+    1,
+    2,
+    1
+  ]
+}

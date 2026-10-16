@@ -1,0 +1,11 @@
+Edge 1 (1,2): ACCEPTED
+Edge 2 (2,3): ACCEPTED
+Edge 3 (3,1): REJECTED (odd cycle)
+Edge 4 (3,4): ACCEPTED
+Edge 5 (4,1): ACCEPTED
+Edge 6 (5,6): ACCEPTED
+Edge 7 (2,5): ACCEPTED
+Edge 8 (4,5): ACCEPTED
+Accepted arrivals: 7 of 8
+Final colours: 0 1 0 1 0 1
+Work: 48

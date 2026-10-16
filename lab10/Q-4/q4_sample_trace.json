@@ -1,0 +1,11 @@
+{
+  "stdout": "Delete 1 (vertex 3): maximum=4\nDelete 2 (vertex 1): maximum=4\nDelete 3 (vertex 5): maximum=7\nDelete 4 (vertex 2): maximum=7\nDelete 5 (vertex 4): maximum=0 (empty graph)\nWork: 42\n",
+  "work": 42,
+  "maxima": [
+    4,
+    4,
+    7,
+    7,
+    0
+  ]
+}

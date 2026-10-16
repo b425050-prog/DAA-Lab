@@ -10,14 +10,15 @@
   <a href="lab5/README.md"><img alt="Lab 05" src="https://img.shields.io/badge/LAB%2005-SELECT%20%C2%B7%20PARTITION-F59E0B?style=for-the-badge"></a>
   <a href="lab6/README.md"><img alt="Lab 06" src="https://img.shields.io/badge/LAB%2006-TRANSFORM%20%C2%B7%20OPTIMIZE-06B6D4?style=for-the-badge"></a>
   <a href="lab7/lab7/README.md"><img alt="Lab 07" src="https://img.shields.io/badge/LAB%2007-PUZZLE%20%C2%B7%20SEARCH-A3E635?style=for-the-badge"></a>
-  <a href="lab9/README.md"><img alt="Lab 09" src="https://img.shields.io/badge/LAB%2009-GREEDY%20%C2%B7%20PROVE-F5CF83?style=for-the-badge"></a>
   <a href="lab8/README.md"><img alt="Lab 08" src="https://img.shields.io/badge/LAB%2008-STATE%20%C2%B7%20STORY-81E7BB?style=for-the-badge"></a>
+  <a href="lab9/README.md"><img alt="Lab 09" src="https://img.shields.io/badge/LAB%2009-GREEDY%20%C2%B7%20PROVE-F5CF83?style=for-the-badge"></a>
+  <a href="lab10/README.md"><img alt="Lab 10" src="https://img.shields.io/badge/LAB%2010-CONNECT%20%C2%B7%20MAINTAIN-73E6C2?style=for-the-badge"></a>
 </p>
 
 <p align="center">
   <img alt="Language" src="https://img.shields.io/badge/LANGUAGE-C17-00599C?style=flat-square&logo=c&logoColor=white">
-  <img alt="Labs" src="https://img.shields.io/badge/LABS-09-7C3AED?style=flat-square">
-  <img alt="Questions" src="https://img.shields.io/badge/QUESTIONS-59-0EA5E9?style=flat-square">
+  <img alt="Labs" src="https://img.shields.io/badge/LABS-10-7C3AED?style=flat-square">
+  <img alt="Questions" src="https://img.shields.io/badge/QUESTIONS-64-0EA5E9?style=flat-square">
   <img alt="Approach" src="https://img.shields.io/badge/APPROACH-THEORY%20%2B%20EXPERIMENT-22C55E?style=flat-square">
   <img alt="Visuals" src="https://img.shields.io/badge/VISUALS-SVG%20%2B%20GIF-F97316?style=flat-square">
   <img alt="Status" src="https://img.shields.io/badge/STATUS-CURRENT-06B6D4?style=flat-square">
@@ -32,7 +33,7 @@
 <p align="center"><strong>Satyam Dhal · B425050 · CSE · IIIT Bhubaneswar</strong></p>
 
 <p align="center"><img src="assets/animated-divider.svg" alt="animated divider" width="100%"></p>
-<p align="center"><img src="assets/course_journey_lab9.gif" alt="Animated course journey through all nine laboratories" width="96%"></p>
+<p align="center"><img src="assets/course_journey_lab10.gif" alt="Animated course journey through all ten laboratories" width="96%"></p>
 
 ---
 
@@ -54,6 +55,7 @@
 <td width="33%" valign="top" align="center"><h3>08 · State · Choice · Story</h3><img src="https://img.shields.io/badge/9-QUESTIONS-81E7BB?style=for-the-badge" alt="9 questions"><p>Coin change, LCS, increasing subsequences, edit scripts, rod cuts, optimal search trees, Collatz.</p><p><a href="lab8/README.md"><strong>Open Lab 08 →</strong></a></p></td>
 <td width="33%" valign="top" align="center"><h3>09 · Greedy · Prove · Challenge</h3><img src="https://img.shields.io/badge/10-QUESTIONS-F5CF83?style=for-the-badge" alt="10 questions"><p>Decay scheduling, canonical codes, fuel, merges, cooldowns, interval rooms, alphabetic trees and superstrings.</p><p><a href="lab9/README.md"><strong>Open Lab 09 →</strong></a></p></td>
 </tr>
+<tr><td colspan="3" valign="top" align="center"><h3>10 · Connect · Maintain · Restore</h3><p>Parity-aware DSU, dynamic islands, signed component maxima, reverse-time deletions and reachable permutations.</p><p><strong>Five graph problems. One component invariant at a time.</strong></p><p><a href="lab10/README.md"><strong>Open Lab 10 →</strong></a></p></td></tr>
 </table>
 
 <p align="center"><a href="lab8/README.md"><img src="lab8/assets/lab8_banner.gif" alt="Lab 08 animated banner" width="96%"></a></p>
@@ -89,6 +91,7 @@
 | **[07](lab7/lab7/README.md)** | 08 Sep 2026 | 7 | puzzles, adversarial search, sweep lines, and matrix-chain DP | ✅ Complete |
 | **[08](lab8/README.md)** | 29 Sep 2026 | 9 | dynamic programming, reconstruction, optimal BSTs, and Collatz trajectories | ✅ Complete |
 | **[09](lab9/README.md)** | 06 Oct 2026 | 10 | greedy exchange arguments, heaps, ordered trees and exact comparisons | ✅ Complete |
+| **[10](lab10/README.md)** | 13 Oct 2026 | 5 | graph representations, disjoint sets, dynamic and reverse-time connectivity | ✅ Complete |
 
 ---
 
@@ -124,8 +127,15 @@ An asymptotic label is treated as a conclusion, not decoration. The correspondin
 | 07 | [1](lab7/lab7/Q-1/README.md) · [2](lab7/lab7/Q-2/README.md) · [3](lab7/lab7/Q-3/README.md) · [4](lab7/lab7/Q-4/README.md) · [5](lab7/lab7/Q-5/README.md) · [6](lab7/lab7/Q-6/README.md) · [7](lab7/lab7/Q-7/README.md) | puzzles, search, sweeps and DP | structural moves, guaranteed coverage, and interval reuse |
 | 08 | [1](lab8/Q-1/README.md) · [2](lab8/Q-2/README.md) · [3](lab8/Q-3/README.md) · [4](lab8/Q-4/README.md) · [5](lab8/Q-5/README.md) · [6](lab8/Q-6/README.md) · [7](lab8/Q-7/README.md) · [8](lab8/Q-8/README.md) · [9](lab8/Q-9/README.md) | dynamic programming and arithmetic trajectories | optimal witnesses, unordered counts, weighted trees, guarded observations |
 | 09 | [1](lab9/Q-1/README.md) · [2](lab9/Q-2/README.md) · [3](lab9/Q-3/README.md) · [4](lab9/Q-4/README.md) · [5](lab9/Q-5/README.md) · [6](lab9/Q-6/README.md) · [7](lab9/Q-7/README.md) · [8](lab9/Q-8/README.md) · [9](lab9/Q-9/README.md) · [10](lab9/Q-10/README.md) | greedy design and exact checks | 885 checked executions; reconstructed witnesses; explicit modelling assumptions |
+| 10 | [1](lab10/Q-1/README.md) · [2](lab10/Q-2/README.md) · [3](lab10/Q-3/README.md) · [4](lab10/Q-4/README.md) · [5](lab10/Q-5/README.md) | graphs and disjoint sets | parity constraints, four-neighbour islands, signed maxima, reverse activation and component permutations |
 
 ---
+
+## ✦ Lab 10 spotlight
+
+<p align="center"><a href="lab10/README.md"><img src="lab10/assets/lab10_banner.gif" alt="Lab 10 connectivity in motion" width="96%"></a></p>
+
+Five DSU problems connect graph invariants to real outputs and independent BFS oracles. Explore the [Lab 10 dashboard](lab10/README.md), [input guide](lab10/INPUTS.md) and [566 checked executions](lab10/VERIFICATION.md). Signed weights, duplicate land additions, rejected odd-cycle edges and the exact reverse-time answer moment are handled explicitly.
 
 ## ✦ Lab 09 spotlight
 
@@ -222,6 +232,7 @@ DAA-Lab/
 ├── lab7/lab7/                      ← puzzles, search, sweeps and DP
 ├── lab8/                      ← nine solutions + GIF/SVG evidence + question notes
 ├── lab9/                      ← ten solutions + 885 checks + GIF/SVG evidence
+├── lab10/                     ← five DSU solutions + 566 checks + GIF/SVG evidence
 └── lab6/
     ├── README.md
     ├── two supplied problem sheets
@@ -232,7 +243,7 @@ DAA-Lab/
 ```
 
 <p align="center"><img src="assets/footer-orbit.svg" alt="DAA laboratory footer" width="100%"></p>
-<p align="center"><strong>59 questions · 9 labs · one continuous evidence-backed algorithm notebook.</strong></p>
+<p align="center"><strong>64 questions · 10 labs · one continuous evidence-backed algorithm notebook.</strong></p>
 
 ## Lab 09 build and evidence
 
@@ -243,3 +254,11 @@ python3 lab9/tools/generate_evidence.py
 ```
 
 The existing Lab 07 directory is nested at `lab7/lab7/`; its navigation and root Makefile targets point to that actual location.
+
+## Lab 10 build and evidence
+
+```sh
+python3 lab10/tools/build.py
+python3 lab10/tools/validate.py
+python3 lab10/tools/generate_evidence.py
+```

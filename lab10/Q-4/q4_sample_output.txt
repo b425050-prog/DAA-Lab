@@ -1,0 +1,6 @@
+Delete 1 (vertex 3): maximum=4
+Delete 2 (vertex 1): maximum=4
+Delete 3 (vertex 5): maximum=7
+Delete 4 (vertex 2): maximum=7
+Delete 5 (vertex 4): maximum=0 (empty graph)
+Work: 42

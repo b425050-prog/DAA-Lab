@@ -1,0 +1,43 @@
+PROBLEMS=[
+ 'Edges of an undirected graph arrive one by one. Accept an edge if it preserves bipartiteness; otherwise report an odd-cycle violation and skip that edge.',
+ 'An initially water-filled R by C grid receives land additions. After every operation, return the number of four-directionally connected land components.',
+ 'A vertex-weighted graph receives weighted edges sequentially. Initially and after every arrival, find the greatest total vertex weight among connected components containing at most K vertices.',
+ 'Delete every vertex of a vertex-weighted undirected graph in a supplied order. After each deletion, find the maximum vertex-weight sum among the remaining connected components.',
+ 'Given a permutation and graph edges specifying allowable swaps of positions, find the lexicographically smallest permutation reachable through any number of those swaps.'
+]
+INPUTS=[
+ '`V E`, followed by E rows `u v`. Vertices are numbered 1..V. V = 1..200000 and E = 0..200000. Self-loops are rejected; repeated consistent edges are accepted arrivals. Rejected edges never enter the maintained graph.',
+ '`R C k`, followed by k rows `r c`. Grid coordinates are zero based: 0 <= r < R and 0 <= c < C. R and C are positive, R*C <= 1000000, and k = 0..200000. Repeated additions are harmless duplicates.',
+ '`V E K`, then V signed vertex weights, then E rows `u v edge_weight`. V = 1..200000, E = 0..200000 and K = 0..V. Vertex IDs are 1..V; vertex and edge weights are -10^9..10^9. Step 0 reports the initial isolated-vertex state. `NONE` means no nonempty component meets the size limit.',
+ '`V E`, then V signed vertex weights, E rows `u v`, and finally a permutation of all V vertex IDs giving deletion order. V = 1..200000, E = 0..200000, IDs = 1..V and vertex weights = -10^9..10^9. The empty graph is reported as 0; a nonempty graph can have a negative maximum.',
+ '`n m`, then a permutation of 1..n, followed by m rows `u v` of allowed position swaps. n = 1..200000, m = 0..200000 and position IDs are 1..n. Duplicate edges and self-loops are harmless.'
+]
+IDEAS=[
+ 'Store a parent, component size and XOR parity from each vertex to its parent. Path compression accumulates parity to the root. Vertices in different components can always be joined, setting the root-to-root parity to parity(u) XOR parity(v) XOR 1. If they already share a root, accept exactly when their parities differ. Finally extract a valid two-colouring of all accepted edges.',
+ 'Flatten cell (r,c) to r*C+c and keep a separate active-land flag. A new land cell starts one island. Attempt to join it to each active orthogonal neighbour; decrease the count only when two different DSU roots actually merge. Ignore repeated additions. The DSU arrays are initialised densely, so grid initialisation is part of the bound.',
+ 'Maintain component size and signed vertex-weight sum at DSU roots. Keep a max-heap of snapshots for eligible roots. After a successful union, insert its new snapshot only if its size is at most K. Before answering, discard snapshots whose ID is no longer a root, whose sum has changed, or whose size exceeds K. Edge weights are retained in the input as labels: the question defines connectivity by arrival and the objective by vertex weights, without specifying any edge-weight filtering or priority.',
+ 'Read the graph into adjacency lists and process the deletion permutation backwards as activations. Immediately before restoring P[i], the active graph is exactly the state after the corresponding forward deletion, so save its answer then. Activate that vertex, join it to already active neighbours, and update a lazy component-sum max-heap. This supports negative weights, for which a simple running maximum would be incorrect.',
+ 'Use DSU to discover the connected sets of positions. Create records containing root, position and value. Stable merge sort orders one copy by (root, position) and another by (root, value). Pair corresponding records and place each group\'s ascending values into its ascending positions. Isolated positions remain fixed.'
+]
+PROOFS=[
+ 'The invariant is that the XOR path to a root represents a valid relative colour assignment in that component. An edge requires colour(u) XOR colour(v)=1. Different components have independent colour flips, so the required root relation can always be imposed. Within one component the relation is already fixed: equal parity creates an odd closed walk and hence an odd cycle; opposite parity is consistent. A rejected edge changes no graph connectivity or parity constraint.',
+ 'Before an addition, DSU sets of active cells equal the current islands. A new active cell creates one singleton. Each successful neighbour union reduces the number of sets by one, while an already-connected neighbour does not. These are exactly the possible new four-directional connections, so the updated counter equals the number of islands. Ignoring duplicates preserves this invariant.',
+ 'The live DSU roots partition the current graph, and each root stores its exact size and vertex sum. Every eligible component has a matching current snapshot: initial singletons are inserted and each successful eligible merge is inserted. Invalid snapshots may remain below the heap top, but removing invalid top entries until one is live leaves a greatest eligible sum. Components only grow, so an oversized component cannot become eligible later. Snapshot validation is essential when signed sums decrease.',
+ 'After removing P[0] through P[i], the surviving vertices are P[i+1] through P[V-1]. These are exactly the active vertices just before the reverse loop restores P[i]. Every surviving edge appears once both endpoints are active, and DSU unions exactly the surviving connected components. Reading the heap at that moment therefore yields the required forward answer. The empty graph receives the declared value zero; nonempty negative maxima are preserved.',
+ 'An edge swap cannot move a value outside its connected component. Conversely, swaps along a path generate transpositions between any two positions in that component, so every rearrangement of its values is reachable. At the earliest position where two attainable permutations differ, assigning the smallest remaining value available in that position\'s component is best. Repeating that choice is exactly sorting each component\'s values into its increasing positions.'
+]
+ANALYSES=[
+ 'Union by size with path compression costs amortised inverse-Ackermann time per operation. Initialisation and final colour extraction are linear, giving O(V + E*alpha(V)) amortised time and O(V) space. The counter records DSU node visits, including final colour extraction.',
+ 'Dense initialisation costs O(R*C). Each of k additions attempts at most four neighbour joins, giving O(R*C + k*alpha(R*C)) amortised time and O(R*C) space. The plotted counter includes neighbour probes and DSU visits but excludes dense initialisation and input/output work.',
+ 'At most V-1 successful unions occur. There are at most 2V-1 heap insertions and removals across all queries, each O(log V), while all E union attempts cost O(E*alpha(V)) amortised. Total time is O(V + E*alpha(V) + V*log V), with O(V) space. Edge weights are not sorted or added to component totals.',
+ 'Adjacency construction and scans take O(V+E). DSU operations cost O((V+E)*alpha(V)) amortised. At most 2V-1 snapshots are inserted, giving O(V*log V) heap work overall. Total time is O((V+E)*alpha(V) + V*log V) and space O(V+E). The logarithmic term is needed for signed-weight maxima.',
+ 'DSU discovery costs O((n+m)*alpha(n)) amortised. Two deterministic merge sorts cost O(n*log n), and the final assignment is linear. Time is O((n+m)*alpha(n) + n*log n), with O(n) auxiliary space. The implementation uses its own merge sort, so the sorting bound does not depend on the C library\'s qsort.'
+]
+RESULTS=[
+ 'The sample rejects edge (3,1), which closes a triangle, and accepts the other seven arrivals. Final colours 0 1 0 1 0 1 satisfy every retained edge.',
+ 'The sample island counts are 1,1,2,3,1,1,2,1. The repeated addition at (1,1) keeps the count unchanged, and only successful unions reduce it.',
+ 'With K=2, the sample maxima are 8,7,10,-2,NONE,NONE. The negative answer -2 is valid; later no component satisfies the size limit.',
+ 'In forward deletion order 3,1,5,2,4, the sample answers are 4,4,7,7,0. The final zero denotes an empty graph. Independent deletion-and-BFS replay checks every saved answer.',
+ 'The sample result is 3 4 5 6 7 2 1. Positions 1,3,5 share one component, positions 2,4 share another, and positions 6 and 7 stay fixed.'
+]
+SOURCES={}

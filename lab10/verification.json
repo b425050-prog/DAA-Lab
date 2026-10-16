@@ -1,0 +1,9 @@
+{
+  "seed": 42505010,
+  "result": "PASS",
+  "strict_sources": 5,
+  "core_executions": 526,
+  "oracles": "BFS, flood fill, deletion replay, exhaustive legal swaps",
+  "negative_weights": true,
+  "q3_edge_order": "arrival order; edge weights are labels"
+}

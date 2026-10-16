@@ -1,0 +1,12 @@
+{
+  "stdout": "Step 0: maximum=8\nStep 1: maximum=7\nStep 2: maximum=10\nStep 3: maximum=-2\nStep 4: maximum=NONE\nStep 5: maximum=NONE\nWork: 43\n",
+  "work": 43,
+  "maxima": [
+    8,
+    7,
+    10,
+    -2,
+    null,
+    null
+  ]
+}

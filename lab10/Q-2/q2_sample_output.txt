@@ -1,0 +1,9 @@
+Add 1 (0,0): islands=1
+Add 2 (0,1): islands=1
+Add 3 (1,2): islands=2
+Add 4 (2,1): islands=3
+Add 5 (1,1): islands=1
+Add 6 (1,1): islands=1 (duplicate)
+Add 7 (2,3): islands=2
+Add 8 (2,2): islands=1
+Work: 48

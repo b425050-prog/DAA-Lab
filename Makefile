@@ -1,6 +1,6 @@
-.PHONY: all lab4 lab5 lab6 lab7 lab8 lab9 evidence strict clean
+.PHONY: all lab4 lab5 lab6 lab7 lab8 lab9 lab10 evidence strict clean
 
-all: lab4 lab5 lab6 lab7 lab8 lab9
+all: lab4 lab5 lab6 lab7 lab8 lab9 lab10
 
 lab4:
 	$(MAKE) -C lab4 all
@@ -24,6 +24,7 @@ evidence:
 	$(MAKE) -C lab7/lab7 evidence
 	$(MAKE) -C lab8 evidence
 	$(MAKE) -C lab9 evidence
+	$(MAKE) -C lab10 evidence
 
 strict:
 	$(MAKE) -C lab4 strict
@@ -32,6 +33,7 @@ strict:
 	$(MAKE) -C lab7/lab7 strict
 	$(MAKE) -C lab8 strict
 	$(MAKE) -C lab9 strict
+	$(MAKE) -C lab10 strict
 
 clean:
 	$(MAKE) -C lab4 clean
@@ -40,6 +42,10 @@ clean:
 	$(MAKE) -C lab7/lab7 clean
 	$(MAKE) -C lab8 clean
 	$(MAKE) -C lab9 clean
+	$(MAKE) -C lab10 clean
 
 lab9:
 	$(MAKE) -C lab9 all
+
+lab10:
+	$(MAKE) -C lab10 all
