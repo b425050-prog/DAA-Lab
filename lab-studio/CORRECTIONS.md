@@ -1,6 +1,6 @@
 # Corrections in this project only
 
-Source baseline: `91b6e69bd366391a07a162d4cac98b72992cc7cb` from `b425050-prog/DAA-Lab`. Original paths below are relative to `engine/sources/` in this folder. The original repository files are preserved.
+Source baseline: `91b6e69bd366391a07a162d4cac98b72992cc7cb` from `b425050-prog/DAA-Lab`. Original paths below are relative to `engine/overrides/` in this folder. The original repository files are preserved.
 
 ## Arithmetic and convergence
 
@@ -19,4 +19,15 @@ Lab 1's four fixed demonstrations accept parameters in the project; the bubble s
 
 The party-attendance example uses distinct endpoints, matching the original program's precondition. Modern graph solutions already handle rejected edges, duplicate additions, signed weights, and reverse-deletion timing; independent oracle suites verify those cases. No defect is claimed merely because an algorithm has documented assumptions or limits.
 
-The source hash list in `engine/provenance.json` identifies the original copies. `AUDIT.json` lists which project copies differ and records the checks actually run.
+The source hash list in `engine/provenance.json` identifies the original versions of the overrides. `AUDIT.json` lists which corrected overrides are applied and records the checks actually run.
+
+
+## Interface reliability refinements
+
+The launcher explicitly locates Chrome, finds common Windows compiler installations, rebuilds stale frontend output, and reports setup/occupied-port problems clearly. Matching dependencies are reused instead of being unnecessarily reinstalled while a Vite/test process may hold their executables open.
+
+Failed builds no longer leave cache entries that look complete. Cache writes use unique staging files and atomic replacement. Run cancellation terminates the active computation. Optional JSON-trace failures preserve successful C answers. BOM/CRLF text imports are normalized, generated file-sort input can be submitted again, and large graph results retain their structured decisions even when their drawing is limited.
+
+The UI preserves binary codes and exact integer strings, renders legacy matrices as matrices, prevents negative grid-cell geometry, validates saved workspace shapes, and provides matrix resizing and count synchronization. Imports, exports, keyboard tab navigation, cancellation, and chart expansion have focused regression checks.
+
+Unchanged C, Markdown, datasets, and upstream test scripts are read directly from the original repository. Only corrected/adapted files remain in `engine/overrides/`; independent suites are copied into a disposable test tree at audit time.

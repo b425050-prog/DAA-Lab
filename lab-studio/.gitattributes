@@ -7,4 +7,4 @@
 *.md text eol=lf
 *.cmd text eol=crlf
 # Preserve the exact imported C/header bytes for provenance comparisons.
-engine/sources/** -text
+engine/overrides/** -text

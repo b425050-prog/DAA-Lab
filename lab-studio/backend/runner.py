@@ -11,16 +11,20 @@ import subprocess
 import tempfile
 import threading
 import time
+import uuid
+from functools import lru_cache
+from .catalog import ROOT, REPOSITORY, OVERRIDES, load_catalog, materialize, source_path, parse_dat
 
-ROOT = Path(__file__).resolve().parents[1]
-SOURCES = ROOT / 'engine' / 'sources'
+SOURCES = OVERRIDES  # Compatibility for direct corrected-header regression tests.
 CACHE = ROOT / '.cache'
-CATALOG = json.loads((ROOT / 'catalog.json').read_text(encoding='utf-8'))
+CATALOG = load_catalog()
 BY_ID = {item['id']: item for item in CATALOG['problems']}
 BUILD_LOCK = threading.Lock()
 RUN_SLOTS = threading.BoundedSemaphore(2)
 TIMEOUT = 12
 OUTPUT_LIMIT = 2 * 1024 * 1024
+REQUESTS = {}
+REQUEST_LOCK = threading.Lock()
 
 
 class RunError(Exception):
@@ -32,31 +36,63 @@ class RunError(Exception):
 def compiler():
     configured = os.environ.get('CC')
     found = shutil.which(configured or 'gcc') or (None if configured else shutil.which('clang'))
+    if not found and not configured and os.name == 'nt':
+        candidates = [Path('C:/msys64/ucrt64/bin/gcc.exe'), Path('C:/msys64/mingw64/bin/gcc.exe'), Path('C:/Program Files/LLVM/bin/clang.exe')]
+        found = next((str(path) for path in candidates if path.is_file()), None)
     if not found:
         raise RunError('A C compiler is needed. Install GCC or Clang, add it to PATH, then restart Lab Studio.', 503)
     return found
 
 
+@lru_cache(maxsize=8)
+def compiler_identity(cc):
+    try:
+        result = subprocess.run([cc, '--version'], capture_output=True, timeout=10)
+    except (OSError,subprocess.TimeoutExpired) as error:
+        raise RunError('The C compiler could not start. Check its installation and the CC setting.',503) from error
+    if result.returncode:
+        raise RunError('The selected C compiler could not start. Check its installation and the CC setting.', 503)
+    return result.stdout
+
+
 def build(item):
-    source = SOURCES / item['source']
+    source = source_path(item['source'])
+    if not source.is_file():
+        raise RunError('The repository source file is missing. Keep lab-studio inside the complete DAA-Lab checkout.', 503)
     digest = hashlib.sha256(source.read_bytes())
-    # Headers are small; hashing all of them avoids stale builds after a shared fix.
-    for header in sorted(SOURCES.rglob('*.h')):
-        digest.update(header.read_bytes())
+    lab_root = REPOSITORY / f'lab{item["lab"]}'
+    for header in sorted(lab_root.rglob('*.h')):
+        relative = header.relative_to(REPOSITORY)
+        digest.update(str(relative).encode())
+        digest.update(source_path(relative).read_bytes())
     cc = compiler()
-    digest.update(cc.encode())
+    flags = ['-std=c17', '-O2', '-Wall', '-Wextra', '-Wpedantic']
+    if os.name == 'nt' and Path(cc).name.lower() in ('gcc', 'gcc.exe'):
+        flags.append('-static-libgcc')
+    digest.update(cc.encode()+compiler_identity(cc)+' '.join(flags).encode())
     target = CACHE / 'bin' / (item['id'] + '-' + digest.hexdigest()[:16] + ('.exe' if os.name == 'nt' else ''))
     with BUILD_LOCK:
-        if not target.exists():
+        if not target.exists() or target.stat().st_size == 0:
             target.parent.mkdir(parents=True, exist_ok=True)
-            result = subprocess.run([cc, '-std=c17', '-O2', '-Wall', '-Wextra', '-Wpedantic',
-                                     str(source), '-lm', '-o', str(target)], capture_output=True, timeout=60)
-            if result.returncode:
-                raise RunError('The C program could not be compiled.', 500, result.stderr.decode(errors='replace'))
+            with tempfile.TemporaryDirectory(prefix='daa-build-') as temp:
+                directory = Path(temp)
+                materialize(directory, lab=item['lab'])
+                executable = directory / ('program.exe' if os.name == 'nt' else 'program')
+                try:
+                    result = subprocess.run([cc, *flags, str(directory/item['source']), '-lm', '-o', str(executable)], capture_output=True, timeout=60)
+                except (OSError, subprocess.TimeoutExpired) as error:
+                    raise RunError('Compilation could not finish. Check the C compiler installation and retry.', 503, str(error)) from error
+                if result.returncode:
+                    raise RunError('The C program could not be compiled.', 500, result.stderr.decode(errors='replace'))
+                staged = target.with_name(target.name+'.'+uuid.uuid4().hex+'.partial')
+                shutil.copy2(executable, staged)
+                staged.replace(target)
     return target
 
 
 def validate_input(item, text):
+    if isinstance(text, str):
+        text = text.removeprefix('\ufeff').replace('\r\n', '\n').replace('\r', '\n')
     if not isinstance(text, str) or len(text.encode('utf-8')) > 64_000:
         raise RunError('Input must be text of at most 64 KB.')
     if any(ord(c) > 126 or (ord(c) < 32 and c not in '\r\n\t') for c in text):
@@ -143,17 +179,19 @@ def validate_input(item, text):
     return text if text.endswith('\n') else text + '\n'
 
 
-def execute_process(binary, text, directory, args=()):
+def execute_process(binary, text, directory, args=(), cancel=None):
     output, errors = directory / 'stdout.log', directory / 'stderr.log'
     stdin_path = directory / 'stdin.txt'
     stdin_path.write_text(text, encoding='ascii')
-    env = {**os.environ, 'DAA_NO_OPEN': '1'}
+    env = {**os.environ, 'DAA_NO_OPEN': '1', 'PATH': str(Path(compiler()).parent)+os.pathsep+os.environ.get('PATH','')}
     with stdin_path.open('rb') as inp, output.open('wb') as out, errors.open('wb') as err:
         process = subprocess.Popen([str(binary), *args], stdin=inp, stdout=out, stderr=err,
                                    cwd=directory, env=env)
         start = time.monotonic()
         try:
             while process.poll() is None:
+                if cancel is not None and cancel.is_set():
+                    raise RunError('Run cancelled.', 409)
                 if time.monotonic() - start > TIMEOUT:
                     raise RunError(f'Run stopped after {TIMEOUT} seconds. Try a smaller input.')
                 if output.stat().st_size + errors.stat().st_size > OUTPUT_LIMIT:
@@ -168,34 +206,10 @@ def execute_process(binary, text, directory, args=()):
     stdout = output.read_text(encoding='utf-8', errors='replace')
     stderr = errors.read_text(encoding='utf-8', errors='replace')
     if process.returncode:
+        if process.returncode & 0xffffffff == 0xC0000135:
+            raise RunError('A required compiler runtime DLL is missing. Reinstall GCC/Clang or add its bin directory to PATH.', 503)
         raise RunError(stderr.strip() or 'The C program rejected this input. See its output below.', output=stdout)
     return stdout, stderr
-
-
-def parse_dat(text):
-    rows, labels = [], []
-    for line in text.splitlines():
-        parts = line.strip().split()
-        if not parts:
-            continue
-        if parts[0].startswith('#'):
-            candidate = line.lstrip('# ').split()
-            if candidate:
-                labels = candidate
-            continue
-        try:
-            row = [float(x) for x in parts]
-        except ValueError:
-            continue
-        if len(row) > 1 and all(math.isfinite(v) for v in row):
-            rows.append(row)
-    if not rows:
-        return None
-    width = len(rows[0])
-    rows = [r for r in rows if len(r) == width]
-    if len(labels) != width:
-        labels = ['Input size'] + [f'Series {i}' for i in range(1, width)]
-    return {'labels': labels, 'rows': rows, 'totalRows': len(rows)}
 
 
 def graph_result(pid, text, stdout):
@@ -206,14 +220,12 @@ def graph_result(pid, text, stdout):
     if pid == 'L10Q2':
         return {'kind': 'grid', 'rows': n, 'cols': m, 'cells': [values[i:i+2] for i in range(3, len(values), 2)],
                 'counts': list(map(int, re.findall(r'islands=(\d+)', stdout)))}
-    if n > 200:
-        return {'kind': 'large', 'n': n}
     offset = 2 if pid == 'L10Q1' else 3 + n if pid == 'L10Q3' else 2 + n
     stride = 3 if pid == 'L10Q3' else 2
     edges = [values[i:i+stride] for i in range(offset, offset + stride*m, stride)]
     accepted = ['REJECTED' not in s for s in stdout.splitlines() if s.startswith('Edge ')]
     colours_match = re.search(r'Final colours:([^\n]*)', stdout)
-    result = {'kind': 'graph', 'n': n, 'edges': edges, 'accepted': accepted,
+    result = {'kind': 'large' if n > 200 else 'graph', 'n': n, 'edges': edges, 'accepted': accepted,
               'colours': list(map(int, colours_match[1].split())) if colours_match else [],
               'maxima': [None if x == 'NONE' else int(x) for x in re.findall(r'maximum=(NONE|-?\d+)', stdout)]}
     if pid == 'L10Q3':
@@ -229,15 +241,33 @@ def graph_result(pid, text, stdout):
     return result
 
 
-def run_problem(pid, text, count_only=False):
+def cancel_run(request_id):
+    with REQUEST_LOCK:
+        event = REQUESTS.get(request_id)
+        if event:
+            event.set()
+    return bool(event)
+
+
+def run_problem(pid, text, count_only=False, request_id=None):
     if pid not in BY_ID:
         raise RunError('Unknown problem.', 404)
     if not RUN_SLOTS.acquire(blocking=False):
         raise RunError('Two runs are already active. Please try again shortly.', 429)
+    event = threading.Event()
+    if request_id:
+        with REQUEST_LOCK:
+            if request_id in REQUESTS:
+                RUN_SLOTS.release()
+                raise RunError('This request is already running.', 409)
+            REQUESTS[request_id] = event
     try:
         item = BY_ID[pid]
+        supplied_input = text
         text = validate_input(item, text)
         binary = build(item)
+        if event.is_set():
+            raise RunError('Run cancelled.', 409)
         start = time.perf_counter()
         with tempfile.TemporaryDirectory(prefix='daa-studio-') as temp:
             directory = Path(temp)
@@ -245,13 +275,21 @@ def run_problem(pid, text, count_only=False):
             local_binary = directory / binary.name
             shutil.copy2(binary, local_binary)
             args = ['--count'] if count_only and pid in ('L7Q1', 'L7Q3', 'L7Q4') else []
-            stdout, stderr = execute_process(local_binary, text, directory, args)
+            stdout, stderr = execute_process(local_binary, text, directory, args, event)
             elapsed = round((time.perf_counter() - start) * 1000, 2)
-            trace = None
+            trace, warnings = None, []
             if item['lab'] in (8, 9):
-                raw, _ = execute_process(local_binary, text, directory, ['--json'])
-                # Preserve 64-bit JSON integers as decimal strings rather than lose precision in JS.
-                trace = json.loads(raw, parse_int=lambda x: int(x) if abs(int(x)) <= 2**53-1 else x)
+                try:
+                    raw, _ = execute_process(local_binary, text, directory, ['--json'], event)
+                    def reject_constant(value):
+                        raise ValueError('Non-finite JSON value: '+value)
+                    trace = json.loads(raw, parse_int=lambda x: int(x) if abs(int(x)) <= 2**53-1 else x,parse_constant=reject_constant)
+                except RunError as error:
+                    if event.is_set():
+                        raise
+                    warnings.append('The C calculation succeeded. Its detailed JSON trace exceeded the interactive limit or could not be generated; the answer and console output are available. '+error.message)
+                except ValueError:
+                    warnings.append('The C calculation succeeded, but its detailed JSON trace was invalid. The answer and console output are available.')
             generated = []
             for path in sorted(directory.glob('*.dat')):
                 if path.stat().st_size <= OUTPUT_LIMIT:
@@ -264,8 +302,11 @@ def run_problem(pid, text, count_only=False):
                 if path.exists() and path.stat().st_size <= OUTPUT_LIMIT:
                     files.append({'name': name, 'text': path.read_text(errors='replace')})
             # JSON invocation overwrites stdout.log, so retain the first human-readable result above.
-            return {'problemId': pid, 'input': text, 'stdout': stdout, 'stderr': stderr,
+            return {'problemId': pid, 'input': supplied_input.removeprefix('\ufeff').replace('\r\n','\n').replace('\r','\n'), 'countOnly':bool(args), 'warnings':warnings, 'stdout': stdout, 'stderr': stderr,
                     'elapsedMs': elapsed, 'trace': trace, 'graph': graph_result(pid, text, stdout),
                     'datasets': generated, 'files': files, 'source': item['source'], 'engine': 'C17'}
     finally:
+        if request_id:
+            with REQUEST_LOCK:
+                REQUESTS.pop(request_id, None)
         RUN_SLOTS.release()

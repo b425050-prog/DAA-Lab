@@ -1,13 +1,13 @@
 {
   "status": "PASS",
   "sourceCommit": "91b6e69bd366391a07a162d4cac98b72992cc7cb",
-  "scope": "All project-owned C copies; original repository files are not modified.",
+  "scope": "Repository C sources with project overrides; original files remain read-only.",
   "compiler": "gcc.EXE",
   "cSyntaxChecks": 126,
   "sampleRuns": 64,
   "focusedRegressions": "PASS",
   "fullAudit": true,
-  "modifiedProjectCopies": [
+  "correctedOverrides": [
     "lab1/Q-1/q1_growth_order.c",
     "lab1/Q-2/q2_coin_toss.c",
     "lab1/Q-3/q3_bubble_sort.c",
@@ -24,10 +24,11 @@
     "lab6/Q-8/q8_matrix_chain.h",
     "lab6/Q-8/q8_matrix_chain_dp.c"
   ],
+  "overrideCount": 15,
   "warnings": [
     {
       "source": "lab6/new.c",
-      "diagnostics": "engine/sources\\lab6\\new.c:2: warning: ISO C forbids an empty translation unit [-Wpedantic]\n"
+      "diagnostics": "repository\\lab6\\new.c:2: warning: ISO C forbids an empty translation unit [-Wpedantic]\n"
     }
   ],
   "failures": [],
@@ -75,7 +76,7 @@
     {
       "id": "L2Q3",
       "result": "PASS",
-      "outputSha256": "7259c6ad9b052d38d5c104e3f478ab0e35f1cf768637d60d9b271b2f8fb7936a"
+      "outputSha256": "bdb80ff5da9ce4cddb5ebe73e0e9973e5dbd137cdcc9a50dc81fa6a6137f2a7e"
     },
     {
       "id": "L3Q1",
@@ -357,156 +358,167 @@
     {
       "lab": 7,
       "result": "PASS",
-      "transcript": "Built all 7 C17 programs with warnings treated as errors.\r\nPASS coins\r\nPASS eggs\r\nPASS hanoi\r\nPASS switches\r\nPASS target\r\nPASS scientists\r\nPASS matrix_chain\r\nPASS invalid_input\r\nPASS: all 7 solutions; 341 program executions plus independent oracle checks.\r\n"
+      "executions": 341
     },
     {
       "lab": 8,
       "result": "PASS",
-      "transcript": "Created q1_evidence.svg\r\nCreated q2_evidence.svg\r\nCreated q3_evidence.svg\r\nCreated q4_evidence.svg\r\nCreated q5_evidence.svg\r\nCreated q6_evidence.svg\r\nCreated q7_evidence.svg\r\nCreated q8_evidence.svg\r\nCreated q9_evidence.svg\r\nPASS: 18/18 C17 sources; warnings treated as errors.\r\nPASS: 993 oracle-checked executions.\r\n"
+      "executions": 993
     },
     {
       "lab": 9,
       "result": "PASS",
-      "transcript": "{\r\n  \"seed\": 42505009,\r\n  \"strict_sources\": 10,\r\n  \"oracle_checked_executions\": 805,\r\n  \"result\": \"PASS\",\r\n  \"q1_model\": \"continuous unit-rate integrated consumption\",\r\n  \"q1_validation\": \"concavity-based global optimality gap certificate\",\r\n  \"q9_validation\": \"independent interval DP, ordered prefix code and weighted cost\"\r\n}\r\n"
+      "executions": 805
     },
     {
       "lab": 10,
       "result": "PASS",
-      "transcript": "{\r\n  \"seed\": 42505010,\r\n  \"result\": \"PASS\",\r\n  \"strict_sources\": 5,\r\n  \"core_executions\": 526,\r\n  \"oracles\": \"BFS, flood fill, deletion replay, exhaustive legal swaps\",\r\n  \"negative_weights\": true,\r\n  \"q3_edge_order\": \"arrival order; edge weights are labels\"\r\n}\r\n"
+      "executions": 526
     }
   ],
   "legacyExperiments": [
     {
       "source": "lab2/Q-2/q2_plot_experimental.c",
       "result": "PASS",
-      "transcript": "Created q2_experimental_data.dat and q2_experimental_complexity.svg\r\n"
+      "outputSha256": "34bb19f2180390d61858bb90cc271a076683daf25ca4fcc0644373f85a622abe"
     },
     {
       "source": "lab3/Q-1/q1_experimental_comparison.c",
       "result": "PASS",
-      "transcript": "Q1 deterministic worst-case comparison\r\nSearching for x > maximum element (unsuccessful search).\r\n\r\nn          Bin probes     Ter probes      Bin comparisons  Ter comparisons   Winner    \r\n8          4              4               8                8                 Binary    \r\n16         5              5               10               11                Binary    \r\n32         6              6               12               12                Binary    \r\n64         7              7               14               15                Binary    \r\n128        8              9               16               19                Binary    \r\n256        9              10              18               20                Binary    \r\n512        10             11              20               23                Binary    \r\n1024       11             12              22               24                Binary    \r\n2048       12             14              24               28                Binary    \r\n4096       13             15              26               31                Binary    \r\n8192       14             16              28               32                Binary    \r\n16384      15             17              30               35                Binary    \r\n32768      16             19              32               39                Binary    \r\n65536      17             20              34               40                Binary    \r\n131072     18             21              36               43                Binary    \r\n262144     19             22              38               44                Binary    \r\n524288     20             24              40               48                Binary    \r\n1048576    21             25              42               51                Binary    \r\n\r\nData written to q1_experimental_data.dat\r\nConclusion: both grow logarithmically, but binary search uses the smaller\r\nworst-case probe constant for this comparison model.\r\n"
+      "outputSha256": "bcecb420be2f9ea3cb7fac6be3bdd40519bbe4e10a516e50817474c4d5bf30dd"
     },
     {
       "source": "lab3/Q-2/q2_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n        worst weighings   ceil(log2 n)  bound + 1   \r\n----------------------------------------------------------\r\n2        1                 1             2           \r\n3        2                 2             3           \r\n4        2                 2             3           \r\n5        2                 3             4           \r\n6        3                 3             4           \r\n7        3                 3             4           \r\n8        3                 3             4           \r\n9        3                 4             5           \r\n10       3                 4             5           \r\n11       3                 4             5           \r\n12       4                 4             5           \r\n13       4                 4             5           \r\n14       4                 4             5           \r\n15       4                 4             5           \r\n16       4                 4             5           \r\n17       4                 5             6           \r\n18       4                 5             6           \r\n19       4                 5             6           \r\n20       4                 5             6           \r\n32       5                 5             6           \r\n64       6                 6             7           \r\n128      7                 7             8           \r\n256      8                 8             9           \r\n512      9                 9             10          \r\n1024     10                10            11          \r\n\r\nAll tested cases satisfy worst weighings <= ceil(log2 n) + 1.\r\nData written to q2_experimental_data.dat\r\n"
+      "outputSha256": "8054adc996ba7340b71ad7b91d1734b794682fb46db7d2ad61f6b4fc5340ecd9"
     },
     {
       "source": "lab3/Q-3/q3_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n        comparisons    3n/2           exact formula \r\n1        0              1.5            0             \r\n2        1              3.0            1             \r\n3        3              4.5            3             \r\n4        4              6.0            4             \r\n5        6              7.5            6             \r\n6        7              9.0            7             \r\n7        9              10.5           9             \r\n8        10             12.0           10            \r\n9        12             13.5           12            \r\n10       13             15.0           13            \r\n11       15             16.5           15            \r\n12       16             18.0           16            \r\n13       18             19.5           18            \r\n14       19             21.0           19            \r\n15       21             22.5           21            \r\n16       22             24.0           22            \r\n32       46             48.0           46            \r\n64       94             96.0           94            \r\n128      190            192.0          190           \r\n256      382            384.0          382           \r\n512      766            768.0          766           \r\n1024     1534           1536.0         1534          \r\n2048     3070           3072.0         3070          \r\n4096     6142           6144.0         6142          \r\n\r\nEvery tested n satisfies comparisons <= 3n/2 and matches the exact pairwise-tournament formula.\r\n"
+      "outputSha256": "563a511d13be37fcd213a4769fc461cefbf9678dc1b346e97832ace7f93a19c0"
     },
     {
       "source": "lab3/Q-4/q4_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n        Strassen mult        Classical mult       speedup count\r\n1        1                    1                    1.0000      \r\n2        7                    8                    1.1429      \r\n4        49                   64                   1.3061      \r\n8        343                  512                  1.4927      \r\n16       2401                 4096                 1.7060      \r\n32       16807                32768                1.9497      \r\n64       117649               262144               2.2282      \r\n128      823543               2097152              2.5465      \r\n256      5764801              16777216             2.9103      \r\n512      40353607             134217728            3.3260      \r\n1024     282475249            1073741824           3.8012      \r\n\r\nAt n=2^k, Strassen performs exactly 7^k = n^(log2 7) scalar multiplications.\r\nData written to q4_experimental_data.dat\r\n"
+      "outputSha256": "9c7a5cc9bb4424c15ce2867f3c36abd2dab63d3bb2d2344f4e2c1690b999a97f"
     },
     {
       "source": "lab3/Q-5/q5_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n       mult         add/sub        divide-by-2  total ops        n^2         \r\n1       1            0              0            1                1           \r\n2       2            6              2            10               4           \r\n4       4            36             12           52               16          \r\n8       8            168            56           232              64          \r\n16      16           720            240          976              256         \r\n32      32           2976           992          4000             1024        \r\n64      64           12096          4032         16192            4096        \r\n128     128          48768          16256        65152            16384       \r\n256     256          195840         65280        261376           65536       \r\n512     512          784896         261632       1047040          262144      \r\n1024    1024         3142656        1047552      4191232          1048576     \r\n\r\nThe scalar multiplication count is only n; total work is dominated by Theta(n^2)\r\nblock additions/reconstruction and by writing the n^2 output entries.\r\n"
+      "outputSha256": "216bef09b5293fab6392c7cb2294f7a51481744fa0baaf05db55ea71325f8712"
     },
     {
       "source": "lab3/Q-6/q6_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n       sorted cmp   reverse cmp  random cmp   exact       \r\n8       28           28           28           28          \r\n16      120          120          120          120         \r\n24      276          276          276          276         \r\n32      496          496          496          496         \r\n64      2016         2016         2016         2016        \r\n128     8128         8128         8128         8128        \r\n192     18336        18336        18336        18336       \r\n256     32640        32640        32640        32640       \r\n320     51040        51040        51040        51040       \r\n384     73536        73536        73536        73536       \r\n448     100128       100128       100128       100128      \r\n512     130816       130816       130816       130816      \r\n\r\nAll three input orders perform exactly n(n-1)/2 comparisons.\r\nBest-case and worst-case running times are therefore both Theta(n^2).\r\n"
+      "outputSha256": "89e68101a9cc79226140893bee6a4f02e7aa20f2fe343cc6fbdcd5faf62e8f5c"
     },
     {
       "source": "lab4/Q-1/q1_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n         reads          writes         total          validation\r\n128       128            128            256            PASS      \r\n256       256            256            512            PASS      \r\n512       512            512            1024           PASS      \r\n1024      1024           1024           2048           PASS      \r\n2048      2048           2048           4096           PASS      \r\n4096      4096           4096           8192           PASS      \r\n8192      8192           8192           16384          PASS      \r\n16384     16384          16384          32768          PASS      \r\n32768     32768          32768          65536          PASS      \r\n65536     65536          65536          131072         PASS      \r\n131072    131072         131072         262144         PASS      \r\n\r\nEvery run performs exactly n classifications + n placements = 2n.\r\nData written to q1_experimental_data.dat\r\n"
+      "outputSha256": "e96219599446030a46d925e8879b89590ae79d5c811fb3b6068cec8cc2390cfb"
     },
     {
       "source": "lab4/Q-2/q2_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n        sort cmp       search cmp       total          validation\r\n128      737            1024             1761           PASS      \r\n256      1733           2304             4037           PASS      \r\n512      3966           5120             9086           PASS      \r\n1024     8970           11264            20234          PASS      \r\n2048     19932          24576            44508          PASS      \r\n4096     44041          53248            97289          PASS      \r\n8192     96198          114688           210886         PASS      \r\n16384    208685         245760           454445         PASS      \r\n32768    450173         524288           974461         PASS      \r\n\r\nThe total comparison count stays a constant multiple of n log2(n).\r\nData written to q2_experimental_data.dat\r\n"
+      "outputSha256": "321b5c378072c700c436a5b7c7416e17871016b8733da3bac6a5f974c0161bf6"
     },
     {
       "source": "lab4/Q-3/q3_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n     k   sort cmp    prefixes      binary cmp    total         check   \r\n16    2   47          15            49            96            PASS    \r\n24    2   82          23            89            171           PASS    \r\n32    2   121         31            129           250           PASS    \r\n48    2   214         47            225           439           PASS    \r\n64    2   308         63            321           629           PASS    \r\n96    2   508         95            545           1053          PASS    \r\n128   2   726         127           769           1495          PASS    \r\n16    3   47          105           290           337           PASS    \r\n24    3   82          253           822           904           PASS    \r\n32    3   120         465           1674          1794          PASS    \r\n48    3   210         1081          4458          4668          PASS    \r\n64    3   300         1953          8778          9078          PASS    \r\n96    3   510         4465          22522         23032         PASS    \r\n128   3   738         8001          43434         44172         PASS    \r\n16    4   45          455           1095          1140          PASS    \r\n24    4   81          1771          5067          5148          PASS    \r\n32    4   123         4495          14415         14538         PASS    \r\n48    4   213         16215         60039         60252         PASS    \r\n64    4   298         39711         161727        162025        PASS    \r\n96    4   517         138415        636559        637076        PASS    \r\n128   4   737         333375        1662303       1663040       PASS    \r\n\r\nAll impossible-target runs exhausted every (k-1)-prefix.\r\nData written to q3_experimental_data.dat\r\n"
+      "outputSha256": "2724facfa5d0b4ac02df77c26dd280f7904e16991757ea983b08e26970a79384"
     },
     {
       "source": "lab4/Q-4/q4_experimental_validation.c",
       "result": "PASS",
-      "transcript": "persons  events     sort cmp       sweep      total          peak     check   \r\n128      256        1758           256        2014           128      PASS    \r\n256      512        4033           512        4545           256      PASS    \r\n512      1024       9069           1024       10093          512      PASS    \r\n1024     2048       20194          2048       22242          1024     PASS    \r\n2048     4096       44494          4096       48590          2048     PASS    \r\n4096     8192       97310          8192       105502         4096     PASS    \r\n8192     16384      210861         16384      227245         8192     PASS    \r\n16384    32768      454534         32768      487302         16384    PASS    \r\n32768    65536      974569         65536      1040105        32768    PASS    \r\n65536    131072     2079850        131072     2210922        65536    PASS    \r\n\r\nEvery timeline sorted 2n distinct events, reached peak n, and ended at zero.\r\nData written to q4_experimental_data.dat\r\n"
+      "outputSha256": "2756ab21db7bc3a591d94d58af4849ad5ae922a8ddc8cbe1b698b45c65a49f69"
     },
     {
       "source": "lab4/Q-5/q5_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n        sort cmp       scan       total          merged       check   \r\n128      735            127        862            2            PASS    \r\n256      1744           255        1999           2            PASS    \r\n512      3969           511        4480           2            PASS    \r\n1024     8962           1023       9985           2            PASS    \r\n2048     19955          2047       22002          2            PASS    \r\n4096     43924          4095       48019          2            PASS    \r\n8192     96202          8191       104393         2            PASS    \r\n16384    208786         16383      225169         2            PASS    \r\n32768    450330         32767      483097         2            PASS    \r\n65536    966151         65535      1031686        2            PASS    \r\n\r\nEvery output is sorted, pairwise disjoint, and covers every input interval.\r\nData written to q5_experimental_data.dat\r\n"
+      "outputSha256": "a36fb913178e8960914c2e5c3cd4107f360af87c823fa73e6aefc100d1dd9644"
     },
     {
       "source": "lab4/Q-6/q6_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n        endpoints  sort cmp       sweep work   total          peak     check   \r\n128      256        1750           293          2043           99       PASS    \r\n256      512        4012           573          4585           167      PASS    \r\n512      1024       9034           1133         10167          311      PASS    \r\n1024     2048       20065          2253         22318          568      PASS    \r\n2048     4096       44211          4493         48704          1080     PASS    \r\n4096     8192       96553          8973         105526         2104     PASS    \r\n8192     16384      209514         17933        227447         4152     PASS    \r\n16384    32768      451563         35853        487416         8248     PASS    \r\n32768    65536      968893         71693        1040586        16440    PASS    \r\n65536    131072     2068586        143369       2211955        32824    PASS    \r\n\r\nTied endpoints were grouped with closed-interval START-before-END semantics.\r\nData written to q6_experimental_data.dat\r\n"
+      "outputSha256": "46c29884a9a86d7db9c228c87a7f1c1baa21890972e8da28e887ec0a77eaf1a8"
     },
     {
       "source": "lab5/Q-1/q1_experimental_validation.c",
       "result": "PASS",
-      "transcript": "DAA Lab 05 Q1 - deterministic BFPRT validation\r\n============================================================\r\nTargeted edge cases             : 7/7 PASS\r\nExhaustive {-1,0,1}, lengths 1-9: 29523/29523 PASS\r\n\r\nn         comparisons  writes       operations   ops/n        oracle    \r\n128       2021         2403         4424         34.562       PASS      \r\n256       3909         4741         8650         33.789       PASS      \r\n512       8722         10526        19248        37.594       PASS      \r\n1024      13408        16359        29767        29.069       PASS      \r\n2048      37149        45258        82407        40.238       PASS      \r\n4096      71686        86989        158675       38.739       PASS      \r\n8192      118148       143753       261901       31.970       PASS      \r\n16384     238796       291612       530408       32.374       PASS      \r\n32768     564951       680802       1245753      38.017       PASS      \r\n65536     952311       1158259      2110570      32.205       PASS      \r\n131072    1796656      2182869      3979525      30.361       PASS      \r\n\r\nAll 29541 correctness cases passed.\r\nEach scaling row uses two selections because n is even.\r\nData written to q1_experimental_data.dat\r\n"
+      "outputSha256": "784f282d146e53f7322a2641ca633cf80ef3722614665a1fefb5f3a1c3232f52"
     },
     {
       "source": "lab5/Q-2/q2_experimental_validation.c",
       "result": "PASS",
-      "transcript": "Edge-case suite: PASS (single, duplicates, signed extremes, ordered, reverse, all equal)\r\n\r\nDeterministic fuzz suite: PASS (2000 duplicate-heavy arrays)\r\n\r\nn        trials  avg comparisons  cmp / n      avg parts    validation\r\n128      5       902.4            7.0500       10.2         PASS      \r\n256      5       1904.6           7.4398       13.4         PASS      \r\n512      5       4407.4           8.6082       27.6         PASS      \r\n1024     5       9119.2           8.9055       40.2         PASS      \r\n2048     5       19126.0          9.3389       68.2         PASS      \r\n4096     5       38282.4          9.3463       95.6         PASS      \r\n8192     5       79178.2          9.6653       162.8        PASS      \r\n16384    5       160894.4         9.8202       243.8        PASS      \r\n32768    5       325418.8         9.9310       393.0        PASS      \r\n65536    5       650545.4         9.9265       608.0        PASS      \r\n131072   5       1317304.6        10.0502      968.0        PASS      \r\n\r\nAll deterministic checks passed.\r\nThe comparisons/n ratio remains bounded, supporting Theta(n) growth.\r\nData written to q2_experimental_data.dat\r\n"
+      "outputSha256": "eaae9ab6e0f6dd1089b85ae3a94c3c7fb7f8b121f181bec3c705818aca4a300f"
     },
     {
       "source": "lab5/Q-3/q3_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n         avg comparisons  avg swaps      avg parts     stack      check   \r\n128       1413.8           579.8          83.4          4          PASS    \r\n256       3473.0           1519.4         168.2         6          PASS    \r\n512       7796.6           3408.6         326.2         6          PASS    \r\n1024      17549.6          8117.8         626.4         7          PASS    \r\n2048      39646.6          18323.4        1232.4        8          PASS    \r\n4096      84859.2          40029.8        2405.8        8          PASS    \r\n8192      191375.0         89003.0        4836.6        9          PASS    \r\n16384     391835.6         186459.2       9582.0        9          PASS    \r\n32768     883059.6         418738.6       19169.2       10         PASS    \r\n65536     1849615.4        883877.6       38234.2       10         PASS    \r\n131072    4027492.4        1915171.4      76533.6       12         PASS    \r\n262144    8359165.4        3950663.6      153070.8      12         PASS    \r\n\r\nAdversarial and duplicate-rich validation (n = 65536)\r\ncase                   comparisons      swaps          stack      check   \r\nalready sorted         2059189          733274         10         PASS    \r\nreverse sorted         1938755          708736         11         PASS    \r\nall equal              131072           0              1          PASS    \r\n17-value duplicate pool 451038           204289         3          PASS    \r\nalternating limits     196608           32768          1          PASS    \r\nempty + singleton      0                0              0 / 1      PASS    \r\n\r\nAll rows exactly match an independent qsort oracle and pass\r\nsortedness, multiset-fingerprint, and stack-bound checks.\r\nFive deterministic trials per n were written to q3_experimental_data.dat.\r\n"
+      "outputSha256": "2ce14da41bbadfe9ee4a1b015114e6eae2dcf8b5c0ea22d12beca3352511e713"
     },
     {
       "source": "lab5/Q-4/q4_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n         build cmp    extraction cmp  total cmp     ratio        check    \r\n128       229          1165            1394          1.555804     PASS     \r\n256       469          2861            3330          1.625977     PASS     \r\n512       944          6664            7608          1.651042     PASS     \r\n1024      1923         15423           17346         1.693945     PASS     \r\n2048      3820         34898           38718         1.718661     PASS     \r\n4096      7729         77926           85655         1.742655     PASS     \r\n8192      15320        172242          187562        1.761212     PASS     \r\n16384     30853        377354          408207        1.779641     PASS     \r\n32768     61427        820282          881709        1.793842     PASS     \r\n65536     123179       1771370         1894549       1.806783     PASS     \r\n131072    246527       3804612         4051139       1.818102     PASS     \r\n\r\nEdge cases: PASS (empty, singleton, duplicates, ascending, descending)\r\nEvery measured output matched an independent qsort result exactly.\r\nData written to q4_experimental_data.dat\r\n"
+      "outputSha256": "643c881e64aa518ee9279aae497cd242f6809a599536ab39df2144ed7b010e98"
     },
     {
       "source": "lab6/Q-1/q1_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n=64     work=877        validation=PASS\r\nn=128    work=2027       validation=PASS\r\nn=256    work=4545       validation=PASS\r\nn=512    work=10112      validation=PASS\r\nn=1024   work=22272      validation=PASS\r\nn=2048   work=48596      validation=PASS\r\nn=4096   work=105408     validation=PASS\r\nn=8192   work=227154     validation=PASS\r\nn=16384  work=487027     validation=PASS\r\nArray invariants and every partition: PASS\r\n"
+      "outputSha256": "4d92aff0de8976fbd3a685841c70a4e6cdcac9956b1890081a1124787b7b0a36"
     },
     {
       "source": "lab6/Q-2/q2_experimental_validation.c",
       "result": "PASS",
-      "transcript": "Identity, double-transpose, determinant and eigenpair checks: PASS\r\nn=4    work=176          validation=PASS\r\nn=8    work=1472         validation=PASS\r\nn=16   work=12032        validation=PASS\r\nn=32   work=97280        validation=PASS\r\nn=64   work=782336       validation=PASS\r\nn=128  work=6275072      validation=PASS\r\n"
+      "outputSha256": "9dd291536cc3d87fdd588c790e8b701ddb4260c72c61373d8617b21b1fc05de8"
     },
     {
       "source": "lab6/Q-3/q3_experimental_validation.c",
       "result": "PASS",
-      "transcript": "m=16     n=32     padded=64     oracle=PASS\r\nm=32     n=64     padded=128    oracle=PASS\r\nm=64     n=128    padded=256    oracle=PASS\r\nm=128    n=256    padded=512    oracle=PASS\r\nm=256    n=512    padded=1024   oracle=PASS\r\nm=512    n=1024   padded=2048   oracle=PASS\r\nm=1024   n=2048   padded=4096   oracle=PASS\r\nm=2048   n=4096   padded=8192   oracle=PASS\r\nm=4096   n=8192   padded=16384  oracle=PASS\r\nm=8192   n=16384  padded=32768  oracle=PASS\r\nFFT vs direct convolution: PASS\r\n"
+      "outputSha256": "6c2773a5afa4126f09c37acc660ddbbc0c9b63a86e0381e371df4a3f8d514e9e"
     },
     {
       "source": "lab6/Q-4/q4_experimental_validation.c",
       "result": "PASS",
-      "transcript": "n=16    efficient-cost=127         direct-reversals=11     PASS\r\nn=32    efficient-cost=346         direct-reversals=28     PASS\r\nn=64    efficient-cost=992         direct-reversals=57     PASS\r\nn=128   efficient-cost=2735        direct-reversals=121    PASS\r\nn=256   efficient-cost=7343        direct-reversals=252    PASS\r\nn=512   efficient-cost=18598       direct-reversals=506    PASS\r\nn=1024  efficient-cost=45579       direct-reversals=1020   PASS\r\nn=2048  efficient-cost=112382      direct-reversals=2038   PASS\r\nn=4096  efficient-cost=269020      direct-reversals=4093   PASS\r\nn=8192  efficient-cost=633671      direct-reversals=8185   PASS\r\n"
+      "outputSha256": "74cae724a0447c49bedc333975dbd9a9fba6eda09062e1ffe6fe5c458e2c94cf"
     },
     {
       "source": "lab6/Q-5/q5_experimental_validation.c",
       "result": "PASS",
-      "transcript": "Known values, recurrence boundary and F(93): PASS\r\nn=8   F(n)=21                   work=7\r\nn=16  F(n)=987                  work=15\r\nn=24  F(n)=46368                work=23\r\nn=32  F(n)=2178309              work=31\r\nn=40  F(n)=102334155            work=39\r\nn=48  F(n)=4807526976           work=47\r\nn=56  F(n)=225851433717         work=55\r\nn=64  F(n)=10610209857723       work=63\r\nn=72  F(n)=498454011879264      work=71\r\nn=80  F(n)=23416728348467685    work=79\r\nn=88  F(n)=1100087778366101931  work=87\r\n"
+      "outputSha256": "aada6815b43f69558ddbd70024772140365b33f451b59d235e29730690175b37"
     },
     {
       "source": "lab6/Q-6/q6_experimental_validation.c",
       "result": "PASS",
-      "transcript": "Canonical capacity-50 instance: PASS\r\nitems=8    W=32    profit=148      oracle=PASS\r\nitems=16   W=64    profit=450      oracle=PASS\r\nitems=32   W=128   profit=872      oracle=PASS\r\nitems=64   W=256   profit=1748     oracle=PASS\r\nitems=128  W=512   profit=3568     oracle=PASS\r\nitems=256  W=1024  profit=7238     oracle=PASS\r\n"
+      "outputSha256": "d00429b45cef97103b20f0a762c8f8a1b262358b3e7839661604e65407c90ca6"
     },
     {
       "source": "lab6/Q-7/q7_experimental_validation.c",
       "result": "PASS",
-      "transcript": "Canonical LCS instance: PASS (GTAB)\r\nlength=16    LCS=9     validation=PASS\r\nlength=32    LCS=17    validation=PASS\r\nlength=64    LCS=36    validation=PASS\r\nlength=128   LCS=71    validation=PASS\r\nlength=256   LCS=142   validation=PASS\r\nlength=512   LCS=284   validation=PASS\r\nlength=1024  LCS=569   validation=PASS\r\nlength=2048  LCS=1137  validation=PASS\r\n"
+      "outputSha256": "1ef22ff4431aeac6fb62b2b00a24a2f1bcc02d04b1dc64dd3a27077c4792d5ec"
     },
     {
       "source": "lab6/Q-8/q8_experimental_validation.c",
       "result": "PASS",
-      "transcript": "Required sample {10,30,5,60} -> 4500: PASS\r\nCLRS oracle -> 15125: PASS\r\nmatrices=4    candidates=10         cost=936 PASS\r\nmatrices=8    candidates=84         cost=3184 PASS\r\nmatrices=16   candidates=680        cost=8760 PASS\r\nmatrices=32   candidates=5456       cost=15982 PASS\r\nmatrices=64   candidates=43680      cost=32544 PASS\r\nmatrices=128  candidates=349504     cost=64696 PASS\r\n"
+      "outputSha256": "5609b6472a58b8706c94b5b3a93982087ef7995e78a2723b474d41c2a56c9528"
     }
   ],
-  "focusedRegressionCount": 12,
-  "additionalChecks": {
-    "legacySeedAndMatrixEnvelope": "PASS",
-    "productionFrontendBuild": "PASS",
-    "browserDesktopAndMobile": "PASS"
+  "focusedRegressionCount": 24,
+  "frontend": {
+    "status": "PASS",
+    "tests": 86,
+    "passed": 86,
+    "scope": "All 64 real C-result fixtures through UI execution, results, source, notes and experiment views; input editing, imports, exports, recovery and controls"
   },
-  "preservedOriginalFiles": 766
+  "browserVerification": {
+    "chromeDetection": "verified installed path; launch arguments regression-tested",
+    "interactiveChrome": "not completed: Computer Use stopped because it could not reliably identify the browser URL"
+  },
+  "preservedOriginalFiles": 766,
+  "cleanup": {
+    "trackedProjectFilesBefore": 184,
+    "trackedProjectFilesAfter": 53,
+    "correctedOverridesRetained": 15,
+    "unchangedResources": "read directly from repository; no duplicate source/docs/dataset trees"
+  }
 }

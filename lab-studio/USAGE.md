@@ -2,7 +2,7 @@
 
 A personal browser interface for all 64 problems in the DAA-Lab repository. The algorithms execute as compiled C17 programs on your machine. Python connects them to a React interface.
 
-Everything added for this project lives in `lab-studio/`. The repository's existing files and README are unchanged. The interface uses its own copies of the C sources and headers; it does not compile or write into the original lab directories.
+Everything added for this project lives in `lab-studio/`. The repository's existing files and README are unchanged. The interface uses the original C sources as read-only resources and 15 corrected/adapted overrides. Builds and runs use disposable copies; nothing is written into the original lab directories.
 
 ## Start
 
@@ -15,7 +15,7 @@ cd lab-studio
 python run.py
 ```
 
-On Windows, you can also double-click `start.cmd`. The first launch installs the frontend's locked dependencies and builds the interface. It opens `http://127.0.0.1:8765` in your browser. Compilation happens automatically on the first run of each problem and is cached under `.cache/`. A compiler must remain available on PATH. Stop the server with Ctrl+C.
+On Windows, double-click `start.cmd` to open Chrome. **Keep the launcher terminal open while using the app**; closing it stops the backend. If Chrome is not installed, the launcher uses your default browser. The first launch installs the frontend's locked dependencies and builds the interface. Later launches rebuild when the interface source changes, and reuse matching installed dependencies. It opens `http://127.0.0.1:8765` in your browser. Compilation happens automatically on the first run of each problem and is cached under `.cache/`. GCC/Clang is found on PATH or in common Windows MSYS2/LLVM locations. Stop the server with Ctrl+C.
 
 To prepare explicitly:
 
@@ -38,7 +38,9 @@ Python may be named `python3` on Linux/macOS. Set the `CC` environment variable 
 
 Graph problems show vertices/edges or grids, a step slider, playback speed, zoom, and SVG download. Vertex dragging changes the layout; it does not change algorithm input. Bipartiteness has an edge-entry control that updates the edge count. Rejected edges appear as dashed attempted edges and never influence the C program's maintained bipartite graph. Vertex colours use the final valid bipartition throughout playback. Other graph colours illustrate connected components of the displayed state; numerical answers always come from C.
 
-DP programs that return matrices show heatmap tables. Other programs show returned sequences, numerical charts, structured tables, or their actual text transcript. Three-peg and four-peg Hanoi have disk playback. Programs without recorded intermediate states show the final output. The interface does not invent algorithm traces.
+Use **Sync counts with data** after changing array values or edge rows. Matrix problems offer a cell grid and an order selector that preserves the upper-left values of both matrices when resizing. Special-pattern matrix cells are linked so edits preserve the required recursive structure. **Cancel run** stops the active execution.
+
+DP programs that return matrices show heatmap tables. Other programs show returned sequences, numerical charts, structured tables, or their actual text transcript. Three-peg and four-peg Hanoi have disk playback. Programs without recorded intermediate states show the final output. The interface does not invent algorithm traces. If an optional JSON trace exceeds the interactive output budget, the successful calculation and its console answer remain available, with a visible explanation.
 
 **Experiments** contains the repository's recorded `.dat` measurements; these are explicitly separated from the current run. Click legend items to toggle series, enable logarithmic axes where appropriate, or download CSV data. Large recorded datasets are sampled evenly to 400 points with the original row count displayed. Log axes omit nonpositive points. Runtime is process wall time, including process launch and output polling; use algorithm work counters for meaningful complexity comparisons.
 
@@ -72,20 +74,34 @@ python run.py --dev --no-browser
 ```sh
 python -m unittest discover -s tests -p "test_*.py" -v
 python tools/audit.py --full
+cd frontend
+npm test
 ```
 
-The audit checks every copied C translation unit, executes all 64 examples, runs focused arithmetic/HTTP regressions, executes the independent repository oracle suites for Labs 7–10, and runs the earlier C experimental validators. All evidence-writing validators run in temporary copies. The saved `AUDIT.json` contains exact outcomes and scope; a passing audit is evidence for these cases, not a proof for every possible input.
+The audit checks all repository C translation units with the project overrides applied, executes all 64 examples, runs focused arithmetic/HTTP regressions, executes the independent repository oracle suites for Labs 7–10, and runs the earlier C experimental validators. All evidence-writing validators run in temporary copies. The saved `AUDIT.json` contains exact outcomes and scope; a passing audit is evidence for these cases, not a proof for every possible input.
 
 ```text
 lab-studio/
   frontend/          React + TypeScript + Vite, Chart.js, SVG visuals
   backend/           local HTTP bridge and C compiler/runner
-  engine/sources/    project-owned repository source copies
+  engine/overrides/  only 15 corrected/adapted C sources and headers
   engine/provenance.json  original file hashes and source commit
-  catalog.json       64 problems, notes, input examples, recorded datasets
-  tests/             focused regressions and copied independent oracle suites
+  catalog.json       compact 64-problem metadata and input examples
+  backend/catalog.py reads original notes/datasets in place
+  tests/             HTTP, arithmetic, launch and execution regressions
+  frontend/src/tests/ component/integration checks with real C outputs
   tools/audit.py     repeatable verification
   run.py             launch/build helper
 ```
+
+Do not open `frontend/index.html` directly in Chrome: native C execution requires the local server. You can also explicitly choose a browser:
+
+```sh
+python run.py --browser chrome
+python run.py --browser system
+python run.py --check
+```
+
+If another instance is already running, the launcher reuses a matching instance. When an older backend occupies the port, stop its terminal with Ctrl+C and restart, or choose `--port 8766`.
 
 The local server binds to loopback and serves a single-origin interface. It is intended for personal use on your machine. A static website host alone cannot execute the native C programs.
