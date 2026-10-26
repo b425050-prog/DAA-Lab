@@ -1,0 +1,8 @@
+#define PLOT_DATA_FILE "q5_experimental_data.dat"
+#define PLOT_OUTPUT_FILE "q5_fibonacci_dp.svg"
+#define PLOT_TITLE "Fibonacci State Reuse"
+#define PLOT_SUBTITLE "Each new number uses only the preceding two solved states"
+#define PLOT_BADGE "Theta(n) / Theta(1)"
+#define PLOT_X_LABEL "Requested index n"
+#define PLOT_FOOTER "The value grows exponentially, but the number of DP transitions grows linearly."
+#include "../common/plot_from_dat.h"

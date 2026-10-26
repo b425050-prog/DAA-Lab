@@ -1,0 +1,512 @@
+{
+  "status": "PASS",
+  "sourceCommit": "91b6e69bd366391a07a162d4cac98b72992cc7cb",
+  "scope": "All project-owned C copies; original repository files are not modified.",
+  "compiler": "gcc.EXE",
+  "cSyntaxChecks": 126,
+  "sampleRuns": 64,
+  "focusedRegressions": "PASS",
+  "fullAudit": true,
+  "modifiedProjectCopies": [
+    "lab1/Q-1/q1_growth_order.c",
+    "lab1/Q-2/q2_coin_toss.c",
+    "lab1/Q-3/q3_bubble_sort.c",
+    "lab1/Q-4/q4_towers_of_hanoi.c",
+    "lab1/Q-6/q6_element_uniqueness.c",
+    "lab2/Q-1/q1_experimental_complexity.c",
+    "lab3/Q-4/q4_strassen.c",
+    "lab3/Q-5/q5_special_matrix_multiply.c",
+    "lab3/Q-6/q6_selection_sort_invariant.c",
+    "lab6/Q-2/q2_algorithms.h",
+    "lab6/Q-2/q2_matrix_operations.c",
+    "lab6/Q-6/q6_knapsack.h",
+    "lab6/Q-6/q6_knapsack_dp.c",
+    "lab6/Q-8/q8_matrix_chain.h",
+    "lab6/Q-8/q8_matrix_chain_dp.c"
+  ],
+  "warnings": [
+    {
+      "source": "lab6/new.c",
+      "diagnostics": "engine/sources\\lab6\\new.c:2: warning: ISO C forbids an empty translation unit [-Wpedantic]\n"
+    }
+  ],
+  "failures": [],
+  "samples": [
+    {
+      "id": "L1Q1",
+      "result": "PASS",
+      "outputSha256": "643ae8810e184001445e9a964b47a9e9a6376b158526e973752e92169e9f9c83"
+    },
+    {
+      "id": "L1Q2",
+      "result": "PASS",
+      "outputSha256": "651fe2ea5eab40906ab751b978728ff3967bcbc8960450232b906e25ff359cf6"
+    },
+    {
+      "id": "L1Q3",
+      "result": "PASS",
+      "outputSha256": "d391d487ccff5d28bb1f12318958d8647d6c1eb0d4781796cbfd51e75a2ae360"
+    },
+    {
+      "id": "L1Q4",
+      "result": "PASS",
+      "outputSha256": "9aac88e108ab8a67cb9773132708005ccd043351158d2961fb01e4718f595d9f"
+    },
+    {
+      "id": "L1Q5",
+      "result": "PASS",
+      "outputSha256": "105d6b8f148266e27c96430d49f2139b268ac83a2e77dbe4e9a5c24662f7b83f"
+    },
+    {
+      "id": "L1Q6",
+      "result": "PASS",
+      "outputSha256": "248fa00256a723fd1cfc092a1af4f0f8a817e605982a9c5e5753b9b7662bad61"
+    },
+    {
+      "id": "L2Q1",
+      "result": "PASS",
+      "outputSha256": "53a9708910e59010656158aaf335d2e903f180d0fad793c0efd9133e2e7c0fd4"
+    },
+    {
+      "id": "L2Q2",
+      "result": "PASS",
+      "outputSha256": "cb830dfc34bade111dd82e488fd444e5d7989dd7959668832006ecb4b111e474"
+    },
+    {
+      "id": "L2Q3",
+      "result": "PASS",
+      "outputSha256": "7259c6ad9b052d38d5c104e3f478ab0e35f1cf768637d60d9b271b2f8fb7936a"
+    },
+    {
+      "id": "L3Q1",
+      "result": "PASS",
+      "outputSha256": "ecd5cfe5c601b8d8f1bd7cb26576203d2914687f2817566284f9e6db0e92f625"
+    },
+    {
+      "id": "L3Q2",
+      "result": "PASS",
+      "outputSha256": "1370d1e9dbc94c73057fbdc206f592e66961fa5503f321282040fd5f11f73497"
+    },
+    {
+      "id": "L3Q3",
+      "result": "PASS",
+      "outputSha256": "dbad1599412d0ddac1ad0c364a8a8a89944228296a7cd85c740564666421dc17"
+    },
+    {
+      "id": "L3Q4",
+      "result": "PASS",
+      "outputSha256": "d39a0baee5e3aa9131ee077055af1c15766cd5922192a1f1263afde8e9cf2214"
+    },
+    {
+      "id": "L3Q5",
+      "result": "PASS",
+      "outputSha256": "ef9ece8a2c6dfa9e01b6283f37e12e19f1f080dd884df663448380cff34ad8ad"
+    },
+    {
+      "id": "L3Q6",
+      "result": "PASS",
+      "outputSha256": "c79e340401fdfb1ec3c3fe091de92c3223bf42c6481cd071353c6b66693b6f1a"
+    },
+    {
+      "id": "L4Q1",
+      "result": "PASS",
+      "outputSha256": "263c6d517be1dd4901aad461672f9e3a73895530bb4d5fbb1d3908523d53978a"
+    },
+    {
+      "id": "L4Q2",
+      "result": "PASS",
+      "outputSha256": "1e05efd701ad89d6c584455a4c0ae5b479fde070f0e5cee39e6874ca1381f4e4"
+    },
+    {
+      "id": "L4Q3",
+      "result": "PASS",
+      "outputSha256": "14d85b394902b8f70cfc679f72f255d0de664cb94ed7b85dc5b91886742390ab"
+    },
+    {
+      "id": "L4Q4",
+      "result": "PASS",
+      "outputSha256": "8929cb1a0071ece7d0a125e237cdee277a391cf9f2e29088e3c90429269e482d"
+    },
+    {
+      "id": "L4Q5",
+      "result": "PASS",
+      "outputSha256": "5cbfafa967740a7d29ae7c39a2d117bea2962a42972a1b2553f05bf6396150cd"
+    },
+    {
+      "id": "L4Q6",
+      "result": "PASS",
+      "outputSha256": "468b67ec337f01c0211dd13a669e7b76b98f03a92aa2692f8482979d5e406556"
+    },
+    {
+      "id": "L5Q1",
+      "result": "PASS",
+      "outputSha256": "61f91d3ad0507b71f10688cb37b766aa29f26dba452db60c4de74a00a3cbd304"
+    },
+    {
+      "id": "L5Q2",
+      "result": "PASS",
+      "outputSha256": "93114ddc96004e066722c956639a3e546f879015388e40ed323cc34b5a95254a"
+    },
+    {
+      "id": "L5Q3",
+      "result": "PASS",
+      "outputSha256": "1c0ec12f2b574e03e37813333322463b9d65f33309a9bd6b35e8512d166ea553"
+    },
+    {
+      "id": "L5Q4",
+      "result": "PASS",
+      "outputSha256": "c08657ef61b12fa26dc57b7f14bb19fd0fc19e60526390a78f22a5f236b8864d"
+    },
+    {
+      "id": "L6Q1",
+      "result": "PASS",
+      "outputSha256": "3c4f727cad2edab80a7b07218dfe19e139b6c7381356c6a7bcde63911f2e591c"
+    },
+    {
+      "id": "L6Q2",
+      "result": "PASS",
+      "outputSha256": "18d7395949c818124d4694da29cfa44bcd3d34097fbf459fdd805b09fba8f398"
+    },
+    {
+      "id": "L6Q3",
+      "result": "PASS",
+      "outputSha256": "712464e74476d1e82f8d1814218d5ea1d90b2bb0f7b6bea3aad35861a5eb3603"
+    },
+    {
+      "id": "L6Q4",
+      "result": "PASS",
+      "outputSha256": "d24c3a04f538689ac0257bbd410c2db2856bf2055d3504ed18301e03ef832d57"
+    },
+    {
+      "id": "L6Q5",
+      "result": "PASS",
+      "outputSha256": "97494bdaa629585f34e05cb6f25aabd85a6af653132f6adc84daf2be3ba94b7e"
+    },
+    {
+      "id": "L6Q6",
+      "result": "PASS",
+      "outputSha256": "39391f79e57a90d5527354ca254de18dee42c96803ea71e6683680907e4f8f93"
+    },
+    {
+      "id": "L6Q7",
+      "result": "PASS",
+      "outputSha256": "b97780c59b36b2756a0fdc577e4ae3954d5a69958aa2357b1fb9daba37cad2a4"
+    },
+    {
+      "id": "L6Q8",
+      "result": "PASS",
+      "outputSha256": "fa270dd2533278239571441a98aab77577e1957f0c69e8aa8a38be5539b46f93"
+    },
+    {
+      "id": "L7Q1",
+      "result": "PASS",
+      "outputSha256": "1596135b7a5817d113fd8c8ee675a1b200d1bc5076360dd2a2958e05556bcd66"
+    },
+    {
+      "id": "L7Q2",
+      "result": "PASS",
+      "outputSha256": "f0a2e0d73b9577df0c52f30d51b7cf16ad577a7f3717deb86576f7c592998c78"
+    },
+    {
+      "id": "L7Q3",
+      "result": "PASS",
+      "outputSha256": "48b185eb4b9b1a4dbb32303f22c797a242aa152d8269c2fc2f729e7363022420"
+    },
+    {
+      "id": "L7Q4",
+      "result": "PASS",
+      "outputSha256": "c65f4be788f777c7af0d2b5ec4b2d29612404d06c2fcfa8664951ad37409148a"
+    },
+    {
+      "id": "L7Q5",
+      "result": "PASS",
+      "outputSha256": "3f823fa2b1befb3b6e6973953db34934479c259830c31bb058100a81a454c096"
+    },
+    {
+      "id": "L7Q6",
+      "result": "PASS",
+      "outputSha256": "ebd79c47ec94331ddfb9f27d3cc91fb82ad3d70a46b1ee04f0e83f95e8b1c0af"
+    },
+    {
+      "id": "L7Q7",
+      "result": "PASS",
+      "outputSha256": "f06a0f268e76404224c990d5d1cee2842382eca3e685ed3eba2d0732c3f629b8"
+    },
+    {
+      "id": "L8Q1",
+      "result": "PASS",
+      "outputSha256": "96995fbeb3fa56445b45d7185b96745e02b0f624d92a9cf3a3b68fd30115ce31"
+    },
+    {
+      "id": "L8Q2",
+      "result": "PASS",
+      "outputSha256": "2b37c3a7d90f49f5e5f775f6d95bcfd40c65cca09bd41a2b70a1b737b2766716"
+    },
+    {
+      "id": "L8Q3",
+      "result": "PASS",
+      "outputSha256": "6bdf732583f6450bb46aaaf77b920865a44046474ae48de62b9c3166e323689e"
+    },
+    {
+      "id": "L8Q4",
+      "result": "PASS",
+      "outputSha256": "ca52ef202e95966a0fdbe522732b2cf2706049f0f59d5f70569bb50cf8f42252"
+    },
+    {
+      "id": "L8Q5",
+      "result": "PASS",
+      "outputSha256": "91acdf75c7b3fd6cf38b4a2d81c30ab43b390faed6b47dced348d4bb059dcdf6"
+    },
+    {
+      "id": "L8Q6",
+      "result": "PASS",
+      "outputSha256": "4df247bb9f9079146290d3aa658c8d671dfd099ce261252338bb0e659aeb8bbd"
+    },
+    {
+      "id": "L8Q7",
+      "result": "PASS",
+      "outputSha256": "73c315a000b5df91efaa487a69ab79ab2ffa4267b7e70c6f15e555ec665bcbd0"
+    },
+    {
+      "id": "L8Q8",
+      "result": "PASS",
+      "outputSha256": "213fbe677946e930e6bb8f3e1ac3e99845254c50671f8243c029ac60fe6f845b"
+    },
+    {
+      "id": "L8Q9",
+      "result": "PASS",
+      "outputSha256": "2c8375db1f0bcf1d82217a8e9011f96753d819a2c8fc242e25a1acde3d13d3ea"
+    },
+    {
+      "id": "L9Q1",
+      "result": "PASS",
+      "outputSha256": "d8be849d1f0f1abd235c1b544106f6da3c12f562121dc2c7175805cf45c5b733"
+    },
+    {
+      "id": "L9Q2",
+      "result": "PASS",
+      "outputSha256": "1bb504946ab6dccc595431a0dd492f9329d5d8c798324c86c8f395c28091583a"
+    },
+    {
+      "id": "L9Q3",
+      "result": "PASS",
+      "outputSha256": "51735d789b5e1926427934b55026060b197ddc68a917b90e8d16bb3c69603e93"
+    },
+    {
+      "id": "L9Q4",
+      "result": "PASS",
+      "outputSha256": "536b1d95fdf2e287f22f96eed2588f08bc04283780f64dbbf85e4aa0b957dc1c"
+    },
+    {
+      "id": "L9Q5",
+      "result": "PASS",
+      "outputSha256": "63e03c9ae6e86e712b7ec64b9c4fe9e8443350f791bef3c6e97d4bb7a3816770"
+    },
+    {
+      "id": "L9Q6",
+      "result": "PASS",
+      "outputSha256": "b21ca5316cf9c3c0614e5bd58088ffe3d21a4be3c694a9354ad72c082a036664"
+    },
+    {
+      "id": "L9Q7",
+      "result": "PASS",
+      "outputSha256": "f47a20e90836e78590550822fa99c78b66d3f5e29b7c33b3b5af981b8be7b2df"
+    },
+    {
+      "id": "L9Q8",
+      "result": "PASS",
+      "outputSha256": "23df34311f69b8e0647a0b2dcbbb95ced7afeb4975e4ac373f001b7360c717e1"
+    },
+    {
+      "id": "L9Q9",
+      "result": "PASS",
+      "outputSha256": "0ecd54a3e3a3755a9913eaf3c1721d83234c3918ffe1e8acf811e6c5ffc0ed13"
+    },
+    {
+      "id": "L9Q10",
+      "result": "PASS",
+      "outputSha256": "fb1787dbd00e41bf61bcb203acf785af0aabf01b88c59e3933df19cfca698a2a"
+    },
+    {
+      "id": "L10Q1",
+      "result": "PASS",
+      "outputSha256": "395f0beb79d4d0ce235cff74e04cf9ca139dcc426318a958134f1646019707f7"
+    },
+    {
+      "id": "L10Q2",
+      "result": "PASS",
+      "outputSha256": "e6ac7d4f974299d6595ced944ef31363587dfb1f15a5bd15c4460934531d2faf"
+    },
+    {
+      "id": "L10Q3",
+      "result": "PASS",
+      "outputSha256": "7744101694c6aba9bd8796998db5aa8e9244f3550a6e8f486212d3f034a9f74d"
+    },
+    {
+      "id": "L10Q4",
+      "result": "PASS",
+      "outputSha256": "afa4d7ec7dfff08ba3ad2cded1c203c07a89c9f73dc106e37df488022070175c"
+    },
+    {
+      "id": "L10Q5",
+      "result": "PASS",
+      "outputSha256": "f88585a3bc4e3c24ce60a6938d5c9c34d3fb9a8ab0732e1848d82a9e25916089"
+    }
+  ],
+  "oracleSuites": [
+    {
+      "lab": 7,
+      "result": "PASS",
+      "transcript": "Built all 7 C17 programs with warnings treated as errors.\r\nPASS coins\r\nPASS eggs\r\nPASS hanoi\r\nPASS switches\r\nPASS target\r\nPASS scientists\r\nPASS matrix_chain\r\nPASS invalid_input\r\nPASS: all 7 solutions; 341 program executions plus independent oracle checks.\r\n"
+    },
+    {
+      "lab": 8,
+      "result": "PASS",
+      "transcript": "Created q1_evidence.svg\r\nCreated q2_evidence.svg\r\nCreated q3_evidence.svg\r\nCreated q4_evidence.svg\r\nCreated q5_evidence.svg\r\nCreated q6_evidence.svg\r\nCreated q7_evidence.svg\r\nCreated q8_evidence.svg\r\nCreated q9_evidence.svg\r\nPASS: 18/18 C17 sources; warnings treated as errors.\r\nPASS: 993 oracle-checked executions.\r\n"
+    },
+    {
+      "lab": 9,
+      "result": "PASS",
+      "transcript": "{\r\n  \"seed\": 42505009,\r\n  \"strict_sources\": 10,\r\n  \"oracle_checked_executions\": 805,\r\n  \"result\": \"PASS\",\r\n  \"q1_model\": \"continuous unit-rate integrated consumption\",\r\n  \"q1_validation\": \"concavity-based global optimality gap certificate\",\r\n  \"q9_validation\": \"independent interval DP, ordered prefix code and weighted cost\"\r\n}\r\n"
+    },
+    {
+      "lab": 10,
+      "result": "PASS",
+      "transcript": "{\r\n  \"seed\": 42505010,\r\n  \"result\": \"PASS\",\r\n  \"strict_sources\": 5,\r\n  \"core_executions\": 526,\r\n  \"oracles\": \"BFS, flood fill, deletion replay, exhaustive legal swaps\",\r\n  \"negative_weights\": true,\r\n  \"q3_edge_order\": \"arrival order; edge weights are labels\"\r\n}\r\n"
+    }
+  ],
+  "legacyExperiments": [
+    {
+      "source": "lab2/Q-2/q2_plot_experimental.c",
+      "result": "PASS",
+      "transcript": "Created q2_experimental_data.dat and q2_experimental_complexity.svg\r\n"
+    },
+    {
+      "source": "lab3/Q-1/q1_experimental_comparison.c",
+      "result": "PASS",
+      "transcript": "Q1 deterministic worst-case comparison\r\nSearching for x > maximum element (unsuccessful search).\r\n\r\nn          Bin probes     Ter probes      Bin comparisons  Ter comparisons   Winner    \r\n8          4              4               8                8                 Binary    \r\n16         5              5               10               11                Binary    \r\n32         6              6               12               12                Binary    \r\n64         7              7               14               15                Binary    \r\n128        8              9               16               19                Binary    \r\n256        9              10              18               20                Binary    \r\n512        10             11              20               23                Binary    \r\n1024       11             12              22               24                Binary    \r\n2048       12             14              24               28                Binary    \r\n4096       13             15              26               31                Binary    \r\n8192       14             16              28               32                Binary    \r\n16384      15             17              30               35                Binary    \r\n32768      16             19              32               39                Binary    \r\n65536      17             20              34               40                Binary    \r\n131072     18             21              36               43                Binary    \r\n262144     19             22              38               44                Binary    \r\n524288     20             24              40               48                Binary    \r\n1048576    21             25              42               51                Binary    \r\n\r\nData written to q1_experimental_data.dat\r\nConclusion: both grow logarithmically, but binary search uses the smaller\r\nworst-case probe constant for this comparison model.\r\n"
+    },
+    {
+      "source": "lab3/Q-2/q2_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n        worst weighings   ceil(log2 n)  bound + 1   \r\n----------------------------------------------------------\r\n2        1                 1             2           \r\n3        2                 2             3           \r\n4        2                 2             3           \r\n5        2                 3             4           \r\n6        3                 3             4           \r\n7        3                 3             4           \r\n8        3                 3             4           \r\n9        3                 4             5           \r\n10       3                 4             5           \r\n11       3                 4             5           \r\n12       4                 4             5           \r\n13       4                 4             5           \r\n14       4                 4             5           \r\n15       4                 4             5           \r\n16       4                 4             5           \r\n17       4                 5             6           \r\n18       4                 5             6           \r\n19       4                 5             6           \r\n20       4                 5             6           \r\n32       5                 5             6           \r\n64       6                 6             7           \r\n128      7                 7             8           \r\n256      8                 8             9           \r\n512      9                 9             10          \r\n1024     10                10            11          \r\n\r\nAll tested cases satisfy worst weighings <= ceil(log2 n) + 1.\r\nData written to q2_experimental_data.dat\r\n"
+    },
+    {
+      "source": "lab3/Q-3/q3_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n        comparisons    3n/2           exact formula \r\n1        0              1.5            0             \r\n2        1              3.0            1             \r\n3        3              4.5            3             \r\n4        4              6.0            4             \r\n5        6              7.5            6             \r\n6        7              9.0            7             \r\n7        9              10.5           9             \r\n8        10             12.0           10            \r\n9        12             13.5           12            \r\n10       13             15.0           13            \r\n11       15             16.5           15            \r\n12       16             18.0           16            \r\n13       18             19.5           18            \r\n14       19             21.0           19            \r\n15       21             22.5           21            \r\n16       22             24.0           22            \r\n32       46             48.0           46            \r\n64       94             96.0           94            \r\n128      190            192.0          190           \r\n256      382            384.0          382           \r\n512      766            768.0          766           \r\n1024     1534           1536.0         1534          \r\n2048     3070           3072.0         3070          \r\n4096     6142           6144.0         6142          \r\n\r\nEvery tested n satisfies comparisons <= 3n/2 and matches the exact pairwise-tournament formula.\r\n"
+    },
+    {
+      "source": "lab3/Q-4/q4_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n        Strassen mult        Classical mult       speedup count\r\n1        1                    1                    1.0000      \r\n2        7                    8                    1.1429      \r\n4        49                   64                   1.3061      \r\n8        343                  512                  1.4927      \r\n16       2401                 4096                 1.7060      \r\n32       16807                32768                1.9497      \r\n64       117649               262144               2.2282      \r\n128      823543               2097152              2.5465      \r\n256      5764801              16777216             2.9103      \r\n512      40353607             134217728            3.3260      \r\n1024     282475249            1073741824           3.8012      \r\n\r\nAt n=2^k, Strassen performs exactly 7^k = n^(log2 7) scalar multiplications.\r\nData written to q4_experimental_data.dat\r\n"
+    },
+    {
+      "source": "lab3/Q-5/q5_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n       mult         add/sub        divide-by-2  total ops        n^2         \r\n1       1            0              0            1                1           \r\n2       2            6              2            10               4           \r\n4       4            36             12           52               16          \r\n8       8            168            56           232              64          \r\n16      16           720            240          976              256         \r\n32      32           2976           992          4000             1024        \r\n64      64           12096          4032         16192            4096        \r\n128     128          48768          16256        65152            16384       \r\n256     256          195840         65280        261376           65536       \r\n512     512          784896         261632       1047040          262144      \r\n1024    1024         3142656        1047552      4191232          1048576     \r\n\r\nThe scalar multiplication count is only n; total work is dominated by Theta(n^2)\r\nblock additions/reconstruction and by writing the n^2 output entries.\r\n"
+    },
+    {
+      "source": "lab3/Q-6/q6_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n       sorted cmp   reverse cmp  random cmp   exact       \r\n8       28           28           28           28          \r\n16      120          120          120          120         \r\n24      276          276          276          276         \r\n32      496          496          496          496         \r\n64      2016         2016         2016         2016        \r\n128     8128         8128         8128         8128        \r\n192     18336        18336        18336        18336       \r\n256     32640        32640        32640        32640       \r\n320     51040        51040        51040        51040       \r\n384     73536        73536        73536        73536       \r\n448     100128       100128       100128       100128      \r\n512     130816       130816       130816       130816      \r\n\r\nAll three input orders perform exactly n(n-1)/2 comparisons.\r\nBest-case and worst-case running times are therefore both Theta(n^2).\r\n"
+    },
+    {
+      "source": "lab4/Q-1/q1_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n         reads          writes         total          validation\r\n128       128            128            256            PASS      \r\n256       256            256            512            PASS      \r\n512       512            512            1024           PASS      \r\n1024      1024           1024           2048           PASS      \r\n2048      2048           2048           4096           PASS      \r\n4096      4096           4096           8192           PASS      \r\n8192      8192           8192           16384          PASS      \r\n16384     16384          16384          32768          PASS      \r\n32768     32768          32768          65536          PASS      \r\n65536     65536          65536          131072         PASS      \r\n131072    131072         131072         262144         PASS      \r\n\r\nEvery run performs exactly n classifications + n placements = 2n.\r\nData written to q1_experimental_data.dat\r\n"
+    },
+    {
+      "source": "lab4/Q-2/q2_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n        sort cmp       search cmp       total          validation\r\n128      737            1024             1761           PASS      \r\n256      1733           2304             4037           PASS      \r\n512      3966           5120             9086           PASS      \r\n1024     8970           11264            20234          PASS      \r\n2048     19932          24576            44508          PASS      \r\n4096     44041          53248            97289          PASS      \r\n8192     96198          114688           210886         PASS      \r\n16384    208685         245760           454445         PASS      \r\n32768    450173         524288           974461         PASS      \r\n\r\nThe total comparison count stays a constant multiple of n log2(n).\r\nData written to q2_experimental_data.dat\r\n"
+    },
+    {
+      "source": "lab4/Q-3/q3_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n     k   sort cmp    prefixes      binary cmp    total         check   \r\n16    2   47          15            49            96            PASS    \r\n24    2   82          23            89            171           PASS    \r\n32    2   121         31            129           250           PASS    \r\n48    2   214         47            225           439           PASS    \r\n64    2   308         63            321           629           PASS    \r\n96    2   508         95            545           1053          PASS    \r\n128   2   726         127           769           1495          PASS    \r\n16    3   47          105           290           337           PASS    \r\n24    3   82          253           822           904           PASS    \r\n32    3   120         465           1674          1794          PASS    \r\n48    3   210         1081          4458          4668          PASS    \r\n64    3   300         1953          8778          9078          PASS    \r\n96    3   510         4465          22522         23032         PASS    \r\n128   3   738         8001          43434         44172         PASS    \r\n16    4   45          455           1095          1140          PASS    \r\n24    4   81          1771          5067          5148          PASS    \r\n32    4   123         4495          14415         14538         PASS    \r\n48    4   213         16215         60039         60252         PASS    \r\n64    4   298         39711         161727        162025        PASS    \r\n96    4   517         138415        636559        637076        PASS    \r\n128   4   737         333375        1662303       1663040       PASS    \r\n\r\nAll impossible-target runs exhausted every (k-1)-prefix.\r\nData written to q3_experimental_data.dat\r\n"
+    },
+    {
+      "source": "lab4/Q-4/q4_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "persons  events     sort cmp       sweep      total          peak     check   \r\n128      256        1758           256        2014           128      PASS    \r\n256      512        4033           512        4545           256      PASS    \r\n512      1024       9069           1024       10093          512      PASS    \r\n1024     2048       20194          2048       22242          1024     PASS    \r\n2048     4096       44494          4096       48590          2048     PASS    \r\n4096     8192       97310          8192       105502         4096     PASS    \r\n8192     16384      210861         16384      227245         8192     PASS    \r\n16384    32768      454534         32768      487302         16384    PASS    \r\n32768    65536      974569         65536      1040105        32768    PASS    \r\n65536    131072     2079850        131072     2210922        65536    PASS    \r\n\r\nEvery timeline sorted 2n distinct events, reached peak n, and ended at zero.\r\nData written to q4_experimental_data.dat\r\n"
+    },
+    {
+      "source": "lab4/Q-5/q5_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n        sort cmp       scan       total          merged       check   \r\n128      735            127        862            2            PASS    \r\n256      1744           255        1999           2            PASS    \r\n512      3969           511        4480           2            PASS    \r\n1024     8962           1023       9985           2            PASS    \r\n2048     19955          2047       22002          2            PASS    \r\n4096     43924          4095       48019          2            PASS    \r\n8192     96202          8191       104393         2            PASS    \r\n16384    208786         16383      225169         2            PASS    \r\n32768    450330         32767      483097         2            PASS    \r\n65536    966151         65535      1031686        2            PASS    \r\n\r\nEvery output is sorted, pairwise disjoint, and covers every input interval.\r\nData written to q5_experimental_data.dat\r\n"
+    },
+    {
+      "source": "lab4/Q-6/q6_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n        endpoints  sort cmp       sweep work   total          peak     check   \r\n128      256        1750           293          2043           99       PASS    \r\n256      512        4012           573          4585           167      PASS    \r\n512      1024       9034           1133         10167          311      PASS    \r\n1024     2048       20065          2253         22318          568      PASS    \r\n2048     4096       44211          4493         48704          1080     PASS    \r\n4096     8192       96553          8973         105526         2104     PASS    \r\n8192     16384      209514         17933        227447         4152     PASS    \r\n16384    32768      451563         35853        487416         8248     PASS    \r\n32768    65536      968893         71693        1040586        16440    PASS    \r\n65536    131072     2068586        143369       2211955        32824    PASS    \r\n\r\nTied endpoints were grouped with closed-interval START-before-END semantics.\r\nData written to q6_experimental_data.dat\r\n"
+    },
+    {
+      "source": "lab5/Q-1/q1_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "DAA Lab 05 Q1 - deterministic BFPRT validation\r\n============================================================\r\nTargeted edge cases             : 7/7 PASS\r\nExhaustive {-1,0,1}, lengths 1-9: 29523/29523 PASS\r\n\r\nn         comparisons  writes       operations   ops/n        oracle    \r\n128       2021         2403         4424         34.562       PASS      \r\n256       3909         4741         8650         33.789       PASS      \r\n512       8722         10526        19248        37.594       PASS      \r\n1024      13408        16359        29767        29.069       PASS      \r\n2048      37149        45258        82407        40.238       PASS      \r\n4096      71686        86989        158675       38.739       PASS      \r\n8192      118148       143753       261901       31.970       PASS      \r\n16384     238796       291612       530408       32.374       PASS      \r\n32768     564951       680802       1245753      38.017       PASS      \r\n65536     952311       1158259      2110570      32.205       PASS      \r\n131072    1796656      2182869      3979525      30.361       PASS      \r\n\r\nAll 29541 correctness cases passed.\r\nEach scaling row uses two selections because n is even.\r\nData written to q1_experimental_data.dat\r\n"
+    },
+    {
+      "source": "lab5/Q-2/q2_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "Edge-case suite: PASS (single, duplicates, signed extremes, ordered, reverse, all equal)\r\n\r\nDeterministic fuzz suite: PASS (2000 duplicate-heavy arrays)\r\n\r\nn        trials  avg comparisons  cmp / n      avg parts    validation\r\n128      5       902.4            7.0500       10.2         PASS      \r\n256      5       1904.6           7.4398       13.4         PASS      \r\n512      5       4407.4           8.6082       27.6         PASS      \r\n1024     5       9119.2           8.9055       40.2         PASS      \r\n2048     5       19126.0          9.3389       68.2         PASS      \r\n4096     5       38282.4          9.3463       95.6         PASS      \r\n8192     5       79178.2          9.6653       162.8        PASS      \r\n16384    5       160894.4         9.8202       243.8        PASS      \r\n32768    5       325418.8         9.9310       393.0        PASS      \r\n65536    5       650545.4         9.9265       608.0        PASS      \r\n131072   5       1317304.6        10.0502      968.0        PASS      \r\n\r\nAll deterministic checks passed.\r\nThe comparisons/n ratio remains bounded, supporting Theta(n) growth.\r\nData written to q2_experimental_data.dat\r\n"
+    },
+    {
+      "source": "lab5/Q-3/q3_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n         avg comparisons  avg swaps      avg parts     stack      check   \r\n128       1413.8           579.8          83.4          4          PASS    \r\n256       3473.0           1519.4         168.2         6          PASS    \r\n512       7796.6           3408.6         326.2         6          PASS    \r\n1024      17549.6          8117.8         626.4         7          PASS    \r\n2048      39646.6          18323.4        1232.4        8          PASS    \r\n4096      84859.2          40029.8        2405.8        8          PASS    \r\n8192      191375.0         89003.0        4836.6        9          PASS    \r\n16384     391835.6         186459.2       9582.0        9          PASS    \r\n32768     883059.6         418738.6       19169.2       10         PASS    \r\n65536     1849615.4        883877.6       38234.2       10         PASS    \r\n131072    4027492.4        1915171.4      76533.6       12         PASS    \r\n262144    8359165.4        3950663.6      153070.8      12         PASS    \r\n\r\nAdversarial and duplicate-rich validation (n = 65536)\r\ncase                   comparisons      swaps          stack      check   \r\nalready sorted         2059189          733274         10         PASS    \r\nreverse sorted         1938755          708736         11         PASS    \r\nall equal              131072           0              1          PASS    \r\n17-value duplicate pool 451038           204289         3          PASS    \r\nalternating limits     196608           32768          1          PASS    \r\nempty + singleton      0                0              0 / 1      PASS    \r\n\r\nAll rows exactly match an independent qsort oracle and pass\r\nsortedness, multiset-fingerprint, and stack-bound checks.\r\nFive deterministic trials per n were written to q3_experimental_data.dat.\r\n"
+    },
+    {
+      "source": "lab5/Q-4/q4_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n         build cmp    extraction cmp  total cmp     ratio        check    \r\n128       229          1165            1394          1.555804     PASS     \r\n256       469          2861            3330          1.625977     PASS     \r\n512       944          6664            7608          1.651042     PASS     \r\n1024      1923         15423           17346         1.693945     PASS     \r\n2048      3820         34898           38718         1.718661     PASS     \r\n4096      7729         77926           85655         1.742655     PASS     \r\n8192      15320        172242          187562        1.761212     PASS     \r\n16384     30853        377354          408207        1.779641     PASS     \r\n32768     61427        820282          881709        1.793842     PASS     \r\n65536     123179       1771370         1894549       1.806783     PASS     \r\n131072    246527       3804612         4051139       1.818102     PASS     \r\n\r\nEdge cases: PASS (empty, singleton, duplicates, ascending, descending)\r\nEvery measured output matched an independent qsort result exactly.\r\nData written to q4_experimental_data.dat\r\n"
+    },
+    {
+      "source": "lab6/Q-1/q1_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n=64     work=877        validation=PASS\r\nn=128    work=2027       validation=PASS\r\nn=256    work=4545       validation=PASS\r\nn=512    work=10112      validation=PASS\r\nn=1024   work=22272      validation=PASS\r\nn=2048   work=48596      validation=PASS\r\nn=4096   work=105408     validation=PASS\r\nn=8192   work=227154     validation=PASS\r\nn=16384  work=487027     validation=PASS\r\nArray invariants and every partition: PASS\r\n"
+    },
+    {
+      "source": "lab6/Q-2/q2_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "Identity, double-transpose, determinant and eigenpair checks: PASS\r\nn=4    work=176          validation=PASS\r\nn=8    work=1472         validation=PASS\r\nn=16   work=12032        validation=PASS\r\nn=32   work=97280        validation=PASS\r\nn=64   work=782336       validation=PASS\r\nn=128  work=6275072      validation=PASS\r\n"
+    },
+    {
+      "source": "lab6/Q-3/q3_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "m=16     n=32     padded=64     oracle=PASS\r\nm=32     n=64     padded=128    oracle=PASS\r\nm=64     n=128    padded=256    oracle=PASS\r\nm=128    n=256    padded=512    oracle=PASS\r\nm=256    n=512    padded=1024   oracle=PASS\r\nm=512    n=1024   padded=2048   oracle=PASS\r\nm=1024   n=2048   padded=4096   oracle=PASS\r\nm=2048   n=4096   padded=8192   oracle=PASS\r\nm=4096   n=8192   padded=16384  oracle=PASS\r\nm=8192   n=16384  padded=32768  oracle=PASS\r\nFFT vs direct convolution: PASS\r\n"
+    },
+    {
+      "source": "lab6/Q-4/q4_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "n=16    efficient-cost=127         direct-reversals=11     PASS\r\nn=32    efficient-cost=346         direct-reversals=28     PASS\r\nn=64    efficient-cost=992         direct-reversals=57     PASS\r\nn=128   efficient-cost=2735        direct-reversals=121    PASS\r\nn=256   efficient-cost=7343        direct-reversals=252    PASS\r\nn=512   efficient-cost=18598       direct-reversals=506    PASS\r\nn=1024  efficient-cost=45579       direct-reversals=1020   PASS\r\nn=2048  efficient-cost=112382      direct-reversals=2038   PASS\r\nn=4096  efficient-cost=269020      direct-reversals=4093   PASS\r\nn=8192  efficient-cost=633671      direct-reversals=8185   PASS\r\n"
+    },
+    {
+      "source": "lab6/Q-5/q5_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "Known values, recurrence boundary and F(93): PASS\r\nn=8   F(n)=21                   work=7\r\nn=16  F(n)=987                  work=15\r\nn=24  F(n)=46368                work=23\r\nn=32  F(n)=2178309              work=31\r\nn=40  F(n)=102334155            work=39\r\nn=48  F(n)=4807526976           work=47\r\nn=56  F(n)=225851433717         work=55\r\nn=64  F(n)=10610209857723       work=63\r\nn=72  F(n)=498454011879264      work=71\r\nn=80  F(n)=23416728348467685    work=79\r\nn=88  F(n)=1100087778366101931  work=87\r\n"
+    },
+    {
+      "source": "lab6/Q-6/q6_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "Canonical capacity-50 instance: PASS\r\nitems=8    W=32    profit=148      oracle=PASS\r\nitems=16   W=64    profit=450      oracle=PASS\r\nitems=32   W=128   profit=872      oracle=PASS\r\nitems=64   W=256   profit=1748     oracle=PASS\r\nitems=128  W=512   profit=3568     oracle=PASS\r\nitems=256  W=1024  profit=7238     oracle=PASS\r\n"
+    },
+    {
+      "source": "lab6/Q-7/q7_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "Canonical LCS instance: PASS (GTAB)\r\nlength=16    LCS=9     validation=PASS\r\nlength=32    LCS=17    validation=PASS\r\nlength=64    LCS=36    validation=PASS\r\nlength=128   LCS=71    validation=PASS\r\nlength=256   LCS=142   validation=PASS\r\nlength=512   LCS=284   validation=PASS\r\nlength=1024  LCS=569   validation=PASS\r\nlength=2048  LCS=1137  validation=PASS\r\n"
+    },
+    {
+      "source": "lab6/Q-8/q8_experimental_validation.c",
+      "result": "PASS",
+      "transcript": "Required sample {10,30,5,60} -> 4500: PASS\r\nCLRS oracle -> 15125: PASS\r\nmatrices=4    candidates=10         cost=936 PASS\r\nmatrices=8    candidates=84         cost=3184 PASS\r\nmatrices=16   candidates=680        cost=8760 PASS\r\nmatrices=32   candidates=5456       cost=15982 PASS\r\nmatrices=64   candidates=43680      cost=32544 PASS\r\nmatrices=128  candidates=349504     cost=64696 PASS\r\n"
+    }
+  ],
+  "focusedRegressionCount": 12,
+  "additionalChecks": {
+    "legacySeedAndMatrixEnvelope": "PASS",
+    "productionFrontendBuild": "PASS",
+    "browserDesktopAndMobile": "PASS"
+  },
+  "preservedOriginalFiles": 766
+}

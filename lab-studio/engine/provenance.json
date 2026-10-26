@@ -1,0 +1,582 @@
+{
+  "repository": "https://github.com/b425050-prog/DAA-Lab",
+  "commit": "91b6e69bd366391a07a162d4cac98b72992cc7cb",
+  "files": [
+    {
+      "path": "lab1/Q-1/q1_growth_order.c",
+      "sha256": "9ae02dddddc4c3e381a3b01e2292951bd4b654fe172f7a7854845cc4f6bfa10b"
+    },
+    {
+      "path": "lab1/Q-2/q2_coin_toss.c",
+      "sha256": "c7f51a8d07f6632e20b334024c2cfb17a416b679ea42f0e6e54758166e5025e4"
+    },
+    {
+      "path": "lab1/Q-3/q3_bubble_sort.c",
+      "sha256": "277c7160abc021dd93a5acc2e2e24219b69fa299e031d57501833df6f5bfac22"
+    },
+    {
+      "path": "lab1/Q-4/q4_towers_of_hanoi.c",
+      "sha256": "c21d28fe6167d4c92c705ed8088095d94b816dd7ed2b359c98b6acc21bab7f58"
+    },
+    {
+      "path": "lab1/Q-5/q5_partition_point.c",
+      "sha256": "2c70013a010978df6bdf06c20a1c109494b8edad8b91ee0140ae76ef766096df"
+    },
+    {
+      "path": "lab1/Q-6/q6_element_uniqueness.c",
+      "sha256": "3eae230424fe5aa20a6ad53fbddea2a3b4ff07c64fa8c2a77b4af1e27d4b43a3"
+    },
+    {
+      "path": "lab10/Q-1/q1_online_bipartiteness.c",
+      "sha256": "37b7f184acbd178c131dfb161fb9e416b5e07b2e1a7bb37321b52f0c600a1f5d"
+    },
+    {
+      "path": "lab10/Q-2/q2_dynamic_grid_components.c",
+      "sha256": "f14a65f301049a3035c98b37ff3f16d31fc023c9759bd7a994f217560c7752e3"
+    },
+    {
+      "path": "lab10/Q-3/q3_maximum_weight_component.c",
+      "sha256": "f30580f30150538235b1022b522271634c250016b66661fc3e830c70c92db634"
+    },
+    {
+      "path": "lab10/Q-4/q4_reverse_time_dsu.c",
+      "sha256": "c8b297355f1ef717fa4ad0ae32e8fa7c7680049f86fc83109b337c642394f1f0"
+    },
+    {
+      "path": "lab10/Q-5/q5_smallest_component_permutation.c",
+      "sha256": "2af43b8a805ae813ccd2119389ea601d45882fbc4b04f227208e9254663626fc"
+    },
+    {
+      "path": "lab10/common/lab10_common.h",
+      "sha256": "da7e1b1f7f818adf81b2456cac94626a9e7b479532ecf4e286513206f61bab83"
+    },
+    {
+      "path": "lab2/Q-1/q1_experimental_complexity.c",
+      "sha256": "70d9a32125a408fb171b8c7647acb7be877555840380d5dae206ddda50b25937"
+    },
+    {
+      "path": "lab2/Q-1/q1_plot_experimental.c",
+      "sha256": "3de2cdf935a0fc81617484b73ecaf751fad5a1fb5fb8b1921caf043bd0649799"
+    },
+    {
+      "path": "lab2/Q-1/q1_plot_theoretical.c",
+      "sha256": "b108d15d18a05df5b7cef42883553df094a783d663c5721a55ab4b6f7aa7cfd8"
+    },
+    {
+      "path": "lab2/Q-2/q2_merge_sort_interactive.c",
+      "sha256": "ab9cf8d34e1b0cf5596b20ef25e34eb8702dd9226cae2f018e56fd27da656da2"
+    },
+    {
+      "path": "lab2/Q-2/q2_plot_experimental.c",
+      "sha256": "c0104ffcb1345bf5ab2d869dc05d70fb0a5221b4f4b84350c112f3e5e41d09ca"
+    },
+    {
+      "path": "lab2/Q-2/q2_plot_theoretical.c",
+      "sha256": "d11c76e576b8b06cde7b6859eee216bf56a5f303b2d4023efbf6f37e288da215"
+    },
+    {
+      "path": "lab2/Q-3/q3_merge_k_arrays.c",
+      "sha256": "3638d274b640a90dca8b00cc175b0564cbb083ec394a54ec25f12d332c0db30b"
+    },
+    {
+      "path": "lab3/Q-1/q1_experimental_comparison.c",
+      "sha256": "b2852773e3004106e149b24679227775543ab90b66138d721e6cc3385b17026c"
+    },
+    {
+      "path": "lab3/Q-1/q1_plot_comparison.c",
+      "sha256": "e5a5e524e88cc2ad1baa7a0dc3e4f260127b3a28c600fad5eda3aeb7ebd73758"
+    },
+    {
+      "path": "lab3/Q-1/q1_search_interactive.c",
+      "sha256": "859be6580ac3b6316f56c5ebe5c456d2e0b8fb503c243518e897894e449fe983"
+    },
+    {
+      "path": "lab3/Q-2/q2_defective_coin.c",
+      "sha256": "d6bd19cb7e2681846bb575c8a753aa7e8780f9c4e9b66709794354ff42f91b5f"
+    },
+    {
+      "path": "lab3/Q-2/q2_experimental_validation.c",
+      "sha256": "e82cf22544351589aeb9658895fec9074b34070fa252ed188976310864bdf0ef"
+    },
+    {
+      "path": "lab3/Q-2/q2_plot_complexity.c",
+      "sha256": "e4c273a490766e42e3f3ed09ec0ed9eefa6186fc389c204aef74efbee455001d"
+    },
+    {
+      "path": "lab3/Q-3/q3_experimental_validation.c",
+      "sha256": "406cf8fbd4a8ebd4ae60ce06c2279ce8d26587fd755ac0b9b7789a06c6b31663"
+    },
+    {
+      "path": "lab3/Q-3/q3_max_min_dc.c",
+      "sha256": "539aa2f51f22fb0e333fda879f8631a1b02150a33789cb2f74325ce97310acd9"
+    },
+    {
+      "path": "lab3/Q-3/q3_plot_comparisons.c",
+      "sha256": "2be2259a5f90f28f950e48877a7e7f6a111d64c946d19268379ff7e058ab5827"
+    },
+    {
+      "path": "lab3/Q-4/q4_experimental_validation.c",
+      "sha256": "c842697ba8db1f39410458c64c101313cb651ad330d14288ed62a9819d7c1e3b"
+    },
+    {
+      "path": "lab3/Q-4/q4_plot_multiplications.c",
+      "sha256": "1586cada76d853e3d67d7b4cb509d33f375086e91e8decca06b9cc282e89489b"
+    },
+    {
+      "path": "lab3/Q-4/q4_strassen.c",
+      "sha256": "7851b8ed9e7c1ee722c1a14588d7195de8fe980127cd98663213ea75657b2885"
+    },
+    {
+      "path": "lab3/Q-5/q5_experimental_validation.c",
+      "sha256": "f7a20d533c2eb4c92f04c9bffcc00187d0992fdbe98ce4b0e53b9dfe6277d483"
+    },
+    {
+      "path": "lab3/Q-5/q5_plot_complexity.c",
+      "sha256": "18868309f822d10563f0a3e58824905f780c368a1eeee6aa74b87551dd8f4b61"
+    },
+    {
+      "path": "lab3/Q-5/q5_special_matrix_multiply.c",
+      "sha256": "add42190a63980567c54ef15fe89e1eb29aacd286333b3f2800469a4add8e53c"
+    },
+    {
+      "path": "lab3/Q-6/q6_experimental_validation.c",
+      "sha256": "09e845ff17ba5b0ec732c57f0a08b31bfee75663cd8067b2f0fda97325b7c07e"
+    },
+    {
+      "path": "lab3/Q-6/q6_plot_comparisons.c",
+      "sha256": "2e15ad4bf8382b550925db8f16e8bec91e77c3c2acebda2b37320b51e4f30d39"
+    },
+    {
+      "path": "lab3/Q-6/q6_selection_sort_invariant.c",
+      "sha256": "fe6effe698ed776429d8d84d22b14e559d83b8d4bf6e566307ba670c9c30301f"
+    },
+    {
+      "path": "lab4/Q-1/q1_experimental_validation.c",
+      "sha256": "614e1b585aa99ce16f97b1d61a7a59a0afbde12dc8065f4f47793a6e52f94578"
+    },
+    {
+      "path": "lab4/Q-1/q1_plot_linear.c",
+      "sha256": "b367ed695604f814ea2e5e553c0e0b291767c1a1847655dbc89a04fb9f7b7dc7"
+    },
+    {
+      "path": "lab4/Q-1/q1_stable_colour_sort.c",
+      "sha256": "23744d479d2e25ea3bc28f3768253e84c325b368c8ba452798f9f8ffc8a50c92"
+    },
+    {
+      "path": "lab4/Q-2/q2_cross_set_pair_sum.c",
+      "sha256": "6ab18cafb4dcd1bb8e4c85bc1129105b5c804a39bd5f524f28f0c687f28e219f"
+    },
+    {
+      "path": "lab4/Q-2/q2_experimental_validation.c",
+      "sha256": "a87fa16dd355840f0e1820d0a670f26b5152c19fcc0b1469c09a87498547a6a8"
+    },
+    {
+      "path": "lab4/Q-2/q2_plot_complexity.c",
+      "sha256": "18c233220aa4f84420ea246c4dc25154359ca25265d9573d6602b6d2a6619f86"
+    },
+    {
+      "path": "lab4/Q-3/q3_experimental_validation.c",
+      "sha256": "70e73dbd220bb7f50f249c3aef0de59512e570b33a35541d7093111eb4c9f5d9"
+    },
+    {
+      "path": "lab4/Q-3/q3_generalized_k_sum.c",
+      "sha256": "fcfb413b9757a812437dc8bccbafcd245c8f9916279693145c214ce4076031b0"
+    },
+    {
+      "path": "lab4/Q-3/q3_plot_complexity.c",
+      "sha256": "0206400080ee240f1b478f4418e2ca21fbff25dc0ff71ca6464cbd8cccce1ef3"
+    },
+    {
+      "path": "lab4/Q-4/q4_experimental_validation.c",
+      "sha256": "a15add569ccb6124b52ccabe45131d583a6634ef283439ef1b0a75b5571b428e"
+    },
+    {
+      "path": "lab4/Q-4/q4_party_peak.c",
+      "sha256": "5216d5d3cfa3fd4b3f2fe314800a5c7f42116067e4aa98ecfa59022b8b1d7960"
+    },
+    {
+      "path": "lab4/Q-4/q4_plot_complexity.c",
+      "sha256": "3a914d7cba8fcbe0a4075472ec827fba3cae9d8d07d786a7210e1e1816020355"
+    },
+    {
+      "path": "lab4/Q-5/q5_experimental_validation.c",
+      "sha256": "d9d75aa03e2ce591fb235e6d88e7a26836fb1646c14e0a317d1185320a17a484"
+    },
+    {
+      "path": "lab4/Q-5/q5_merge_intervals.c",
+      "sha256": "5c11082ed76877b83d6c20abde72dab1113a2a86db406fa86349a8c58fabfb0e"
+    },
+    {
+      "path": "lab4/Q-5/q5_plot_complexity.c",
+      "sha256": "607174d8104ac84286fbc07a6f22ee52e5354f871d3b0d6e92cdab571e462035"
+    },
+    {
+      "path": "lab4/Q-6/q6_experimental_validation.c",
+      "sha256": "d8510dba97d9ce1346525cb128b784ecbb3353b7284aaddb00288a70fae8f3b9"
+    },
+    {
+      "path": "lab4/Q-6/q6_max_interval_overlap.c",
+      "sha256": "e3ef656f78bc15a379583f42ff6a70f3f3c3ec14c71751d8fd30357651a63720"
+    },
+    {
+      "path": "lab4/Q-6/q6_plot_complexity.c",
+      "sha256": "7d1419a477bbb66c072db989015e72b505dde24d349170289e2448bd7dc2536e"
+    },
+    {
+      "path": "lab4/common/svg_plot.h",
+      "sha256": "258068f366f0f7a8afb3297a96b1266b4e8710ee0f3545216655ba929e065dcd"
+    },
+    {
+      "path": "lab5/Q-1/q1_experimental_validation.c",
+      "sha256": "02197c8c24962d68035b3c499dd632703b0cc80ee46e8e5d1e22c97b1e695707"
+    },
+    {
+      "path": "lab5/Q-1/q1_median_bfprt.c",
+      "sha256": "3108a01a381fe2c263aff17a6f7386e71d4d99b413591cd2bfa91eaca291ae8d"
+    },
+    {
+      "path": "lab5/Q-1/q1_plot_complexity.c",
+      "sha256": "59dc3f31bf65c881ea3ad44c7e5e8df212c0f3cd1f74d2ab0fc2b800b2e836f4"
+    },
+    {
+      "path": "lab5/Q-2/q2_bfprt.h",
+      "sha256": "dd519c018c29b045c134e7f686b648d05e143bfad029fa41605f92740eb7d199"
+    },
+    {
+      "path": "lab5/Q-2/q2_experimental_validation.c",
+      "sha256": "624e57cb9ebebbd85123cd189c6ec452c6f80755cdad54396c255f35c8e8b4c3"
+    },
+    {
+      "path": "lab5/Q-2/q2_kth_smallest.c",
+      "sha256": "5940c999f2af517aabdb6c33983bccfdb79ad58dd695539ac471e392a15c111a"
+    },
+    {
+      "path": "lab5/Q-2/q2_plot_complexity.c",
+      "sha256": "9e4dcfdcd7331af7069318b69e09048ca2fd605ac6907b8187c9a7ee4567fd3b"
+    },
+    {
+      "path": "lab5/Q-3/q3_experimental_validation.c",
+      "sha256": "a6829685f8f0ba27b4e5736097f261573e9e2afccc6c49e5d88eb6708113a730"
+    },
+    {
+      "path": "lab5/Q-3/q3_plot_complexity.c",
+      "sha256": "c2b495955f10411d35e639037bb1ef79db955dc46a64794399f003918993fb24"
+    },
+    {
+      "path": "lab5/Q-3/q3_quicksort.h",
+      "sha256": "46c7fd0bd506d44d5b32add6d8c5d502868f075fda6fd936f1c325be26499471"
+    },
+    {
+      "path": "lab5/Q-3/q3_random_file_quicksort.c",
+      "sha256": "b1431495fb214a35d2bc742f0197073d63cd50ea35e34e5959c2dce555963db4"
+    },
+    {
+      "path": "lab5/Q-4/q4_experimental_validation.c",
+      "sha256": "6e2176e99a47d4d411dcc50b537b389bb7ccefbebaf50c7b810c7b7a968c96d1"
+    },
+    {
+      "path": "lab5/Q-4/q4_heap_sort_file.c",
+      "sha256": "a3c906fe9a4f0cf2985043b107d6ce312c049f74ba0de7510b27978c75e470f0"
+    },
+    {
+      "path": "lab5/Q-4/q4_plot_complexity.c",
+      "sha256": "7886656c43681d7d416983d70de2405abb5931cc1533e2ad22977fb77594313b"
+    },
+    {
+      "path": "lab5/common/svg_plot.h",
+      "sha256": "11d6f7d0e8ba4441032bb063ca222643b08d00417bb02917ad81ea379837532a"
+    },
+    {
+      "path": "lab6/Q-1/q1_algorithms.h",
+      "sha256": "24906a552804e693fca41ebad792b69f937adc0c4c848301c7603c254c0e3686"
+    },
+    {
+      "path": "lab6/Q-1/q1_array_operations.c",
+      "sha256": "af1dfab877a8856dad8b6cd96e453327e4acf0b45081b68055a721297547028f"
+    },
+    {
+      "path": "lab6/Q-1/q1_experimental_validation.c",
+      "sha256": "6a94d142245bb181a690ab792c9d762c50ae4319b3653f2ed4175966f1946154"
+    },
+    {
+      "path": "lab6/Q-1/q1_plot_complexity.c",
+      "sha256": "1bc63f04b28c6050482ca5e355dca525c183658b8d4edcd000a94d82b5b141c2"
+    },
+    {
+      "path": "lab6/Q-2/q2_algorithms.h",
+      "sha256": "04ec15b670e92f98a6e0ab1ae80c443a10db2c7b90512eafc3e02e1e1951ed12"
+    },
+    {
+      "path": "lab6/Q-2/q2_experimental_validation.c",
+      "sha256": "5ad464d9ffc6385f504bab10050bb2cb4a5f556430d0aaaad57671f1ae156a0c"
+    },
+    {
+      "path": "lab6/Q-2/q2_matrix_operations.c",
+      "sha256": "d79f97f0d9d393eb9a5ff28962cf55fe0949c2d854562304f5e8f42373d731bb"
+    },
+    {
+      "path": "lab6/Q-2/q2_plot_complexity.c",
+      "sha256": "e6c255c1144aaef53f39a6e06d6983dca025524febc6e5e4560f4090cd5e5ace"
+    },
+    {
+      "path": "lab6/Q-3/q3_experimental_validation.c",
+      "sha256": "0e316f8abb531099ca0bc457fe1669f880bbe2b21fb7a034d162a43566146f5a"
+    },
+    {
+      "path": "lab6/Q-3/q3_fft.h",
+      "sha256": "5faf32f2a618bf5186131609e31db22cf2ca55eb75da459e33a722c44f9f5278"
+    },
+    {
+      "path": "lab6/Q-3/q3_fft_convolution.c",
+      "sha256": "28794f811ab9888e27f9f5a83c055525cb806ef9c24df4f64dad64b3694eeebd"
+    },
+    {
+      "path": "lab6/Q-3/q3_plot_complexity.c",
+      "sha256": "550fe13126f45469389bb68100d1e45d0100c447a25b28dffb10d7c77569843b"
+    },
+    {
+      "path": "lab6/Q-4/q4_experimental_validation.c",
+      "sha256": "186ef167898616ea67ad5e4aa9d24ced29015c87a625fc1f9a3be48601e7ae58"
+    },
+    {
+      "path": "lab6/Q-4/q4_plot_complexity.c",
+      "sha256": "977b3f3bf2ce0759d0b212fa830248d6a502e5057bdf34622e9d7f85f7564408"
+    },
+    {
+      "path": "lab6/Q-4/q4_reversal.h",
+      "sha256": "a4feae0d1d75c597004f12823be3d659171add81670368c925541ee3a81e2865"
+    },
+    {
+      "path": "lab6/Q-4/q4_reversal_sort.c",
+      "sha256": "6bc4cd2c304cf09906fda417ec669b1f6577fc15e497a7538faf96dff3948d93"
+    },
+    {
+      "path": "lab6/Q-5/q5_experimental_validation.c",
+      "sha256": "dcbf4db67b96cf2022024b1846a646e5c63aedf37d017ab594d5a157d3d99b24"
+    },
+    {
+      "path": "lab6/Q-5/q5_fibonacci.h",
+      "sha256": "1e6017e4f511d31f62710a39a56f02a91d316b1aacf94a8984b844589a2eba24"
+    },
+    {
+      "path": "lab6/Q-5/q5_fibonacci_dp.c",
+      "sha256": "73d65a772c661c63cf8d334636644864e58a9da0ada51bd7962427a2a6360970"
+    },
+    {
+      "path": "lab6/Q-5/q5_plot_complexity.c",
+      "sha256": "e83402ebca36b3f8bc72871adc3aa6b8b4c0a3546462aab24247b313ea8ab73a"
+    },
+    {
+      "path": "lab6/Q-6/q6_experimental_validation.c",
+      "sha256": "de56236151b09a928efb31ac2b693d6372ec00723aa6b02751e95ffa50326a19"
+    },
+    {
+      "path": "lab6/Q-6/q6_knapsack.h",
+      "sha256": "f94bba0755fd5d3b9f9015d78bfbe90ea0361f1bdc6df9a3317c50c49ea23bb9"
+    },
+    {
+      "path": "lab6/Q-6/q6_knapsack_dp.c",
+      "sha256": "cfc1c29555fc956a626ed0d2eb28791ac1e2ce2d292c7ec26f077db25eaeaefc"
+    },
+    {
+      "path": "lab6/Q-6/q6_plot_complexity.c",
+      "sha256": "f6d403b8654450319e9d69fabce513b7fd9df4ba2817472a70fd9a0773b0578f"
+    },
+    {
+      "path": "lab6/Q-7/q7_experimental_validation.c",
+      "sha256": "56eb428070648d9155ccd82c8e0d170f0662a44b9792a78b0d479d1633864ec9"
+    },
+    {
+      "path": "lab6/Q-7/q7_lcs.h",
+      "sha256": "df8547731af422d2f9ecd02f53d2305401bd47b6c021b73666b2e485a7d28937"
+    },
+    {
+      "path": "lab6/Q-7/q7_lcs_dp.c",
+      "sha256": "09791aad875e9c4b8abf59b089f700fbfc2399ae91de6717e25a83ef392f4e2d"
+    },
+    {
+      "path": "lab6/Q-7/q7_plot_complexity.c",
+      "sha256": "c49fa02d4f17c2fc0eac8529ee6c638f2a7edf488d4ff4aaef643c70dafbfab8"
+    },
+    {
+      "path": "lab6/Q-8/q8_experimental_validation.c",
+      "sha256": "5ea4eee0f5f2224da270fc9208fe655dc45b0e1ecaaaef9b0d14f35f7af8555d"
+    },
+    {
+      "path": "lab6/Q-8/q8_matrix_chain.h",
+      "sha256": "8a818385ad2763a4a72cc992fe0e8110385285d4640ea397e6c87602b7bcb1fc"
+    },
+    {
+      "path": "lab6/Q-8/q8_matrix_chain_dp.c",
+      "sha256": "893a85659a83a2cb1effb262a8715df182f789ec28b36c04318f64732a24ddad"
+    },
+    {
+      "path": "lab6/Q-8/q8_plot_complexity.c",
+      "sha256": "72b98502431b476c1b8deb0ce01067cb10be6c85c72877e6cca7b374e968498a"
+    },
+    {
+      "path": "lab6/common/plot_from_dat.h",
+      "sha256": "e986a0013563be872589439519ea5155ed4cae20dfd979d2824a69062ff7da1d"
+    },
+    {
+      "path": "lab6/new.c",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "lab7/lab7/Q-1/q1_coin_triangle.c",
+      "sha256": "21fc74c5a5201ec670c81d0e1d1008824d189bef30e60af63a6a07ba477003ee"
+    },
+    {
+      "path": "lab7/lab7/Q-2/q2_egg_dropping_dp.c",
+      "sha256": "4867e19897cef0d07a5dc862bc1bb8136bc6db9a41fdde8c98f3ea8526746547"
+    },
+    {
+      "path": "lab7/lab7/Q-3/q3_reves_puzzle.c",
+      "sha256": "9c9b733a3628ab5a4b9f0d8c6163986f81e3faefe0a76f9171412a54c1ae95a4"
+    },
+    {
+      "path": "lab7/lab7/Q-4/q4_security_switches.c",
+      "sha256": "f35197ba438982f8d1009f18e2cad3996263a7ab937e2927cac88af2b9cd2790"
+    },
+    {
+      "path": "lab7/lab7/Q-5/q5_moving_target.c",
+      "sha256": "0c9b00dd1f3d4bc779364fdf62d8ec578251d5755e2ef344a34462ed08c4c351"
+    },
+    {
+      "path": "lab7/lab7/Q-6/q6_best_time_alive.c",
+      "sha256": "5c251da9b3d04038f9227f3dd6793fd91351c72ce0b9933b86b594182de949a5"
+    },
+    {
+      "path": "lab7/lab7/Q-7/q7_matrix_chain_dp.c",
+      "sha256": "47ca1b701ac6b91eb9b4cdbac4ec384867ac85249b2409024ed08450bedb2493"
+    },
+    {
+      "path": "lab7/lab7/common/lab7_common.h",
+      "sha256": "b0b4422b178f4e22c33208cac4892020311b5c3b849986ea6a05a673e14b092a"
+    },
+    {
+      "path": "lab8/Q-1/q1_minimum_coin_change.c",
+      "sha256": "99780b333f179d8b639dbe79a74b09ee64f0280cb74bf36f394d9315fa718668"
+    },
+    {
+      "path": "lab8/Q-1/q1_plot_evidence.c",
+      "sha256": "a95135432b3790b4c0040feb6c63e3f243f6cf773e9fff9cbba9c8db7b7e0dac"
+    },
+    {
+      "path": "lab8/Q-2/q2_coin_change_ways.c",
+      "sha256": "72dc22b3329216ca1215807e5e257b5f8be6bb3bf13486efdfc9baf3e2b46c95"
+    },
+    {
+      "path": "lab8/Q-2/q2_plot_evidence.c",
+      "sha256": "60778252dc20d3abb81aa38bfacbba8608c7a541d39a3eb93e02ae4e04c56a58"
+    },
+    {
+      "path": "lab8/Q-3/q3_lcs_traceback.c",
+      "sha256": "d0625f767d5a3abf7e819eb6e666d7ab4ce0a78ce88c2da00de611c4655ec709"
+    },
+    {
+      "path": "lab8/Q-3/q3_plot_evidence.c",
+      "sha256": "dafb3d69f105b2c1907dea3babc6b56e29ac691eecf39da2673cfb3fa1b02cb5"
+    },
+    {
+      "path": "lab8/Q-4/q4_longest_increasing_subsequence.c",
+      "sha256": "cd56fb0151eeaea1d1d06c95680b4c924850d1caf4cf70d3540c26b3fd5574e4"
+    },
+    {
+      "path": "lab8/Q-4/q4_plot_evidence.c",
+      "sha256": "b880e791d8122dfdf516bc6fdb1b8d4c4705d3755132b252b991f00850673697"
+    },
+    {
+      "path": "lab8/Q-5/q5_maximum_sum_increasing_subsequence.c",
+      "sha256": "8d4913ed59e22dd044b77bf99e4516551a183b5f1d12035f693109a364f0cc0e"
+    },
+    {
+      "path": "lab8/Q-5/q5_plot_evidence.c",
+      "sha256": "d3dbb5580fa8033d81285ceac269a86fed25a36f80fe575333088063702c6a30"
+    },
+    {
+      "path": "lab8/Q-6/q6_edit_distance_traceback.c",
+      "sha256": "595122e0571039d683da7362ef64d8a16473440aaa760bf2b4bfc4630d1004b8"
+    },
+    {
+      "path": "lab8/Q-6/q6_plot_evidence.c",
+      "sha256": "81b5a1f56e475e22151d7003e55c3f48469d9abe84a3ac5bddc093d5e8d17600"
+    },
+    {
+      "path": "lab8/Q-7/q7_plot_evidence.c",
+      "sha256": "8366cea9864d0c20bf6a68e97069851cd039e45b8ae95e3c82fc602b55caa9f1"
+    },
+    {
+      "path": "lab8/Q-7/q7_rod_cutting_reconstruction.c",
+      "sha256": "292e590df620b1e0a5324f220de028e43c6db66c52aee7ed5407ad907be3d5d5"
+    },
+    {
+      "path": "lab8/Q-8/q8_optimal_binary_search_tree.c",
+      "sha256": "e13346aa53aed11aef985c0d539dd6bc3caac2cbfea55570794d61918d101ef2"
+    },
+    {
+      "path": "lab8/Q-8/q8_plot_evidence.c",
+      "sha256": "16bb5923f64dd68ef5ad233b2b2973405331f9ecf2fbbf9138d54ee5e2216fe1"
+    },
+    {
+      "path": "lab8/Q-9/q9_collatz_analyser.c",
+      "sha256": "7988523c11832b0fae866f8beae01d93c1460404a38895d78431ccd1778d22f5"
+    },
+    {
+      "path": "lab8/Q-9/q9_plot_evidence.c",
+      "sha256": "ffef1cf56b536bb63e1589fd77eda66c9d36d6bb101596bc60abeefa9ac638b3"
+    },
+    {
+      "path": "lab8/common/lab8_common.h",
+      "sha256": "c58f1a05d54536c5edfa4549e72792450add0200a738eb6415df69d1d2903550"
+    },
+    {
+      "path": "lab8/common/plot_from_dat.h",
+      "sha256": "f3d7c33c8b71b6fd74291cc8156f0751b5d1e0b550bfcda6f729a33eae14e31a"
+    },
+    {
+      "path": "lab9/Q-1/q1_deteriorating_knapsack.c",
+      "sha256": "730b9029333038b9341ebd519317cf82ddd22d3a32497620854682c26802bd00"
+    },
+    {
+      "path": "lab9/Q-10/q10_greedy_superstring.c",
+      "sha256": "a029d22b0238110815d71a0a97a9af7c1c311e4a28911960bd9cd4742f2628a8"
+    },
+    {
+      "path": "lab9/Q-2/q2_huffman_coding.c",
+      "sha256": "37a7ce7704cd6fa38efb728a9ce09b08e115ef35b8274db54099b0a213f82483"
+    },
+    {
+      "path": "lab9/Q-3/q3_minimum_refuelling_stops.c",
+      "sha256": "0465345290ea813718d2a6ef4e8890302d4e6aa24ff54b515f9301019d51bc67"
+    },
+    {
+      "path": "lab9/Q-4/q4_connect_sticks.c",
+      "sha256": "8e64bad0737f62f6db0b94ffa479a0add9ef20230ec336d64cc25e25222c4863"
+    },
+    {
+      "path": "lab9/Q-5/q5_candy_distribution.c",
+      "sha256": "155625557bc2e9282e5476ef70315ba74fb2edda89ab1ac841994b1614cf2f8d"
+    },
+    {
+      "path": "lab9/Q-6/q6_reorganise_string.c",
+      "sha256": "0d5606b672efd0ee9392adc6cbcb265bddf01ab634b461c77a0809679aebfb0a"
+    },
+    {
+      "path": "lab9/Q-7/q7_minimise_deviation.c",
+      "sha256": "f034d2b3a0dee89be19b928d45caeedbeed4ede49e4409fd771820ad88f29cbe"
+    },
+    {
+      "path": "lab9/Q-8/q8_meeting_rooms.c",
+      "sha256": "91ba1fbee594b6bb7169300c69b9ca666d68c8512833b29f438c025d61d0577c"
+    },
+    {
+      "path": "lab9/Q-9/q9_hu_tucker_simulation.c",
+      "sha256": "3148e5d95f2c1a16decbf79c22882101c1d6b8211515a838035830354f7ff4e9"
+    },
+    {
+      "path": "lab9/common/lab9_common.h",
+      "sha256": "44594a593c508831e7ebb39511088ec0a96391cce2f13ebaaee4dafe699ca701"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+#define PLOT_DATA_FILE "q2_experimental_data.dat"
+#define PLOT_OUTPUT_FILE "q2_matrix_operations.svg"
+#define PLOT_TITLE "Square-Matrix Complexity Landscape"
+#define PLOT_SUBTITLE "Multiplication plus elimination expose the cubic frontier"
+#define PLOT_BADGE "Theta(n^3) DOMINANT"
+#define PLOT_X_LABEL "Matrix order n"
+#define PLOT_FOOTER "Quadratic elementwise operations sit below the cubic multiplication and determinant paths."
+#include "../common/plot_from_dat.h"

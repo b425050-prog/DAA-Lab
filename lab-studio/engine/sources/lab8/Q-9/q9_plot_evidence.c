@@ -1,0 +1,10 @@
+#define PLOT_DATA_FILE "q9_experimental_data.dat"
+#define PLOT_OUTPUT_FILE "q9_evidence.svg"
+#define PLOT_TITLE "Q9 | Collatz observations"
+#define PLOT_SUBTITLE "interval transitions recorded in C; answers independently checked"
+#define PLOT_BADGE "LAB 08 / MEASURED"
+#define PLOT_X_LABEL "Interval upper bound b; starts [1,b]"
+#define PLOT_FOOTER "Finite observations only. No general convergence or complexity bound is claimed."
+#define PLOT_REFERENCE_LABEL "exact work reference"
+#define PLOT_SHOW_REFERENCE 0
+#include "../common/plot_from_dat.h"

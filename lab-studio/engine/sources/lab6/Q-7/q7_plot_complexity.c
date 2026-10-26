@@ -1,0 +1,8 @@
+#define PLOT_DATA_FILE "q7_experimental_data.dat"
+#define PLOT_OUTPUT_FILE "q7_lcs_dp.svg"
+#define PLOT_TITLE "Longest Common Subsequence Grid"
+#define PLOT_SUBTITLE "Diagonal matches and best-neighbour choices fill an m by n table"
+#define PLOT_BADGE "Theta(mn)"
+#define PLOT_X_LABEL "Equal input length n"
+#define PLOT_FOOTER "Backtracking through the same table recovers an actual subsequence, not only its length."
+#include "../common/plot_from_dat.h"

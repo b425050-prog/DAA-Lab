@@ -1,0 +1,116 @@
+"""Same-origin local HTTP API and static frontend, using Python's standard library."""
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+import json
+import mimetypes
+import os
+from urllib.parse import urlsplit
+from .runner import ROOT, SOURCES, CATALOG, BY_ID, RunError, compiler, run_problem
+
+
+class Handler(BaseHTTPRequestHandler):
+    server_version = 'LabStudio/1.0'
+
+    def reply(self, status, content, content_type='application/json; charset=utf-8'):
+        if isinstance(content, (dict, list)):
+            content = json.dumps(content, ensure_ascii=True, allow_nan=False).encode()
+        elif isinstance(content, str):
+            content = content.encode('utf-8')
+        self.send_response(status)
+        self.send_header('Content-Type', content_type)
+        self.send_header('Content-Length', str(len(content)))
+        self.send_header('X-Content-Type-Options', 'nosniff')
+        self.send_header('Cache-Control', 'no-store' if content_type.startswith('application/json') else 'no-cache')
+        self.end_headers()
+        self.wfile.write(content)
+
+    def local_request(self):
+        host = self.headers.get('Host', '').split(':')[0]
+        if host not in ('127.0.0.1', 'localhost'):
+            self.reply(403, {'error': 'Lab Studio accepts local requests only.'})
+            return False
+        origin = self.headers.get('Origin')
+        if origin:
+            parsed = urlsplit(origin)
+            if parsed.scheme != 'http' or parsed.hostname not in ('127.0.0.1', 'localhost') or parsed.port not in (self.server.server_port, 5173):
+                self.reply(403, {'error': 'Request origin is not allowed.'})
+                return False
+        return True
+
+    def do_GET(self):
+        if not self.local_request():
+            return
+        path = urlsplit(self.path).path
+        if path == '/api/health':
+            try:
+                cc = compiler()
+                self.reply(200, {'status': 'ready', 'compiler': Path(cc).name, 'problems': len(BY_ID)})
+            except RunError as error:
+                self.reply(200, {'status': 'compiler-missing', 'message': error.message, 'problems': len(BY_ID)})
+        elif path == '/api/catalog':
+            self.reply(200, CATALOG)
+        elif path.startswith('/api/source/'):
+            item = BY_ID.get(path.removeprefix('/api/source/'))
+            if not item:
+                self.reply(404, {'error': 'Unknown problem.'})
+            else:
+                self.reply(200, {'path': item['source'], 'text': (SOURCES / item['source']).read_text(encoding='utf-8')})
+        elif path == '/api/audit':
+            audit = ROOT / 'AUDIT.json'
+            self.reply(200, json.loads(audit.read_text()) if audit.exists() else {'status': 'Not yet run'})
+        elif path.startswith('/api/'):
+            self.reply(404, {'error': 'Unknown API route.'})
+        else:
+            public = (ROOT / 'frontend' / 'dist').resolve()
+            file = (public / path.lstrip('/')).resolve()
+            if not file.is_relative_to(public):
+                self.reply(404, 'Not found', 'text/plain')
+                return
+            if not file.is_file():
+                file = public / 'index.html' if '.' not in Path(path).name else file
+            if file.is_file():
+                mime = mimetypes.guess_type(file)[0] or 'application/octet-stream'
+                if file.suffix == '.js':
+                    mime = 'text/javascript'
+                self.reply(200, file.read_bytes(), mime)
+            else:
+                self.reply(404, 'Build the frontend: cd frontend && npm ci && npm run build', 'text/plain')
+
+    def do_POST(self):
+        if not self.local_request():
+            return
+        if urlsplit(self.path).path != '/api/run':
+            self.reply(404, {'error': 'Unknown API route.'})
+            return
+        try:
+            length = int(self.headers.get('Content-Length', '0'))
+            if not 0 < length <= 100_000:
+                raise RunError('Request body must be between 1 byte and 100 KB.', 413)
+            body = json.loads(self.rfile.read(length))
+            if not isinstance(body, dict) or not isinstance(body.get('problemId'), str):
+                raise RunError('Provide a problemId and input text.')
+            self.reply(200, run_problem(body['problemId'], body.get('input', ''), body.get('countOnly') is True))
+        except RunError as error:
+            self.reply(error.status, {'error': error.message, 'output': error.output})
+        except (ValueError, UnicodeError, TypeError):
+            self.reply(400, {'error': 'Invalid JSON request.'})
+        except Exception:
+            import traceback
+            traceback.print_exc()
+            self.reply(500, {'error': 'An unexpected backend error occurred. Check the terminal for details.'})
+
+    def log_message(self, format, *args):
+        if os.environ.get('DAA_QUIET') != '1':
+            super().log_message(format, *args)
+
+
+def serve(port=8765):
+    server = ThreadingHTTPServer(('127.0.0.1', port), Handler)
+    server.daemon_threads = True
+    print(f'Lab Studio: http://127.0.0.1:{port}', flush=True)
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        server.server_close()

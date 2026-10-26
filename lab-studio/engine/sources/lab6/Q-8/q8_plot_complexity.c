@@ -1,0 +1,8 @@
+#define PLOT_DATA_FILE "q8_experimental_data.dat"
+#define PLOT_OUTPUT_FILE "q8_matrix_chain_dp.svg"
+#define PLOT_TITLE "Matrix-Chain Parenthesization"
+#define PLOT_SUBTITLE "Every interval tries each final split and remembers the cheapest"
+#define PLOT_BADGE "Theta(n^3)"
+#define PLOT_X_LABEL "Number of matrices"
+#define PLOT_FOOTER "The required {10,30,5,60} instance is independently locked to the answer 4500."
+#include "../common/plot_from_dat.h"

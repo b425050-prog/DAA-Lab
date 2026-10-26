@@ -1,0 +1,8 @@
+#define PLOT_DATA_FILE "q3_experimental_data.dat"
+#define PLOT_OUTPUT_FILE "q3_fft_convolution.svg"
+#define PLOT_TITLE "FFT Convolution"
+#define PLOT_SUBTITLE "Three transforms replace every coefficient pair with frequency-domain products"
+#define PLOT_BADGE "O(n log n)"
+#define PLOT_X_LABEL "Zero-padded transform length"
+#define PLOT_FOOTER "Every FFT result is compared coefficient-by-coefficient with direct convolution."
+#include "../common/plot_from_dat.h"
