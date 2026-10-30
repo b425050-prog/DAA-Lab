@@ -1,0 +1,12 @@
+@echo off
+setlocal
+pushd "%~dp0" || exit /b 1
+python tools\build.py
+if errorlevel 1 goto :failed
+python tools\validate.py
+if errorlevel 1 goto :failed
+popd
+exit /b 0
+:failed
+popd
+exit /b 1

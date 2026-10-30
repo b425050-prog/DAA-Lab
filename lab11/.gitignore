@@ -1,0 +1,11 @@
+bin/
+__pycache__/
+*.pyc
+*.exe
+
+# Keep the shared C build/debug settings even when the root ignores .vscode.
+!.vscode/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/settings.json

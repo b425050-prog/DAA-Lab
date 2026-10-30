@@ -1,0 +1,12 @@
+{
+  "stdout": "Minimum mutations: 4\nSequence: hit -> hot -> dot -> dog -> cog\nWork: 895\n",
+  "work": 895,
+  "mutations": 4,
+  "path": [
+    "hit",
+    "hot",
+    "dot",
+    "dog",
+    "cog"
+  ]
+}

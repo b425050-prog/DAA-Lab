@@ -1,0 +1,42 @@
+{
+  "stdout": "Vertex  Even  Odd  Minimum effective cost\n1  0  INF  0\n2  2  1  2\n3  INF  1  6\n4  2  1  2\n5  INF  1  6\n6  INF  INF  UNREACHABLE\nWork: 45\n",
+  "work": 45,
+  "rows": [
+    [
+      "1",
+      "0",
+      "INF",
+      "0"
+    ],
+    [
+      "2",
+      "2",
+      "1",
+      "2"
+    ],
+    [
+      "3",
+      "INF",
+      "1",
+      "6"
+    ],
+    [
+      "4",
+      "2",
+      "1",
+      "2"
+    ],
+    [
+      "5",
+      "INF",
+      "1",
+      "6"
+    ],
+    [
+      "6",
+      "INF",
+      "INF",
+      "UNREACHABLE"
+    ]
+  ]
+}

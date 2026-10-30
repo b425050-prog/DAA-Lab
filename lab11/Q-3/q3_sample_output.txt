@@ -1,0 +1,3 @@
+Minimum mutations: 4
+Sequence: hit -> hot -> dot -> dog -> cog
+Work: 895

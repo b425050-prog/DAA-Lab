@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "C/C++: gcc.exe build active C file",
+      "command": "gcc",
+      "windows": {
+        "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe"
+      },
+      "args": [
+        "-x",
+        "c",
+        "-std=c17",
+        "-g",
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-Werror",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Compile the active .c solution as C17 with GCC."
+    }
+  ]
+}

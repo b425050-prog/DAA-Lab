@@ -1,0 +1,8 @@
+Vertex  Even  Odd  Minimum effective cost
+1  0  INF  0
+2  2  1  2
+3  INF  1  6
+4  2  1  2
+5  INF  1  6
+6  INF  INF  UNREACHABLE
+Work: 45
